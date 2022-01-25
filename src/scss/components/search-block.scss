@@ -1,0 +1,26 @@
+.search-block {
+
+  &__input {
+    // todo: сделать
+    display: none;
+
+    background-color: white;
+  }
+
+  &__btn {
+
+    &:focus-visible,
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.header {
+
+  .logo {
+    display: inline-flex;
+  
+    img {
+      width: 34.7rem;
+      height: 4rem;
+  
+      object-fit: contain;
+    }
+  }
+
+  // Upper Header
+  // ######
+  
+  &__secondary-block {
+    padding: 1.2rem 0;
+  }
+
+  &__secondary-block-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    row-gap: 0.4rem;
+
+    flex-wrap: wrap;
+
+    @extend %secondary-ff;
+  }
+
+  &__address {
+    @extend %fs-t6;
+  }
+
+  &__working-time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+
+    @extend %fs-t6;
+
+    & * {
+      flex-shrink: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.6rem;
+    row-gap: 1rem;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1.2rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+
+    &:focus-visible,
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+
+      .header__btn-label {
+        color: var(--primary-color);
+      }
+
+      .header__btn-label::after {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  &__btn-label {
+    flex-shrink: 0;
+
+    position: relative;
+
+    @include clamp(12, 14);
+    font-weight: 400;
+    line-height: 1.5;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    &::after {
+      content: '';
+      
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--dark);
+
+      transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+
+  // Main Header
+  // ######
+
+  &__main-block {
+    background-color: black;
+    color: var(--white);
+
+    padding: 2rem 0;
+  }
+
+  &__main-block-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__menu-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu {
+    margin-left: 4rem;
+    margin-right: 4rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.4rem;
+      row-gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      @extend %fs-h6;
+
+      transition: color $base-transition-time $base-transition-easing;
+
+      &:focus-visible,
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__burger {
+
+    &:focus-visible,
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
+    svg {
+      width: 2rem;
+      height: 1.2rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="intro">
+    <h1 class="visually-hidden">ГЛОБАЛ МОЛЛ</h1>
+    <div class="container">
+        <div class="intro__info">
+            <address class="intro__info-address">м. Автозаводская, ул.Ленинская Слобода, д. 26, стр.2</address>
+            <div class="footer__info-working-time">
+                <span>ежедневно 10:00 - 22:00</span>
+                <span>супермаркет 24 часа</span>
+            </div>
+            <div class="intro__info-btns">
+                <a class="intro__info-btn" href="/">
+                    <svg><use xlink:href="#car-1"></svg>
+                    <span class="intro__info-btn-label">Как добраться</span>
+                </a>
+                <a class="intro__info-btn" href="/">
+                    <svg><use xlink:href="#block"></svg>
+                    <span class="intro__info-btn-label">Схема этажей</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro__inner">
+            <div class="swiper intro__slider">
+                <ul class="swiper-wrapper  intro__slider-wrapper">
+                    <li class="swiper-slide  intro__slide">
+                        <div class="intro__slide-wrapper">
+                            <img src="" alt="новогодний шопинг!">
+                            <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                            <div class="intro__slide-subtitle">
+                                <p>Большая предновогодняя распродажа! <br> Скидки до -50%!</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="intro__slider-btns">
+                    <button class="intro__slider-btn intro__slider-btn--prev" type="button" title="Назад"></button>
+                    <button class="intro__slider-btn intro__slider-btn--next" type="button" title="Вперёд"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

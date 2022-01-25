@@ -1,0 +1,30 @@
+:root {
+  --dark: #222E3C;
+  --secondary-dark: rgba(88, 95, 103, 1);
+  --grey: #B9BCC1;
+  --secondary-grey: #E6E6E6;
+  --secondary-light: #F6F6F6;
+  --black: #222E3C;
+  --secondary: #E9D0AC;
+  --white: #FFF;
+  --success: #349C6A;
+  --error: #DB4444;
+  --bg-success: #E4F8EE;
+  --bg-error: #FFE2E2;
+
+  --max-container-width: 140rem;
+  --content-padding: 6rem;
+  --primary-color: var(--secondary);
+  --text-color: var(--dark);
+
+  --youtube-icon-color: var(--primary-color);
+}
+
+$minWidth: 375;
+$maxWidth: 1680; // Ширина макета
+$base-transition-time: 0.3s;
+$base-transition-easing: ease;
+
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+$modal-bg-color: white;

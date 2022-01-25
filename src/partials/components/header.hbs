@@ -1,0 +1,56 @@
+<header class="header">
+    <div class="header__secondary-block">
+        <div class="container">
+            <div class="header__secondary-block-inner">
+                <address class="header__address">м. Автозаводская, ул.Ленинская Слобода, д. 26, стр.2</address>
+                <div class="header__working-time">
+                    <span>Ежедневно 10:00 - 22:00</span>
+                    <span>Супермаркет 24 часа</span>
+                </div>
+                <div class="header__buttons">
+                    <a class="header__btn" href="/">
+                        <svg><use xlink:href="#car-1"></svg>
+                        <span class="header__btn-label">Как добраться</span>
+                    </a>
+                    <a class="header__btn" href="/">
+                        <svg><use xlink:href="#block"></svg>
+                        <span class="header__btn-label">Схема этажей</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header__main-block">
+        <div class="container">
+            <div class="header__main-block-inner">
+                {{>logo img="img/logo.svg"}}
+                <div class="header__menu-block">
+                    <button class="header__burger">
+                        <svg><use xlink:href="#bar"></svg>
+                    </button>
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="/">магазины</a></li>
+                            <li><a href="/">услуги</a></li>
+                            <li><a href="/">развлечения</a></li>
+                            <li><a href="/">рестораны и кафе</a></li>
+                            <li><a href="/">новости</a></li>
+                            <li><a href="/">акции</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-block">
+                        <label for="searchInput">
+                            <input class="search-block__input" id="searchInput" name="search" type="text">
+                        </label>
+                        <button class="search-block__btn">
+                            <svg><use xlink:href="#search"></svg>
+                        </button>
+                    </div>
+                </div>
+
+                {{>socials}}
+            </div>
+        </div>
+    </div>
+</header>
