@@ -6,16 +6,16 @@
     <div class="container">
         <div class="intro__info">
             <address class="intro__info-address">м. Автозаводская, ул.Ленинская Слобода, д. 26, стр.2</address>
-            <div class="footer__info-working-time">
+            <div class="intro__info-working-time">
                 <span>ежедневно 10:00 - 22:00</span>
                 <span>супермаркет 24 часа</span>
             </div>
             <div class="intro__info-btns">
-                <a class="intro__info-btn" href="/">
+                <a class="button button--filled" href="/">
                     <svg><use xlink:href="#car-1"></svg>
                     <span class="intro__info-btn-label">Как добраться</span>
                 </a>
-                <a class="intro__info-btn" href="/">
+                <a class="button button--filled" href="/">
                     <svg><use xlink:href="#block"></svg>
                     <span class="intro__info-btn-label">Схема этажей</span>
                 </a>
@@ -25,22 +25,277 @@
 
     <div class="container">
         <div class="intro__inner">
-            <div class="swiper intro__slider">
-                <ul class="swiper-wrapper  intro__slider-wrapper">
-                    <li class="swiper-slide  intro__slide">
-                        <div class="intro__slide-wrapper">
-                            <img src="" alt="новогодний шопинг!">
-                            <h3 class="intro__slide-title">новогодний шопинг!</h3>
-                            <div class="intro__slide-subtitle">
-                                <p>Большая предновогодняя распродажа! <br> Скидки до -50%!</p>
-                            </div>
-                        </div>
+            <div class="intro__slider-block">
+                <div class="swiper intro__slider js-init-slider" data-fade="1" data-slides="1" data-space="0" data-delay="3000" data-loop="1">
+                    <ul class="swiper-wrapper  intro__slider-wrapper">
+                        <li class="swiper-slide intro__slide">
+                            <a class="intro__slide-link" href="/">
+                                <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                                <div class="intro__slide-content">
+                                    <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                                    <div class="intro__slide-subtitle">
+                                        <p>Большая предновогодняя распродажа! Скидки до -50%!</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide intro__slide">
+                            <a class="intro__slide-link" href="/">
+                                <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                                <div class="intro__slide-content">
+                                    <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                                    <div class="intro__slide-subtitle">
+                                        <p>Большая предновогодняя распродажа! Скидки до -60%!</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide intro__slide">
+                            <a class="intro__slide-link" href="/">
+                                <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                                <div class="intro__slide-content">
+                                    <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                                    <div class="intro__slide-subtitle">
+                                        <p>Большая предновогодняя распродажа! Скидки до -70%!</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="slider__btns intro__slider-btns js-slider-navigation">
+                        <button class="slider__btn js-prev-slide" type="button" title="Назад">
+                            <svg><use xlink:href="#arrow-left"></svg>
+                        </button>
+                        <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__favorite-promotion">
+                {{>card}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sections">
+    <div class="container">
+        <div class="sections__grid js-init-tabs">
+            <div class="sections__content">
+                <ul class="sections__names js-tabs">
+                    <li class="sections__name js-tab active">
+                        <button class="sections__btn" type="button">шопинг</button>
+                    </li>
+                    <li class="sections__name js-tab">
+                        <button class="sections__btn" type="button">развлечения</button>
+                    </li>
+                    <li class="sections__name js-tab">
+                        <button class="sections__btn" type="button">фудкорт</button>
                     </li>
                 </ul>
-                <div class="intro__slider-btns">
-                    <button class="intro__slider-btn intro__slider-btn--prev" type="button" title="Назад"></button>
-                    <button class="intro__slider-btn intro__slider-btn--next" type="button" title="Вперёд"></button>
+                <ul class="sections__bodies js-bodies">
+                    <li class="sections__body js-body active">
+                        <div class="sections__body-text">
+                            <p>Форма времяпрепровождения в виде посещения магазинов, обычно в торговых центрах и комплексах, и покупки товаров</p>
+                        </div>
+                        <ul class="hashtags">
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Аксессуары</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Детские товары</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Женская одежда</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Красота и здоровье</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Кафе</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Электроника</a>
+                            </li>
+                        </ul>
+                        <a class="button button--narrow sections__body-link" href="/">
+                            <span>Смотреть все</span>
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </a>
+                    </li>
+                    <li class="sections__body js-body">
+                        <div class="sections__body-text">
+                            <p>Посетители  смогут найти все необходимые магазины и много развлечений, особенно для своих детей.</p>
+                        </div>
+                        <ul class="hashtags">
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Детские развлечения</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Гонки</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Женская одежда</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">кино</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Игровые комнаты</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">игровые автоматы</a>
+                            </li>
+                        </ul>
+                        <a class="button button--narrow sections__body-link" href="/">
+                            <span>Смотреть все</span>
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </a>
+                    </li>
+                    <li class="sections__body js-body">
+                        <div class="sections__body-text">
+                            <p>Ресторанный дворик, или фуд-корт (англ. food court) — зона питания в торговом центре, гостинице, аэропорте на вокзале.</p>
+                        </div>
+                        <ul class="hashtags sections__body-hashtags">
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Фастфуд</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Восточная кухня</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">Турецкая кухня</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">кафе</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">пицца</a>
+                            </li>
+                            <li class="hashtags__item">
+                                <a class="hashtags__link" href="/">кофе</a>
+                            </li>
+                        </ul>
+                        <a class="button button--narrow sections__body-link" href="/">
+                            <span>Смотреть все</span>
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sections__icons-block">
+                <div class="sections__disk">
+                    <ul class="sections__icons js-bodies">
+                        <li class="sections__icon js-body active">
+                            <img src="img/section-1.svg" alt="шопинг">
+                        </li>
+                        <li class="sections__icon js-body">
+                            <img src="img/section-2.svg" alt="развлечения">
+                        </li>
+                        <li class="sections__icon js-body">
+                            <img src="img/section-3.svg" alt="фудкорт">
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news-list">
+    <div class="container">
+        <div class="news-list__inner">
+            <div class="swiper news-list__slider js-init-slider" data-loop="1" data-slides="3" data-space="24" data-delay="3000">
+                <div class="news-list__header">
+                    <h2 class="news-list__title">акции</h2>
+                    <div class="news-list__btns-container">
+                        <div class="slider__btns js-slider-navigation">
+                            <button class="slider__btn news-list__btns js-prev-slide" type="button" title="Назад">
+                                <svg><use xlink:href="#arrow-left"></svg>
+                            </button>
+                            <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                                <svg><use xlink:href="#arrow-right"></svg>
+                            </button>
+                        </div>
+                        <a class="button button--narrow news-list__link" href="/">
+                            <span>все акции</span>
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </a>
+                    </div>
+                </div>
+                <ul class="swiper-wrapper news-list__slider-wrapper">
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news-list">
+    <div class="container">
+        <div class="news-list__inner">
+            <div class="swiper news-list__slider js-init-slider" data-loop="1" data-slides="3" data-space="24" data-delay="3000">
+                <div class="news-list__header">
+                    <h2 class="news-list__title">новости</h2>
+                    <div class="news-list__btns-container">
+                        <div class="slider__btns js-slider-navigation">
+                            <button class="slider__btn news-list__btns js-prev-slide" type="button" title="Назад">
+                                <svg><use xlink:href="#arrow-left"></svg>
+                            </button>
+                            <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                                <svg><use xlink:href="#arrow-right"></svg>
+                            </button>
+                        </div>
+                        <a class="button button--narrow news-list__link" href="/">
+                            <span>все новости</span>
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </a>
+                    </div>
+                </div>
+                <ul class="swiper-wrapper news-list__slider-wrapper">
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                    <li class="swiper-slide">
+                        {{>card}}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

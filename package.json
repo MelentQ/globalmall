@@ -12,12 +12,11 @@
     "build": "gulp build-production",
     "dev": "gulp build && gulp serve",
     "squoosh": "gulp optimize-images",
-    "preghp": "npm run build",
     "ghp": "gh-pages -d build",
     "preftp": "npm run build",
     "ftp": "gulp ftp"
   },
-  "author": "Artem Safin",
+  "author": "MelentQ",
   "license": "MIT",
   "browserslist": [
     "last 2 versions",

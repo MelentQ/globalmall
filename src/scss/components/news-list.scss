@@ -1,0 +1,39 @@
+.news-list {
+
+  margin-bottom: 4.8rem;
+
+  &__inner {
+  }
+
+  &__slider {
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-bottom: 3.2rem;
+  }
+
+  &__title {
+    @extend %fs-h2;
+  }
+
+  &__btns-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 3.2rem;
+  }
+
+  &__btns {
+  }
+
+  &__link {
+  }
+
+  &__slider-wrapper {
+  }
+}

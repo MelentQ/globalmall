@@ -1,0 +1,169 @@
+.sections {
+  padding: 7.2rem 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
+
+  &__content {
+    grid-column: span 2;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2.4rem;
+
+    padding-bottom: 7.2rem;
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  // ******
+  // Names
+
+  &__names {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    width: 100%;
+
+    &::after {
+      content: none;
+
+      flex-grow: 1;
+
+      height: 0.3rem;
+      max-width: 7rem;
+
+      background-color: var(--primary-color);
+    }
+
+    &.active .sections__btn {
+      color: var(--dark);
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &.active::after {
+      content: '';
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+
+    position: relative;
+
+    @extend %fs-h2;
+    color: var(--grey);
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--dark);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: var(--grey);
+    }
+  }
+
+  // ******
+  // Bodies
+
+  &__bodies {
+    grid-column: span 5;
+  }
+
+  &__body {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__body-text {
+    margin-bottom: 3.8rem;
+
+    @extend %secondary-ff;
+    @extend %fs-t4;
+  }
+
+  &__body-link {
+    margin-top: 3.2rem;
+  }
+
+  // ******
+  // Icons
+
+  $disk-size: 70rem;
+
+  &__icons-block {
+    position: relative;
+  }
+
+  &__disk {
+    position: absolute;
+    top: calc(-1 * $disk-size / 2);
+    right: calc(-1 * $disk-size / 2);;
+
+    width: $disk-size;
+    height: $disk-size;
+
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+  }
+
+  &__icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: calc($disk-size / 2);
+    height: calc($disk-size / 2);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    img {
+      width: 12rem;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+}

@@ -7,6 +7,7 @@
 @import './global/global';
 @import './global/layout';
 
+@import './components/ui-kit';
 @import './components/header';
 @import './components/footer';
 @import './components/accordion';
@@ -16,6 +17,8 @@
 @import './components/modal';
 @import './components/search-block';
 
-
-
-
+@import './components/intro';
+@import './components/slider';
+@import './components/card';
+@import './components/sections';
+@import './components/news-list';

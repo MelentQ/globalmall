@@ -7,6 +7,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import editableTextContainer from './custom/editableTextContainer';
+import initSliders from './custom/sliders';
+import initTabs from './custom/tabs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // custom
 
     editableTextContainer();
+    initSliders();
+    initTabs();
 });
 
 document.addEventListener('lazyloaded', () => {

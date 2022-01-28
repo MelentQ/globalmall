@@ -1,0 +1,41 @@
+.slider {
+
+  &__btns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem;
+
+    background-color: var(--white);
+    border: 1px solid var(--dark);
+    border-radius: 2px;
+
+    transition: background-color $base-transition-time $base-transition-easing;
+
+    &:focus-visible,
+    &:hover {
+      background-color: var(--dark);
+
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+  }
+}
