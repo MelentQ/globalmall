@@ -97,7 +97,7 @@
         </div>
         <div class="page-content">
 
-            <header class="header">
+            <header class="header" data-toggle="600">
                 <div class="header__secondary-block">
                     <div class="container">
                         <div class="header__secondary-block-inner">
@@ -129,12 +129,36 @@
                             <a class="logo" href="/" title="На главную">
                                 <img src="img/logo.svg" alt="Logo">
                             </a>
-                            <div class="header__menu-block">
+                            <div class="header__burger-block js-toggle-desktop-burger">
                                 <button class="header__burger">
                                     <svg>
                                         <use xlink:href="#bar"></use>
                                     </svg>
                                 </button>
+                                <nav class="header__burger-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="/">Торговый центр</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">Арендаторам</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">Реклама в ТЦ</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">Вакансии</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">Новости</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header__menu-block js-search-wrapper">
                                 <nav class="header__menu">
                                     <ul>
                                         <li>
@@ -158,15 +182,13 @@
                                     </ul>
                                 </nav>
                                 <div class="search-block">
-                                    <label for="searchInput">
-                                        <input class="search-block__input" id="searchInput" name="search" type="text">
-                                    </label>
-                                    <button class="search-block__btn">
-                                        <svg>
-                                            <use xlink:href="#search"></use>
-                                        </svg>
-                                    </button>
+                                    <input class="search-block__input" placeholder="Поиск по сайту" id="searchInput" name="search" type="text">
                                 </div>
+                                <button class="header__open-search js-toggle-search">
+                                    <svg>
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
                             </div>
                             <ul class="socials">
                                 <li class="socials__item">
@@ -383,7 +405,7 @@
                                         <div class="sections__body-text">
                                             <p>Ресторанный дворик, или фуд-корт (англ. food court) — зона питания в торговом центре, гостинице, аэропорте на вокзале.</p>
                                         </div>
-                                        <ul class="hashtags sections__body-hashtags">
+                                        <ul class="hashtags">
                                             <li class="hashtags__item">
                                                 <a class="hashtags__link" href="/">Фастфуд</a>
                                             </li>
