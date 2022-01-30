@@ -1,26 +1,27 @@
 .search-block {
 
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: auto;
+
+  transition: width $base-transition-time $base-transition-easing;
+
+  overflow: hidden;
+
   &__input {
-    // todo: сделать
-    display: none;
+    padding: 1rem 4rem 1rem 1.6rem;
+
+    border-radius: 2rem;
 
     background-color: white;
-  }
 
-  &__btn {
-
-    &:focus-visible,
-    &:hover {
-      svg {
-        fill: var(--primary-color);
-      }
-    }
-
-    svg {
-      width: 2rem;
-      height: 2rem;
-
-      transition: fill $base-transition-time $base-transition-easing;
+    &::placeholder {
+      @extend %secondary-ff;
+      @extend %fs-t6;
     }
   }
 }

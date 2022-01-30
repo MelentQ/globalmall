@@ -9,6 +9,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import editableTextContainer from './custom/editableTextContainer';
 import initSliders from './custom/sliders';
 import initTabs from './custom/tabs';
+import toggleHeader from './custom/toggleHeader';
+import toggleMenuSearch from './custom/toggleMenuSearch';
+import toggleDesktopBurger from './custom/toggleDesktopBurger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     editableTextContainer();
     initSliders();
     initTabs();
+    toggleHeader();
+    toggleMenuSearch();
+    toggleDesktopBurger();
 });
 
 document.addEventListener('lazyloaded', () => {
