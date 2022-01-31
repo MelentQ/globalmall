@@ -37,6 +37,8 @@
 
     .slider__btn {
       background-color: rgba(0,0,0,0);
+
+      transform: translate3d(0,0,0);
       
       &:hover,
       &:focus {

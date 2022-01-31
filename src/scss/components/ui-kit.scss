@@ -21,6 +21,8 @@
 
   transition: color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing;
 
+  transform: translate3d(0,0,0);
+
   @include breakpoint(mobile) {
     padding: 0.9rem 1.6rem;
   }
@@ -38,6 +40,8 @@
 
     box-shadow: var(--btn-shadow);
 
+    transform: translate3d(0,0,0);
+
     &:focus-visible,
     &:hover {
       color: var(--primary-color) !important;
@@ -50,6 +54,8 @@
     color: var(--black) !important;
 
     box-shadow: var(--btn-shadow);
+
+    transform: translate3d(0,0,0);
 
     &:focus-visible,
     &:hover {
@@ -101,6 +107,8 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
+    transform: translate3d(0,0,0);
+
     &:hover,
     &:focus {
       color: var(--primary-color);
@@ -123,6 +131,8 @@
       background-size: 2rem 2rem;
 
       transition: background-position $base-transition-time $base-transition-easing;
+
+      transform: translate3d(0,0,0);
     }
   }
 }

@@ -51,6 +51,9 @@
   }
 
   &__info-btns {
+    position: relative;
+    z-index: 2;
+    
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -87,6 +90,9 @@
 
   &__favorite-promotion {
     grid-column: span 1;
+
+    position: relative;
+    z-index: 2;
 
     @include breakpoint(tablet) {
       display: none;
@@ -152,6 +158,8 @@
       object-fit: cover;
 
       transition: transform $base-transition-time $base-transition-easing;
+
+      transform: translate3d(0,0,0);
     }
 
     @include breakpoint(tablet) {
@@ -169,6 +177,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 1rem;
 
     width: 100%;
     height: 100%;

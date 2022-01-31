@@ -22,6 +22,8 @@
 
     transition: background-color $base-transition-time $base-transition-easing;
 
+    transform: translate3d(0,0,0);
+
     &:focus-visible,
     &:hover {
       background-color: var(--dark);
@@ -42,6 +44,8 @@
       height: 2.4rem;
 
       transition: fill $base-transition-time $base-transition-easing;
+
+      transform: translate3d(0,0,0);
     }
   }
 }

@@ -11,6 +11,18 @@
 
   overflow: hidden;
 
+  transform: translate3d(0,0,0);
+
+  &--light {
+    color: var(--dark) !important;
+  }
+
+  &--overlay {
+    .card__overlay {
+      background: var(--card-overlay);
+    }
+  }
+
   &:hover,
   &:focus-visible {
     img {
@@ -31,6 +43,8 @@
     object-fit: cover;
 
     transition: transform $base-transition-time $base-transition-easing;
+
+    transform: translate3d(0,0,0);
   }
 
   &__overlay {
@@ -41,8 +55,6 @@
 
     width: 100%;
     height: 100%;
-
-    background: var(--card-overlay);
   }
 
   &__content {
