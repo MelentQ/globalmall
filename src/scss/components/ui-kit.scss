@@ -21,6 +21,10 @@
 
   transition: color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing;
 
+  @include breakpoint(mobile) {
+    padding: 0.9rem 1.6rem;
+  }
+
   &:focus-visible,
   &:hover {
     background-color: var(--dark);
@@ -36,6 +40,20 @@
 
     &:focus-visible,
     &:hover {
+      color: var(--primary-color) !important;
+    }
+  }
+
+  &--filled-gold {
+    background-color: var(--primary-color);
+
+    color: var(--black) !important;
+
+    box-shadow: var(--btn-shadow);
+
+    &:focus-visible,
+    &:hover {
+      background-color: var(--dark);
       color: var(--primary-color) !important;
     }
   }

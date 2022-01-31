@@ -1,5 +1,11 @@
 .sections {
+  position: relative;
+
   padding: 7.2rem 0;
+
+  @include breakpoint(mobile) {
+    padding-top: 2rem;
+  }
 
   &__grid {
     display: grid;
@@ -10,12 +16,24 @@
   &__content {
     grid-column: span 2;
 
+    position: relative;
+    z-index: 2;
+
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 2.4rem;
 
     padding-bottom: 7.2rem;
     border-bottom: 3px solid var(--primary-color);
+
+    @include breakpoint(tablet) {
+      grid-column: span 3;
+      border-bottom: none;
+      padding-bottom: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
   // ******
@@ -28,6 +46,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1.2rem;
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1
+    }
   }
 
   &__name {
@@ -96,6 +118,10 @@
 
   &__bodies {
     grid-column: span 5;
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1
+    }
   }
 
   &__body {
@@ -111,6 +137,10 @@
 
     @extend %secondary-ff;
     @extend %fs-t4;
+
+    @include breakpoint(small-tablet) {
+      max-width: 32rem;
+    }
   }
 
   &__body-link {
@@ -120,19 +150,26 @@
   // ******
   // Icons
 
-  $disk-size: 70rem;
+  --disk-size: 70rem;
+
+  @include breakpoint(tablet) {
+    --disk-size: 40rem;
+  }
 
   &__icons-block {
-    position: relative;
+    position: absolute;
+    top: calc(-1 * var(--disk-size) / 2);
+    right: calc(-1 * var(--disk-size) / 2);
+
+    @include breakpoint(tablet) {
+      top: unset;
+      bottom: calc(-1 * var(--disk-size) / 2);
+    }
   }
 
   &__disk {
-    position: absolute;
-    top: calc(-1 * $disk-size / 2);
-    right: calc(-1 * $disk-size / 2);;
-
-    width: $disk-size;
-    height: $disk-size;
+    width: var(--disk-size);
+    height: var(--disk-size);
 
     border-radius: 50%;
 
@@ -144,14 +181,24 @@
     bottom: 0;
     left: 0;
 
-    width: calc($disk-size / 2);
-    height: calc($disk-size / 2);
+    width: calc(var(--disk-size) / 2);
+    height: calc(var(--disk-size) / 2);
+
+    @include breakpoint(tablet) {
+      top: 0;
+      bottom: unset;
+    }
   }
 
   &__icon {
     position: absolute;
     top: 6rem;
     right: 6rem;
+    
+    @include breakpoint(tablet) {
+      right: unset;
+      left: 11rem;
+    }
 
     display: none;
 
@@ -164,6 +211,10 @@
       height: auto;
 
       object-fit: contain;
+
+      @include breakpoint(tablet) {
+        width: 6rem;
+      }
     }
   }
 }

@@ -13,53 +13,71 @@
             <div class="intro__info-btns">
                 <a class="button button--filled" href="/">
                     <svg><use xlink:href="#car-1"></svg>
-                    <span class="intro__info-btn-label">Как добраться</span>
+                    <span>Как добраться</span>
                 </a>
                 <a class="button button--filled" href="/">
                     <svg><use xlink:href="#block"></svg>
-                    <span class="intro__info-btn-label">Схема этажей</span>
+                    <span>Схема этажей</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container intro__slider-mobile">
         <div class="intro__inner">
             <div class="intro__slider-block">
                 <div class="swiper intro__slider js-init-slider" data-fade="1" data-slides="1" data-space="0" data-delay="3000" data-loop="1">
                     <ul class="swiper-wrapper  intro__slider-wrapper">
                         <li class="swiper-slide intro__slide">
-                            <a class="intro__slide-link" href="/">
-                                <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                            <div class="intro__slide-link">
+                                <picture>
+                                    <source srcset="img/content/intro-mobile.jpg" media="(max-width: 576px)">
+                                    <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                                </picture>
                                 <div class="intro__slide-content">
-                                    <h3 class="intro__slide-title">новогодний шопинг!</h3>
-                                    <div class="intro__slide-subtitle">
-                                        <p>Большая предновогодняя распродажа! Скидки до -50%!</p>
+                                    <div class="intro__slide-text">
+                                        <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                                        <div class="intro__slide-subtitle">
+                                            <p>Большая предновогодняя распродажа! Скидки до -50%!</p>
+                                        </div>
                                     </div>
+                                    <a class="button button--filled intro__slide-btn" href="/">Подробнее</a>
                                 </div>
-                            </a>
+                            </div>
                         </li>
                         <li class="swiper-slide intro__slide">
-                            <a class="intro__slide-link" href="/">
-                                <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                            <div class="intro__slide-link">
+                                <picture>
+                                    <source srcset="img/content/intro-mobile.jpg" media="(max-width: 576px)">
+                                    <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                                </picture>
                                 <div class="intro__slide-content">
-                                    <h3 class="intro__slide-title">новогодний шопинг!</h3>
-                                    <div class="intro__slide-subtitle">
-                                        <p>Большая предновогодняя распродажа! Скидки до -60%!</p>
+                                    <div class="intro__slide-text">
+                                        <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                                        <div class="intro__slide-subtitle">
+                                            <p>Большая предновогодняя распродажа! Скидки до -60%!</p>
+                                        </div>
                                     </div>
+                                    <a class="button button--filled intro__slide-btn" href="/">Подробнее</a>
                                 </div>
-                            </a>
+                            </div>
                         </li>
                         <li class="swiper-slide intro__slide">
-                            <a class="intro__slide-link" href="/">
-                                <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                            <div class="intro__slide-link">
+                                <picture>
+                                    <source srcset="img/content/intro-mobile.jpg" media="(max-width: 576px)">
+                                    <img src="img/content/intro.jpg" alt="новогодний шопинг!">
+                                </picture>
                                 <div class="intro__slide-content">
-                                    <h3 class="intro__slide-title">новогодний шопинг!</h3>
-                                    <div class="intro__slide-subtitle">
-                                        <p>Большая предновогодняя распродажа! Скидки до -70%!</p>
+                                    <div class="intro__slide-text">
+                                        <h3 class="intro__slide-title">новогодний шопинг!</h3>
+                                        <div class="intro__slide-subtitle">
+                                            <p>Большая предновогодняя распродажа! Скидки до -70%!</p>
+                                        </div>
                                     </div>
+                                    <a class="button button--filled intro__slide-btn" href="/">Подробнее</a>
                                 </div>
-                            </a>
+                            </div>
                         </li>
                     </ul>
                     <div class="slider__btns intro__slider-btns js-slider-navigation">
@@ -70,6 +88,7 @@
                             <svg><use xlink:href="#arrow-right"></svg>
                         </button>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
             <div class="intro__favorite-promotion">
@@ -247,6 +266,10 @@
                         {{>card}}
                     </li>
                 </ul>
+                <div class="swiper-pagination"></div>
+                <a class="button button--narrow news-list__link-mobile" href="/">
+                    <span>все акции</span>
+                </a>
             </div>
         </div>
     </div>
@@ -296,6 +319,10 @@
                         {{>card}}
                     </li>
                 </ul>
+                <div class="swiper-pagination"></div>
+                <a class="button button--narrow news-list__link-mobile" href="/">
+                    <span>все новости</span>
+                </a>
             </div>
         </div>
     </div>

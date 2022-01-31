@@ -16,12 +16,29 @@
 
   .logo {
     display: inline-flex;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   
     img {
       width: 34.7rem;
-      height: 4rem;
+      height: auto;
   
       object-fit: contain;
+
+      @include breakpoint(large-desktop) {
+        width: 24rem;
+      }
+      @include breakpoint(desktop) {
+        width: 20rem;
+      }
+    }
+  }
+
+  .socials {
+    @include breakpoint(tablet) {
+      display: none;
     }
   }
 
@@ -32,6 +49,10 @@
     padding: 1.2rem 0;
 
     background-color: var(--white);
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &__secondary-block-inner {
@@ -137,27 +158,58 @@
     color: var(--white);
 
     padding: 2rem 0;
+
+    @include breakpoint(tablet) {
+      padding: 1.5rem 0;
+    }
   }
 
   &__main-block-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem;
+
+    @include breakpoint(laptop) {
+      gap: 2rem;
+    }
   }
 
   &__menu-block {
+    flex-grow: 1;
+
     position: relative;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    .logo {
+      display: none;
+
+      img {
+        height: 3rem;
+        width: auto;
+        margin-right: 1.6rem;
+      }
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
   }
 
   &__menu {
     margin-right: 4rem;
 
     transition: opacity $base-transition-time $base-transition-easing, visibility $base-transition-time $base-transition-easing;
+
+    @include breakpoint(desktop) {
+      margin-right: 2rem;
+    }
+    @include breakpoint(tablet) {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -166,6 +218,16 @@
       gap: 2.4rem;
       row-gap: 0.4rem;
       flex-wrap: wrap;
+
+      @include breakpoint(laptop) {
+        gap: 1.4rem;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     a {
@@ -176,6 +238,10 @@
       &:focus-visible,
       &:hover {
         color: var(--primary-color);
+      }
+
+      @include breakpoint(laptop) {
+        @include clamp(9, 11);
       }
     }
   }
@@ -296,6 +362,14 @@
         opacity: 0;
         visibility: hidden;
       }
+    }
+  }
+
+  &__ghost-mobile {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
     }
   }
 }

@@ -12,6 +12,7 @@ import initTabs from './custom/tabs';
 import toggleHeader from './custom/toggleHeader';
 import toggleMenuSearch from './custom/toggleMenuSearch';
 import toggleDesktopBurger from './custom/toggleDesktopBurger';
+import initModals from './custom/initModals';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // custom
 
+    initModals();
     editableTextContainer();
     initSliders();
     initTabs();

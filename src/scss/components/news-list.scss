@@ -15,6 +15,10 @@
     gap: 1rem;
 
     margin-bottom: 3.2rem;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 2.2rem;
+    }
   }
 
   &__title {
@@ -26,12 +30,35 @@
     align-items: stretch;
     justify-content: space-between;
     gap: 3.2rem;
+
+    @include breakpoint(small-mobile) {
+      display: none;
+    }
+
+    .slider__btn {
+      background-color: rgba(0,0,0,0);
+      
+      &:hover,
+      &:focus {
+        background-color: var(--dark);
+      }
+    }
   }
 
   &__btns {
   }
 
   &__link {
+  }
+  &__link-mobile {
+    display: none;
+
+    @include breakpoint(small-mobile) {
+      display: flex;
+      width: 100%;
+      min-height: 4.2rem;
+      margin-top: 2.2rem;
+    }
   }
 
   &__slider-wrapper {

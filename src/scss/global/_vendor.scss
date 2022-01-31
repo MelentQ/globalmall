@@ -1,6 +1,7 @@
 @import '../../node_modules/swiper/swiper-bundle';
 @import '../../node_modules/choices.js/public/assets/styles/choices';
 @import '../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone';
+@import '../libs/hystmodal.scss';
 // @import '../../node_modules/plyr/dist/plyr';
 // todo: решить баг с plyr.css "Error: -7px and -2 are incompatible."
 
@@ -18,4 +19,25 @@
 .lazyloaded {
     opacity: 1;
     transition: opacity 300ms;
+}
+
+.swiper {
+    position: relative;
+}
+
+.swiper-pagination {
+    display: none;
+    @include breakpoint(tablet) {
+        display: block;
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    position: static;
+
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--black);
 }

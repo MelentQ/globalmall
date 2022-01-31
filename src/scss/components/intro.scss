@@ -12,17 +12,41 @@
     margin-bottom: 6rem;
 
     text-transform: uppercase;
+
+    @include breakpoint(desktop) {
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
   }
 
   &__info-address {
     @extend %fs-h5;
+
+    @include breakpoint(laptop) {
+      @include clamp(12, 14);
+    }
+    @include breakpoint(small-tablet) {
+      text-align: center;
+    }
   }
 
   &__info-working-time {
     @extend %fs-h5;
 
+    @include breakpoint(laptop) {
+      @include clamp(12, 14);
+    }
+
     & > * {
       display: block;
+
+      @include breakpoint(small-tablet) {
+        text-align: center;
+      }
     }
   }
 
@@ -31,6 +55,11 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+
+    @include breakpoint(small-tablet) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   // ******
@@ -47,6 +76,10 @@
 
   &__slider-block {
     grid-column: span 2;
+
+    @include breakpoint(tablet) {
+      grid-column: span 3;
+    }
   }
 
   // ******
@@ -54,10 +87,20 @@
 
   &__favorite-promotion {
     grid-column: span 1;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   // ******
   // Intro Slider
+
+  &__slider-mobile {
+    @include breakpoint(small-mobile) {
+      padding: 0;
+    }
+  }
 
   &__slider-wrapper {
     position: relative;
@@ -69,6 +112,10 @@
     bottom: 5rem;
     right: 5rem;
     z-index: 5;
+
+    @include breakpoint(tablet) {
+      display: none !important;
+    }
   }
 
   // ******
@@ -81,10 +128,10 @@
   &__slide-link {
     position: relative;
 
-    display: block;
-
     height: 0;
     padding-bottom: calc(50% - 1.2rem); // 1.2 = gap / 2
+
+    overflow: hidden;
 
     &:hover,
     &:focus-visible {
@@ -106,6 +153,11 @@
 
       transition: transform $base-transition-time $base-transition-easing;
     }
+
+    @include breakpoint(tablet) {
+      padding-bottom: 0;
+      min-height: 37.5rem;
+    }
   }
 
   &__slide-content {
@@ -113,11 +165,23 @@
     top: 0;
     left: 0;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
     width: 100%;
     height: 100%;
     z-index: 5;
 
     padding: 5rem;
+
+    @include breakpoint(tablet) {
+      padding: 3.4rem;
+    }
+    @include breakpoint(small-mobile) {
+      padding: 3.4rem 2.4rem;
+    }
   }
 
   &__slide-title {
@@ -125,6 +189,11 @@
     margin-bottom: 2.6rem;
 
     @extend %fs-h1;
+
+    @include breakpoint(tablet) {
+      max-width: 25rem;
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__slide-subtitle {
@@ -132,5 +201,9 @@
 
     @extend %secondary-ff;
     @extend %fs-t4;
+  }
+
+  &__slide-btn {
+    min-height: 4.4rem;
   }
 }

@@ -1,8 +1,6 @@
-import {Swiper, Navigation, EffectFade, 
-  Autoplay} from "swiper";
+import {Swiper, Navigation, EffectFade, Autoplay, Pagination} from "swiper";
 
-Swiper.use([Navigation, EffectFade, 
-  Autoplay]);
+Swiper.use([Navigation, EffectFade, Autoplay, Pagination]);
 
 export default function initSliders() {
   const sliders = Array.from(document.querySelectorAll('.js-init-slider'));
@@ -21,13 +19,32 @@ export default function initSliders() {
       }
     }
 
+    let breakpoints = {
+      320: {
+        slidesPerView: 1
+      },
+      576: {
+        slidesPerView: slidesPerView == 1 ? 1 : 2
+      },
+      1024: {
+        slidesPerView: slidesPerView == 1 ? 1 : slidesPerView
+      }
+    }
+
     const swiper = new Swiper(slider, {
       slidesPerView,
       spaceBetween,
       navigation,
       autoplay,
       loop,
-      ...fadeEffect
+      ...fadeEffect,
+      pagination: {
+        el: slider.querySelector('.swiper-pagination'),
+        type: 'bullets',
+        clickable: true,
+        bulletElement: 'button'
+      },
+      breakpoints
     })
   })
 }

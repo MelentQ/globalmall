@@ -18,6 +18,10 @@
   gap: 2.7rem;
   row-gap: 0.4rem;
 
+  @include breakpoint(desktop) {
+    gap: 1.6rem;
+  }
+
   &__item {
     
   }

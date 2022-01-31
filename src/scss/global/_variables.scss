@@ -31,6 +31,17 @@
 
   --js-secondary-header-height: 4.5rem;
   --js-main-header-height: 8rem;
+
+  @media only screen and (max-width: (1400px)) {
+    --content-padding: 4rem;
+  }
+  @media only screen and (max-width: (1024px)) {
+    --js-secondary-header-height: 0;
+    --content-padding: 3rem;
+  }
+  @media only screen and (max-width: (640px)) {
+    --content-padding: 2.4rem;
+  }
 }
 
 $minWidth: 375;

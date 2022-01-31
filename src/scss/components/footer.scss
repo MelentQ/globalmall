@@ -5,10 +5,22 @@
   background-color: black;
   color: var(--white);
 
+  .socials {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+  }
+
   .logo {
     display: inline-flex;
 
     margin-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.2rem;
+    }
   
     img {
       width: 13rem;
@@ -21,7 +33,14 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2.4rem;
+    gap: 3.2rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1fr;
+    }
+    @include breakpoint(tablet) {
+      justify-items: center;
+    }
   }
 
   // Logo Block (Left)
@@ -38,13 +57,35 @@
     @extend %fs-t4;
     @extend %secondary-ff;
     color: var(--secondary-dark);
+
+    .footer__copyright {
+      display: block;
+    }
+
+    .footer__policy {
+      display: block;
+    }
+
+    @include breakpoint(laptop) {
+      .footer__copyright {
+        display: none;
+      }
+  
+      .footer__policy {
+        display: none;
+      }
+    }
   }
 
   &__copyright {
+    display: none;
+
     margin-bottom: 0.3rem;
   }
 
   &__policy {
+    display: none;
+
     position: relative;
 
     transition: color $base-transition-time $base-transition-easing;
@@ -84,7 +125,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
 
+    width: 100%;
+
     @extend %fs-h5;
+
+    @include breakpoint(laptop) {
+      grid-column: span 1;
+    }
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 1.6rem;
+    }
   }
 
   &__menu {
@@ -96,6 +148,18 @@
 
     border-bottom: 1px solid var(--primary-color);
 
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+
+      width: calc(100% - 2.6rem * 2);
+      max-width: 27.5rem;
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+      margin-bottom: 3.2rem;
+
+      border-top: 1px solid var(--primary-color);
+    }
+
     ul {
       display: flex;
       align-items: center;
@@ -103,10 +167,11 @@
       flex-wrap: wrap;
       gap: 3.4rem;
       row-gap: 0.4rem;
-    }
 
-    li {
-
+      @include breakpoint(tablet) {
+        flex-direction: column;
+        row-gap: 2.4rem;
+      }
     }
 
     a {
@@ -120,6 +185,9 @@
   }
 
   &__address {
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
   }
 
   &__working-time {
@@ -127,6 +195,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__contacts {
@@ -176,6 +248,85 @@
       background-color: var(--white);
 
       transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+
+  &__menu-mobile {
+    display: none;
+
+    width: 100%;
+
+    @extend %fs-h5;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 3.4rem;
+      row-gap: 0.4rem;
+
+      @include breakpoint(tablet) {
+        flex-direction: column;
+        row-gap: 2.4rem;
+      }
+    }
+
+    a {
+      transition: color $base-transition-time $base-transition-easing;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__buttons-mobile {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+
+      margin-bottom: 3.8rem;
+    }
+  }
+
+  &__copyright-block-mobile {
+    display: none;
+
+    @extend %fs-t4;
+    @extend %secondary-ff;
+    color: var(--secondary-dark);
+
+    @include breakpoint(laptop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5rem;
+
+      .footer__copyright {
+        display: block;
+        width: fit-content;
+      }
+  
+      .footer__policy {
+        display: block;
+        width: fit-content;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
     }
   }
 }
