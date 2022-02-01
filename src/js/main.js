@@ -13,6 +13,7 @@ import toggleHeader from './custom/toggleHeader';
 import toggleMenuSearch from './custom/toggleMenuSearch';
 import toggleDesktopBurger from './custom/toggleDesktopBurger';
 import initModals from './custom/initModals';
+import hideSortButtons from './custom/hideSortButtons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleHeader();
     toggleMenuSearch();
     toggleDesktopBurger();
+    hideSortButtons();
 });
 
 document.addEventListener('lazyloaded', () => {

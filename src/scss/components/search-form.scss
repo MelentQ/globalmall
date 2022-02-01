@@ -1,0 +1,273 @@
+.search-form {
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 5.6rem;
+
+    border-bottom: 3px solid black;
+
+    input {
+      flex-grow: 1;
+
+      padding-top: 1.6rem;
+      padding-bottom: 1.6rem;
+
+      @extend %fs-t4;
+      @extend %secondary-ff;
+
+      &::placeholder {
+        @extend %fs-t4;
+        @extend %secondary-ff;
+      }
+    }
+  }
+
+  &__btn {
+    svg {
+      height: 3.6rem;
+      width: 3.6rem;
+    }
+  }
+
+  &__filter-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+
+    margin-bottom: 3rem;
+  }
+
+  &__filter-btn-wrapper {
+    color: var(--grey);
+  }
+
+  &__filter-radio {
+    display: block;
+    position: relative;
+
+    cursor: pointer;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--dark);
+
+      .search-form__filter-radio-label::after {
+        background-color: var(--dark);
+      }
+    }
+
+    input:checked ~ .search-form__filter-radio-label {
+      color: var(--dark);
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__filter-radio-label {
+    position: relative;
+
+    @extend %fs-h4;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: var(--grey);
+
+      transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+
+  &__filter-radio-input {
+  }
+
+  &__filter-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 0.6rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    max-height: 50rem;
+
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+
+    &.hidden {
+      max-height: 3.8rem;
+      transition: max-height 0.5s ease-out;
+    }
+  }
+
+  &__filter-item {
+    
+  }
+
+  &__filter-checkbox {
+    display: block;
+    position: relative;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      .search-form__filter-checkbox-label {
+        color: var(--primary-color);
+
+        &::before {
+          background-position-x: 2px;
+        }
+      }
+    }
+
+    input:checked ~ .search-form__filter-checkbox-label {
+      background-color: var(--primary-color);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--dark);
+      }
+
+      &::before {
+        background-image: url(../img/icons/close-small.svg);
+      }
+    }
+  }
+
+  &__filter-checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0.8rem 1.4rem;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+
+    @include clamp(9, 11);
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    transform: translate3d(0,0,0);
+    cursor: pointer;
+
+    &::before {
+      content: '';
+
+      position: relative;
+
+      width: 2rem;
+      height: 2rem;
+
+      background-image: url(../img/hashtag.svg);
+      background-repeat: no-repeat;
+      background-size: 2rem 2rem;
+
+      transition: background-position $base-transition-time $base-transition-easing;
+
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &__filter-checkbox-input {
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.2rem;
+
+    margin-top: 1rem;
+
+    @extend %secondary-ff;
+    @extend %fs-t6;
+  }
+
+  &__hide-btn {
+    position: relative;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--grey);
+
+      &::after {
+        background-color: var(--grey);
+      }
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--dark);
+
+      transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+
+  &__reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+
+    color: var(--error);
+
+    transition: opacity $base-transition-time $base-transition-easing;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.8;
+    }
+
+    svg {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+
+  &__reset-btn-label {
+    position: relative;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--error);
+
+      transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+}

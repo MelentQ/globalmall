@@ -1,0 +1,46 @@
+.breadcrumbs {
+  margin-top: 4rem;
+  margin-bottom: 1.8rem;
+  
+  @extend %secondary-ff;
+  @extend %fs-t6;
+  color: var(--grey);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+
+    & > * {
+      position: relative;
+
+      margin-right: 2.3rem;
+
+      &:focus-visible,
+      &:hover {
+        color: var(--primary-color) !important;
+      }
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        right: -2.3rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 1.5rem;
+        height: 1px;
+
+        background-color: var(--grey);
+      }
+
+      &:last-of-type {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}

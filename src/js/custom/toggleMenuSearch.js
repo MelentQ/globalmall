@@ -6,5 +6,12 @@ export default function toggleMenuSearch() {
     serachMenuBtn.addEventListener('click', () => {
       container.classList.toggle('active');
     })
+
+    window.addEventListener('click', e => {
+      const target = e.target
+      if (!target.closest('.js-toggle-search') && !target.closest('.js-search-wrapper')) {
+        container.classList.remove('active');
+      }
+    })
   }
 }

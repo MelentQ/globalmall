@@ -1,0 +1,429 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="breadcrumbs">
+    <div class="container">
+        <nav class="breadcrumbs__list">
+            <a href="/">Главная</a>
+            <a class="disabled" href="/">Магазины</a>
+        </nav>
+    </div>
+</section>
+
+<section class="search">
+    <div class="container">
+        <div class="search__grid">
+            <div class="search__title-block">
+                <h2 class="search__title">Магазины</h2>
+            </div>
+            <div class="search__form">
+                <form name="search" class="search-form js-hide-sort-buttons js-backend-submit-handler">
+                    <div class="search-form__input">
+                        <input name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
+                        <button class="search-form__btn js-submit" type="submit">
+                            <svg><use xlink:href="#search"></svg>
+                        </button>
+                    </div>
+                    <ul class="search-form__filter-btns">
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" checked name="floor" value="all" type="radio">
+                                <span class="search-form__filter-radio-label">все этажи</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="1" type="radio">
+                                <span class="search-form__filter-radio-label">1 этаж</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="2" type="radio">
+                                <span class="search-form__filter-radio-label">2 этаж</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="search-form__filter-list js-hidden-container">
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">все категории</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Аксессуары</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Детские товары</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Женская одежда</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">кафе</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">кафе</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Обувь</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Красота и здоровье</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Мужская одежда</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">одежда</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Подарки</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Продукты</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Салон связи</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Товары для дома</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Туризм</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Услуги</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">спорт</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Табак</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Сигареты</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Спортивные товары</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Электронные сигареты</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Электроника</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="search-form__footer">
+                        <button class="search-form__hide-btn js-hide-btn" type="button">Скрыть</button>
+                        <button class="search-form__reset-btn js-reset" type="button">
+                            <svg><use xlink:href="#close-small"></svg>
+                            <span class="search-form__reset-btn-label">Сбросить фильтр</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newslist">
+    <div class="container">
+        <ul class="newslist__list">
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-1.jpg" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">Триал-Спорт</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">спорт</a>
+                    </li>
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">спортивные товары</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-2.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">NL International</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">Красота и здоровье</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-3.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">Детский мир</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">Детские товары</a>
+                    </li>
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">детская одежда</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-4.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">TOPGUN</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">Услуги</a>
+                    </li>
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">барбершоп</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-1.jpg" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">Триал-Спорт</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">спорт</a>
+                    </li>
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">спортивные товары</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-2.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">NL International</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">Красота и здоровье</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-3.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">Детский мир</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">Детские товары</a>
+                    </li>
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">детская одежда</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-4.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">TOPGUN</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">Услуги</a>
+                    </li>
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">барбершоп</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="newslist__more-container">
+            <a class="button button--filled newslist__more" href="#">Показать еще</a>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

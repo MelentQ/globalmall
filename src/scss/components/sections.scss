@@ -99,6 +99,10 @@
     &:hover,
     &:focus-visible {
       color: var(--dark);
+
+      &::after {
+        background-color: var(--dark);
+      }
     }
 
     &::after {
@@ -112,6 +116,7 @@
       height: 2px;
 
       background-color: var(--grey);
+      transition: background-color $base-transition-time $base-transition-easing;
     }
   }
 

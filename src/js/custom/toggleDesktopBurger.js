@@ -8,6 +8,14 @@ export default function toggleDesktopBurger() {
         btn.addEventListener('click', () => {
           content.classList.toggle('active');
         })
+
+        window.addEventListener('click', e => {
+          const target = e.target
+          if (!target.closest('.header__burger-menu') && !target.closest('.header__burger')) {
+            content.classList.remove('active');
+          }
+        })
+
       } else {
         btn.addEventListener('click', () => {
           window.modalAPI.open('#menu-modal');

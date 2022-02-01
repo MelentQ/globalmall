@@ -1,0 +1,134 @@
+.newslist {
+
+  margin-bottom: 7.2rem;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+
+  &__card-wrapper {
+    position: relative;
+
+    margin-bottom: 1.2rem;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    min-height: 18rem;
+    padding: 2rem;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px -2px 21px rgba(0, 0, 0, 0.03), 0px 100px 80px rgba(23, 33, 51, 0.04), 0px 12px 10.0172px rgba(23, 33, 51, 0.02);
+    border-radius: 2px;
+
+    transition: box-shadow $base-transition-time $base-transition-easing;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0px -2px 21px rgba(0, 0, 0, 0.05), 0px 100px 80px rgba(23, 33, 51, 0.05), 0px 12px 10.0172px rgba(23, 33, 51, 0.05);
+
+      .newslist__card-name {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__card-image-wrapper {
+    flex-basis: 28.7rem;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+  }
+
+  &__card-image {
+    max-height: 10rem;
+    max-width: 20rem;
+  }
+
+  &__card-text {
+    flex-grow: 1;
+  }
+
+  &__card-name {
+    margin-bottom: 1.6rem;
+
+    @include clamp(17, 22);
+    line-height: 1.3;
+    font-weight: 500;
+
+    transition: color $base-transition-time $base-transition-easing;
+  }
+
+  &__card-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
+
+    @extend %fs-h6;
+    color: var(--grey);
+  }
+
+  &__card-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    padding: 0.9rem 1.4rem;
+
+    border: 1px solid var(--secondary-grey);
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    transition: color $base-transition-time $base-transition-easing, border-color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--dark);
+      border-color: var(--dark);
+      color: var(--primary-color);
+    }
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__card-btn-label {
+    @include clamp(9, 11);
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__more-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2.8rem;
+  }
+
+  &__more {
+    min-height: 4.2rem;
+  }
+}
