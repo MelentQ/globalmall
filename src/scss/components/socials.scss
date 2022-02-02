@@ -29,12 +29,25 @@
 
   &__item-link {
 
-    &:hover svg,
+    &:hover svg {
+      fill: var(--white);
+    }
+
     &:focus-visible svg {
       fill: var(--white);
     }
 
-    &:hover,
+    &:hover {
+      --youtube-icon-color: white !important;
+
+      #youtube-icon-rectangle {
+        stroke: white;
+      }
+      #youtube-icon-border {
+        stroke: white;
+      }
+    }
+
     &:focus-visible {
       --youtube-icon-color: white !important;
 

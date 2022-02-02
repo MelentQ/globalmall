@@ -97,8 +97,15 @@
 
     transform: translate3d(0,0,0);
       
-    &:hover,
     &:focus-visible {
+      color: var(--primary-color);
+
+      &::after {
+        background-color: var(--primary-color);
+      }
+    }
+
+    &:hover {
       color: var(--primary-color);
 
       &::after {
@@ -192,9 +199,12 @@
       transition: color $base-transition-time $base-transition-easing;
 
       transform: translate3d(0,0,0);
-
-      &:hover,
+      
       &:focus-visible {
+        color: var(--white);
+      }
+
+      &:hover {
         color: var(--white);
       }
     }
@@ -230,9 +240,11 @@
     transition: color $base-transition-time $base-transition-easing;
 
     transform: translate3d(0,0,0);
-
-    &:hover,
+    
     &:focus-visible {
+      color: var(--primary-color);
+    }
+    &:hover {
       color: var(--primary-color);
     }
   }
@@ -246,7 +258,14 @@
 
     transform: translate3d(0,0,0);
 
-    &:hover,
+    &:hover {
+      color: var(--primary-color);
+
+      &::after {
+        background-color: var(--primary-color);
+      }
+    }
+    
     &:focus-visible {
       color: var(--primary-color);
 
@@ -303,8 +322,13 @@
 
       transform: translate3d(0,0,0);
 
-      &:hover,
       &:focus-visible {
+        color: var(--primary-color);
+
+        transform: translate3d(0,0,0);
+      }
+
+      &:hover {
         color: var(--primary-color);
 
         transform: translate3d(0,0,0);

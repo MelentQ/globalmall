@@ -96,8 +96,14 @@
 
     transform: translate3d(0,0,0);
 
-    &:hover,
     &:focus-visible {
+      color: var(--dark);
+
+      &::after {
+        background-color: var(--dark);
+      }
+    }
+    &:hover {
       color: var(--dark);
 
       &::after {

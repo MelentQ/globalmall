@@ -24,7 +24,14 @@
 
     transform: translate3d(0,0,0);
 
-    &:focus-visible,
+    &:focus-visible {
+      background-color: var(--dark);
+
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
     &:hover {
       background-color: var(--dark);
 

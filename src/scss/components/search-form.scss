@@ -53,8 +53,14 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    &:hover,
     &:focus-visible {
+      color: var(--dark);
+
+      .search-form__filter-radio-label::after {
+        background-color: var(--dark);
+      }
+    }
+    &:hover {
       color: var(--dark);
 
       .search-form__filter-radio-label::after {
@@ -137,8 +143,10 @@
     input:checked ~ .search-form__filter-checkbox-label {
       background-color: var(--primary-color);
 
-      &:hover,
       &:focus-visible {
+        color: var(--dark);
+      }
+      &:hover {
         color: var(--dark);
       }
 
@@ -241,8 +249,10 @@
 
     transition: opacity $base-transition-time $base-transition-easing;
 
-    &:hover,
     &:focus-visible {
+      opacity: 0.8;
+    }
+    &:hover {
       opacity: 0.8;
     }
 

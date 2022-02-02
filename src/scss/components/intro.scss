@@ -139,8 +139,13 @@
 
     overflow: hidden;
 
-    &:hover,
     &:focus-visible {
+      img {
+        transform: scale(1.05);
+        transition: transform 1s $base-transition-easing;
+      }
+    }
+    &:hover {
       img {
         transform: scale(1.05);
         transition: transform 1s $base-transition-easing;

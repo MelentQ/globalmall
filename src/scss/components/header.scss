@@ -110,7 +110,20 @@
       transform: translate3d(0,0,0);
     }
 
-    &:focus-visible,
+    &:focus-visible {
+      svg {
+        fill: var(--primary-color);
+      }
+
+      .header__btn-label {
+        color: var(--primary-color);
+      }
+
+      .header__btn-label::after {
+        background-color: var(--primary-color);
+      }
+    }
+    
     &:hover {
       svg {
         fill: var(--primary-color);
@@ -243,8 +256,10 @@
 
       transform: translate3d(0,0,0);
 
-      &:focus-visible,
       &:hover {
+        color: var(--primary-color);
+      }
+      &:focus-visible {
         color: var(--primary-color);
       }
 
@@ -264,8 +279,12 @@
   &__burger {
     transition: opacity $base-transition-time $base-transition-easing, visibility $base-transition-time $base-transition-easing;
 
-    &:focus-visible,
     &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+    &:focus-visible {
       svg {
         fill: var(--primary-color);
       }
@@ -310,8 +329,10 @@
 
       transform: translate3d(0,0,0);
       
-      &:hover,
       &:focus-visible {
+        color: var(--dark);
+      }
+      &:hover {
         color: var(--dark);
       }
     }
@@ -331,7 +352,12 @@
   // Search Btn
 
   &__open-search {
-    &:focus-visible,
+    &:focus-visible {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
     &:hover {
       svg {
         fill: var(--primary-color);
