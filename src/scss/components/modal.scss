@@ -2,7 +2,7 @@
   background-color: black;
 
   &__wrapper {
-    margin-bottom: 5rem;
+    
   }
 
   &__window {
@@ -16,6 +16,8 @@
 
     background-color: black;
     color: var(--white);
+
+    padding-bottom: 5rem;
   }
 
   &__header {
@@ -49,5 +51,9 @@
 
   &__content {
     flex-grow: 1;
+
+    .container {
+      height: 100%;
+    }
   }
 }

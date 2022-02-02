@@ -1,0 +1,382 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="breadcrumbs">
+    <div class="container">
+        <nav class="breadcrumbs__list">
+            <a href="/">Главная</a>
+            <a class="disabled" href="/">Ресторнаны и кафе</a>
+        </nav>
+    </div>
+</section>
+
+<section class="search">
+    <div class="container">
+        <div class="search__grid">
+            <div class="search__title-block">
+                <h2 class="search__title">Ресторнаны и&nbsp;кафе</h2>
+            </div>
+            <div class="search__form">
+                <form name="search" class="search-form js-backend-submit-handler">
+                    <div class="search-form__input">
+                        <input name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
+                        <button class="search-form__btn js-submit" type="submit">
+                            <svg><use xlink:href="#search"></svg>
+                        </button>
+                    </div>
+                    <ul class="search-form__filter-btns">
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" checked name="floor" value="all" type="radio">
+                                <span class="search-form__filter-radio-label">все этажи</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="1" type="radio">
+                                <span class="search-form__filter-radio-label">1 этаж</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="2" type="radio">
+                                <span class="search-form__filter-radio-label">2 этаж</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="search-form__filter-list">
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">все категории</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Фастфуд</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Восточная кухня</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">Турецкая кухня</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">кафе</span>
+                            </label>
+                        </li>
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">пицца</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="search-form__footer hidden">
+                        <button class="search-form__hide-btn js-hide-btn" type="button">
+                            Показать ещё
+                        </button>
+                        <button class="search-form__reset-btn js-reset" type="button">
+                            <svg><use xlink:href="#close-small"></svg>
+                            <span class="search-form__reset-btn-label">Сбросить фильтр</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newslist">
+    <div class="container">
+        <ul class="newslist__list">
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-5.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">COFFEE MOMENTS</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">кофе</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-6.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">KFC</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">фастфуд</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-7.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">Теремок</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">кафе</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-5.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">COFFEE MOMENTS</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">кофе</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-6.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">KFC</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">фастфуд</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-7.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">Теремок</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">кафе</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-5.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">COFFEE MOMENTS</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">кофе</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="newslist__item">
+                <div class="newslist__card-wrapper">
+                    <a class="newslist__card" href="#">
+                        <div class="newslist__card-image-wrapper">
+                            <img class="newslist__card-image" src="img/content/news-6.png" alt="Триал-Спорт">
+                        </div>
+                        <div class="newslist__card-text">
+                            <h3 class="newslist__card-name">KFC</h3>
+                            <div class="newslist__card-info">
+                                <span class="newslist__card-floor">1 этаж</span>
+                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="newslist__card-btn">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="newslist__card-btn-label">Расположение на схеме</span>
+                    </a>
+                </div>
+                <ul class="hashtags">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href="#">фастфуд</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="newslist__more-container">
+            <a class="button button--filled newslist__more" href="#">Показать еще</a>
+        </div>
+        <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
+            <svg><use xlink:href="#filter-mini"></svg>
+            <span class="newslist__open-mobile-filter-dot"></span>
+        </a>
+        <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
+            <div class="hystmodal__wrap modal__wrapper">
+                <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                <div class="modal__header">
+                    <div class="container">
+                    <div class="modal__header-inner">
+                        <button data-hystclose title="Закрыть">
+                        <svg class="accordion-item__btn-icon">
+                            <use xlink:href="#menu-back">
+                        </svg>
+                        </button>
+                        <span class="modal__title">Категории</span>
+                        <div class="modal__header-ghost"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal__content">
+                    <div class="container">
+                        <form class="serach-form__mobile-form">
+                            {{!-- todo: input hidden --}}
+                            <ul class="search-form__filter-list">
+                                <li class="search-form__filter-item">
+                                    <label class="search-form__filter-checkbox">
+                                        <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                        <span class="search-form__filter-checkbox-label">все категории</span>
+                                    </label>
+                                </li>
+                                <li class="search-form__filter-item">
+                                    <label class="search-form__filter-checkbox">
+                                        <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                        <span class="search-form__filter-checkbox-label">Фастфуд</span>
+                                    </label>
+                                </li>
+                                <li class="search-form__filter-item">
+                                    <label class="search-form__filter-checkbox">
+                                        <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                        <span class="search-form__filter-checkbox-label">Восточная кухня</span>
+                                    </label>
+                                </li>
+                                <li class="search-form__filter-item">
+                                    <label class="search-form__filter-checkbox">
+                                        <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                        <span class="search-form__filter-checkbox-label">Турецкая кухня</span>
+                                    </label>
+                                </li>
+                                <li class="search-form__filter-item">
+                                    <label class="search-form__filter-checkbox">
+                                        <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                        <span class="search-form__filter-checkbox-label">кафе</span>
+                                    </label>
+                                </li>
+                                <li class="search-form__filter-item">
+                                    <label class="search-form__filter-checkbox">
+                                        <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                        <span class="search-form__filter-checkbox-label">пицца</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="search-form__mobile-form-footer">
+                                <button class="button search-form__mobile-form-reset" type="reset">Сбросить фильтр</button>
+                                <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

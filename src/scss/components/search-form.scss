@@ -39,6 +39,11 @@
       &::placeholder {
         @extend %fs-t4;
         @extend %secondary-ff;
+        color: var(--secondary-grey);
+
+        @include breakpoint(mobile) {
+          color: var(--secondary-dark);
+        }
       }
 
       @include breakpoint(mobile) {
@@ -289,6 +294,10 @@
     @include breakpoint(mobile) {
       display: none;
     }
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__hide-btn {
@@ -373,6 +382,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 4rem;
+  
+  height: 100%;
 
   .search-form__filter-list {
     display: flex !important;
