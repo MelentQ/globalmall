@@ -15,6 +15,8 @@ function searchFormSubmitHandler() {
     })
 
     function submitForm() {
+      // ОНО НЕ РАБОТАЕТ
+      // НАДО У АРТЁМА УЗНАТЬ ЧТО ДЕЛАТЬ В ЭТОЙ СИТУАЦИИ
       form.submit();
     }
 

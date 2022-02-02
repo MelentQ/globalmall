@@ -1,6 +1,13 @@
 .newslist {
 
-  margin-bottom: 7.2rem;
+  padding-bottom: 7.2rem;
+
+  background-color: var(--secondary-grey);
+
+  @include breakpoint(mobile) {
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
+  }
 
   &__list {
     display: flex;
@@ -24,6 +31,7 @@
 
     min-height: 18rem;
     padding: 2rem;
+    padding-right: 30rem;
 
     background: #FFFFFF;
 
@@ -46,6 +54,15 @@
         color: var(--primary-color);
       }
     }
+
+    @include breakpoint(tablet) {
+      padding-right: 8.4rem;
+    }
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-right: 2rem;
+    }
   }
 
   &__card-image-wrapper {
@@ -57,6 +74,11 @@
     justify-content: center;
 
     padding: 2rem;
+
+    @include breakpoint(mobile) {
+      flex-basis: 14rem;
+      padding: 0;
+    }
   }
 
   &__card-image {
@@ -66,6 +88,10 @@
 
   &__card-text {
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+      margin-right: auto;
+    }
   }
 
   &__card-name {
@@ -86,6 +112,12 @@
 
     @extend %fs-h6;
     color: var(--grey);
+  }
+
+  &__card-time {
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &__card-btn {
@@ -122,6 +154,42 @@
       width: 2.4rem;
       height: 2.4rem;
     }
+
+    @include breakpoint(tablet) {
+      right: 2rem;
+
+      justify-content: center;
+
+      height: 4.4rem;
+      width: 4.4rem;
+      padding: 0;
+
+      border-radius: 50%;
+
+      .newslist__card-btn-label {
+        display: none
+      }
+
+      svg {
+        fill: var(--primary-color);
+      }
+
+      &:focus-visible {
+        svg {
+          fill: var(--white);
+        }
+      }
+      &:hover {
+        svg {
+          fill: var(--white);
+        }
+      }
+    }
+    @include breakpoint(mobile) {
+      top: unset;
+      bottom: 2rem;
+      transform: translateY(0);
+    }
   }
 
   &__card-btn-label {
@@ -140,5 +208,71 @@
 
   &__more {
     min-height: 4.2rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      color: var(--black) !important;
+      border-color: var(--black);
+    }
+  }
+
+  &__open-mobile-filter {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 5.4rem;
+    height: 5.4rem;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+
+    box-shadow: 0px 67px 80px rgba(0, 0, 0, 0.14), 0px 8px 34.87px rgba(0, 0, 0, 0.083455), 0px 4.45557px 5.32008px rgba(0, 0, 0, 0.056545);
+
+    transition: background-color $base-transition-time $base-transition-easing;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      fill: var(--white);
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+
+    &:hover {
+      background-color: var(--dark);
+      svg {
+        fill: var(--primary-color);
+      }
+
+      .newslist__open-mobile-filter-dot {
+        background-color: var(--white);
+      }
+    }
+
+    @include breakpoint(mobile) {
+      display: flex;
+    }
+  }
+
+  &__open-mobile-filter-dot {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: black;
+
+    transition: background-color $base-transition-time $base-transition-easing;
   }
 }

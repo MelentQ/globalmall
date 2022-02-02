@@ -1,10 +1,21 @@
 .search {
   padding-bottom: 4.8rem;
 
+  background: linear-gradient(180deg, #FFFFFF 37.5%, var(--secondary-grey) 100%);
+
+  @include breakpoint(mobile) {
+    background: var(--white);
+    padding-bottom: 0;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title-block {
@@ -17,5 +28,9 @@
 
   &__form {
     grid-column: span 2;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
   }
 }

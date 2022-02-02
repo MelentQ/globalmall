@@ -6,6 +6,10 @@
   @extend %fs-t6;
   color: var(--grey);
 
+  @include breakpoint(mobile) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;

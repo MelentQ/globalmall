@@ -1,13 +1,31 @@
 .search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   &__input {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 
+    width: 100%;
     margin-bottom: 5.6rem;
 
     border-bottom: 3px solid black;
+
+    @include breakpoint(mobile) {
+      border-bottom: none;
+      margin-bottom: 2.4rem;
+
+      padding: 0 1.6rem 0 2.6rem;
+
+      border-radius: 3rem;
+
+      background-color: var(--secondary-grey);
+
+      order: 2;
+    }
 
     input {
       flex-grow: 1;
@@ -22,6 +40,11 @@
         @extend %fs-t4;
         @extend %secondary-ff;
       }
+
+      @include breakpoint(mobile) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
     }
   }
 
@@ -29,6 +52,13 @@
     svg {
       height: 3.6rem;
       width: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      svg {
+        height: 2.4rem;
+        width: 2.4rem;
+      }
     }
   }
 
@@ -39,10 +69,28 @@
     gap: 2.4rem;
 
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+
+      width: 100%;
+
+      padding: 4px;
+      border: 1px solid #EBEFF3;
+      border-radius: 2px;
+      order: 1;
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__filter-btn-wrapper {
     color: var(--grey);
+
+    @include breakpoint(mobile) {
+      color: black;
+    }
   }
 
   &__filter-radio {
@@ -71,6 +119,11 @@
     input:checked ~ .search-form__filter-radio-label {
       color: var(--dark);
 
+      @include breakpoint(mobile) {
+        background-color: black;
+        color: white;
+      }
+
       &::after {
         content: none;
       }
@@ -81,6 +134,23 @@
     position: relative;
 
     @extend %fs-h4;
+
+    transition: background-color $base-transition-time $base-transition-easing, color $base-transition-time $base-transition-easing;
+
+    @include breakpoint(mobile) {
+      display: block;
+
+      @include clamp(9, 11);
+      font-weight: 500;
+      line-height: 1;
+
+      padding: 1.2rem 0;
+      border-radius: 2px;
+
+      width: 100%;
+
+      text-align: center;
+    }
 
     &::after {
       content: '';
@@ -95,6 +165,10 @@
       background-color: var(--grey);
 
       transition: background-color $base-transition-time $base-transition-easing;
+
+      @include breakpoint(mobile) {
+        content: none;
+      }
     }
   }
 
@@ -116,6 +190,10 @@
     &.hidden {
       max-height: 3.8rem;
       transition: max-height 0.5s ease-out;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
     }
   }
 
@@ -207,6 +285,10 @@
 
     @extend %secondary-ff;
     @extend %fs-t6;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__hide-btn {
@@ -280,4 +362,52 @@
       transition: background-color $base-transition-time $base-transition-easing;
     }
   }
+}
+
+// ******
+// MOBILE MODAL
+
+.serach-form__mobile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+
+  .search-form__filter-list {
+    display: flex !important;
+  }
+
+  .search-form__filter-list {
+    max-height: unset;
+  }
+
+  .search-form__filter-checkbox {
+    input:checked ~ .search-form__filter-checkbox-label {
+      color: var(--black);
+    }
+  }
+}
+
+.search-form__mobile-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.search-form__mobile-form-reset {
+  flex-grow: 1;
+
+  min-height: 4.2rem;
+
+  border-color: var(--white);
+}
+
+.search-form__mobile-form-submit {
+  flex-grow: 1;
+
+  min-height: 4.2rem;
 }

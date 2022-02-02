@@ -4,7 +4,7 @@ export default function hideSortButtons() {
     const btnsContainer = container.querySelector('.js-hidden-container');
     const hideBtn = container.querySelector('.js-hide-btn');
 
-    let isOpened = true;
+    let isOpened = !btnsContainer.classList.contains('hidden');
 
     hideBtn.addEventListener('click', () => {
       isOpened = !isOpened;
