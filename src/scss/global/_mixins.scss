@@ -73,11 +73,12 @@
 @mixin customScrollbar {
     &::-webkit-scrollbar {
         background-color: white;
-        width: 0.6rem;
+        width: 4px;
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--primary-color);
+        border-radius: 2px;
     }
 
     &::-webkit-scrollbar-button {
@@ -85,7 +86,29 @@
     }
 
     &::-webkit-scrollbar-track {
-        background-color: #f5f5f5;
+        background-color: var(--secondary-grey);
+        border-radius: 2px;
+    }
+}
+
+@mixin customHorizontalScrollbar {
+    &::-webkit-scrollbar {
+        background-color: white;
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--secondary-grey);
+        border-radius: 2px;
     }
 }
 

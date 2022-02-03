@@ -21,13 +21,15 @@ export default function initSliders() {
 
     let breakpoints = {
       320: {
-        slidesPerView: 1
+        slidesPerView: 1,
+        spaceBetween: 14
       },
       576: {
         slidesPerView: slidesPerView == 1 ? 1 : 2
       },
       1024: {
-        slidesPerView: slidesPerView == 1 ? 1 : slidesPerView
+        slidesPerView: slidesPerView == 1 ? 1 : slidesPerView,
+        spaceBetween
       }
     }
 

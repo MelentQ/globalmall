@@ -5,6 +5,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0.8rem;
+
+    &--vertical {
+      flex-direction: column;
+    }
   }
 
   &__btn {
@@ -35,12 +39,6 @@
     &:hover {
       background-color: var(--dark);
 
-      svg {
-        fill: var(--primary-color);
-      }
-    }
-
-    &:focus {
       svg {
         fill: var(--primary-color);
       }

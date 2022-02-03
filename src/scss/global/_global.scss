@@ -28,7 +28,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Stolzl', sans-serif;
+    @extend %main-ff;
     color: var(--text-color);
 }
 
