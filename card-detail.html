@@ -20,7 +20,7 @@
         <meta property="og:locale" content="ru_RU">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="assets/backend/backend.css">
-        <title>Ресторнаны и кафе</title>
+        <title>Акция</title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -238,392 +238,232 @@
                     <div class="container">
                         <nav class="breadcrumbs__list">
                             <a href="/">Главная</a>
-                            <a class="disabled" href="/">Ресторнаны и кафе</a>
+                            <a href="/">Акции</a>
+                            <a class="disabled" href="/">Триал-Спорт</a>
                         </nav>
                     </div>
                 </section>
-                <section class="search">
-                    <div class="container">
-                        <div class="search__grid">
-                            <div class="search__title-block">
-                                <h1 class="search__title">Ресторнаны и&nbsp;кафе</h1>
+                <section class="detail">
+                    <div class="container container--grid">
+                        <div class="detail__header">
+                            <h1 class="detail__title">ликвидация зимних коллекций</h1>
+                            <ul class="hashtags">
+                                <li class="hashtags__item">
+                                    <a class="hashtags__link" href="#">спорт</a>
+                                </li>
+                                <li class="hashtags__item">
+                                    <a class="hashtags__link" href="#">спортивные товары</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="detail__content">
+                            <div class="swiper detail__slider js-init-slider" data-slides="1.5" data-space="24" data-delay="3000" data-loop="1">
+                                <ul class="swiper-wrapper detail__slider-wrapper">
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image">
+                                            <img src="img/content/detail-slider.jpg" alt="ликвидация зимних коллекций">
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image">
+                                            <img src="img/content/detail-slider-2.jpg" alt="ликвидация зимних коллекций">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="slider__btns slider__btns--vertical detail__slider-btns js-slider-navigation">
+                                    <button class="slider__btn js-prev-slide" type="button" title="Назад">
+                                        <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                                        <svg>
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="search__form">
-                                <form name="search" class="search-form js-backend-submit-handler">
-                                    <div class="search-form__input">
-                                        <input name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
-                                        <button class="search-form__btn js-submit" type="submit">
-                                            <svg>
-                                                <use xlink:href="#search"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <ul class="search-form__filter-btns">
-                                        <li class="search-form__filter-btn-wrapper">
-                                            <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden" checked="checked" name="floor" value="all" type="radio">
-                                                <span class="search-form__filter-radio-label">все этажи</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-btn-wrapper">
-                                            <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="1" type="radio">
-                                                <span class="search-form__filter-radio-label">1 этаж</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-btn-wrapper">
-                                            <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="2" type="radio">
-                                                <span class="search-form__filter-radio-label">2 этаж</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <ul class="search-form__filter-list">
-                                        <li class="search-form__filter-item">
-                                            <label class="search-form__filter-checkbox">
-                                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                <span class="search-form__filter-checkbox-label">все категории</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-item">
-                                            <label class="search-form__filter-checkbox">
-                                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                <span class="search-form__filter-checkbox-label">Фастфуд</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-item">
-                                            <label class="search-form__filter-checkbox">
-                                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                <span class="search-form__filter-checkbox-label">Восточная кухня</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-item">
-                                            <label class="search-form__filter-checkbox">
-                                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                <span class="search-form__filter-checkbox-label">Турецкая кухня</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-item">
-                                            <label class="search-form__filter-checkbox">
-                                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                <span class="search-form__filter-checkbox-label">кафе</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-item">
-                                            <label class="search-form__filter-checkbox">
-                                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                <span class="search-form__filter-checkbox-label">пицца</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <div class="search-form__footer hidden">
-                                        <button class="search-form__hide-btn js-hide-btn" type="button">Показать ещё</button>
-                                        <button class="search-form__reset-btn js-reset" type="button">
-                                            <svg>
-                                                <use xlink:href="#close-small"></use>
-                                            </svg>
-                                            <span class="search-form__reset-btn-label">Сбросить фильтр</span>
-                                        </button>
-                                    </div>
-                                </form>
+                            <div class="detail__text-container editable-text-container">
+                                <h3>скидки от 40 до 70%</h3>
+                                <p>В магазине Триал-Спорт ликвидация зимних коллекций прошлых лет* со скидками от 40 до 70% на: горные и беговые лыжи, сноуборды, ледовые коньки и хоккейную экипировку, товары для туризма и скалолазания, одежду и обувь!</p>
+                                <br>
+                                <p>* — зимние коллекции 2017/2018 и более ранние.</p>
+                                <p>Скидка по дисконтной карте на уцененный товар не распространяется.</p>
+                                <p>Скидки действительны пока товар участвующий в акции есть в наличии в магазинах.</p>
+                                <br>
+                                <br>
+                                <h1>ТЕСТ:</h1>
+                                <br>
+                                <br>
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <h2>Lorem, ipsum dolor.</h2>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <h5>Lorem, ipsum dolor.</h5>
+                                <h6>Lorem, ipsum dolor.</h6>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, expedita?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, natus. Est, dolore nihil pariatur blanditiis ea ipsam officiis? Obcaecati, velit?</p>
+                                <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, aliquam? Facilis voluptas laudantium vitae nam iure asperiores voluptatem!</blockquote>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deserunt deleniti, eum animi, dicta vitae iste odio pariatur eligendi commodi harum dolore amet natus libero, officia magni recusandae cumque officiis?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam ex aperiam nostrum optio minus.<b>Atque soluta</b>, distinctio, itaque fuga nobis natus est ullam sapiente modi voluptatibus impedit?<a href="#">Lorem, ipsum.</a>Iure quas, rem minima deleniti modi harum excepturi illum, impedit quis fugiat magnam.</p>
+                                <hr>
+                                <a href="#">Lorem, ipsum.</a>
+                                <hr>
+                                <img src="https://via.placeholder.com/800x600" alt="image">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/7CoSTSLaN4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <ol>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                </ol>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid eveniet explicabo quae, porro unde.</li>
+                                </ul>
+                                <table>
+                                    <tr>
+                                        <th>Lorem.</th>
+                                        <th>Lorem, ipsum.</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, fugit.</td>
+                                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit quidem necessitatibus quos id ipsam modi earum harum voluptatum tempora dolorum!</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                    </tr>
+                                </table>
                             </div>
+                            <a href="#" class="detail__btn">
+                                <svg>
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <span class="detail__btn-label">Расположение на схеме</span>
+                            </a>
                         </div>
                     </div>
                 </section>
-                <section class="newslist">
+                <section class="news-list news-list--grey">
                     <div class="container">
-                        <ul class="newslist__list">
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-5.png" alt="Триал-Спорт">
+                        <div class="news-list__inner">
+                            <div class="swiper news-list__slider js-init-slider" data-loop="1" data-slides="3" data-space="24" data-delay="3000">
+                                <div class="news-list__header">
+                                    <h2 class="news-list__title">акции</h2>
+                                    <div class="news-list__btns-container">
+                                        <div class="slider__btns js-slider-navigation">
+                                            <button class="slider__btn news-list__btns js-prev-slide" type="button" title="Назад">
+                                                <svg>
+                                                    <use xlink:href="#arrow-left"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                                                <svg>
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </button>
                                         </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">COFFEE MOMENTS</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">кофе</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-6.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">KFC</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">фастфуд</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-7.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">Теремок</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">кафе</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-5.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">COFFEE MOMENTS</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">кофе</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-6.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">KFC</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">фастфуд</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-7.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">Теремок</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">кафе</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-5.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">COFFEE MOMENTS</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">кофе</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-6.png" alt="Триал-Спорт">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">KFC</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">фастфуд</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="newslist__more-container">
-                            <a class="button button--filled newslist__more" href="#">Показать еще</a>
-                        </div>
-                        <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
-                            <svg>
-                                <use xlink:href="#filter-mini"></use>
-                            </svg>
-                            <span class="newslist__open-mobile-filter-dot"></span>
-                        </a>
-                        <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
-                            <div class="hystmodal__wrap modal__wrapper">
-                                <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
-                                    <div class="modal__header">
-                                        <div class="container">
-                                            <div class="modal__header-inner">
-                                                <button data-hystclose title="Закрыть">
-                                                    <svg class="accordion-item__btn-icon">
-                                                        <use xlink:href="#menu-back"></use>
-                                                    </svg>
-                                                </button>
-                                                <span class="modal__title">Категории</span>
-                                                <div class="modal__header-ghost"></div>
-                                            </div>
-                                        </div>
+                                        <a class="button button--narrow news-list__link" href="#">
+                                            <span>все акции</span>
+                                            <svg>
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </a>
                                     </div>
-                                    <div class="modal__content">
-                                        <div class="container">
-                                            <form class="serach-form__mobile-form">
-                                                <ul class="search-form__filter-list">
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">все категории</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Фастфуд</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Восточная кухня</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Турецкая кухня</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">кафе</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">пицца</span>
-                                                        </label>
-                                                    </li>
+                                </div>
+                                <ul class="swiper-wrapper news-list__slider-wrapper">
+                                    <li class="swiper-slide">
+                                        <a class="card card--light" href="#">
+                                            <img src="img/content/card-2.jpg" alt="Карточка">
+                                            <div class="card__overlay"></div>
+                                            <div class="card__content">
+                                                <ul class="card__tags">
+                                                    <li>акция</li>
+                                                    <li>спорт</li>
                                                 </ul>
-                                                <div class="search-form__mobile-form-footer">
-                                                    <button class="button search-form__mobile-form-reset" type="reset">Сбросить фильтр</button>
-                                                    <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                                                <h3 class="card__title">ликвидация зимних коллекций</h3>
+                                                <div class="card__description">
+                                                    <p>В Триал-Спорт скидка от 40 до 70%</p>
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a class="card card--light" href="#">
+                                            <img src="img/content/card-3.jpg" alt="Карточка">
+                                            <div class="card__overlay"></div>
+                                            <div class="card__content">
+                                                <ul class="card__tags">
+                                                    <li>акция</li>
+                                                    <li>мужская одежда</li>
+                                                </ul>
+                                                <h3 class="card__title">Скидка
+                                                    <br>до 50%
+                                                    <br>в FANT
+                                                </h3>
+                                                <div class="card__description">
+                                                    <p>На всю мужскую
+                                                        <br>коллецию
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a class="card card--light" href="#">
+                                            <img src="img/content/card-4.jpg" alt="Карточка">
+                                            <div class="card__overlay"></div>
+                                            <div class="card__content">
+                                                <ul class="card__tags">
+                                                    <li>акция</li>
+                                                    <li>одежда</li>
+                                                </ul>
+                                                <h3 class="card__title">новая коллекция exalta</h3>
+                                                <div class="card__description">
+                                                    <p>Теплые куртки, пальто и тренчи 2019 года</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                                <a class="button button--narrow news-list__link-mobile" href="#">
+                                    <span>все акции</span>
+                                </a>
                             </div>
                         </div>
                     </div>
