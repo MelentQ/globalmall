@@ -211,6 +211,7 @@
     position: relative;
 
     cursor: pointer;
+    user-select: none;
 
     &:hover,
     &:focus {
@@ -256,7 +257,7 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
     cursor: pointer;
 
     &::before {
@@ -273,7 +274,7 @@
 
       transition: background-position $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 

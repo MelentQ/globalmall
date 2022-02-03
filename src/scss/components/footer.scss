@@ -95,7 +95,7 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
       
     &:focus-visible {
       color: var(--primary-color);
@@ -127,7 +127,7 @@
 
       transition: background-color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 
@@ -198,7 +198,7 @@
     a {
       transition: color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
       
       &:focus-visible {
         color: var(--white);
@@ -239,7 +239,7 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
     
     &:focus-visible {
       color: var(--primary-color);
@@ -256,7 +256,7 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
 
     &:hover {
       color: var(--primary-color);
@@ -288,7 +288,7 @@
 
       transition: background-color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 
@@ -320,18 +320,18 @@
     a {
       transition: color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
 
       &:focus-visible {
         color: var(--primary-color);
 
-        transform: translate3d(0,0,0);
+        
       }
 
       &:hover {
         color: var(--primary-color);
 
-        transform: translate3d(0,0,0);
+        
       }
     }
   }

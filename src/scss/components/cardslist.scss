@@ -1,0 +1,45 @@
+.cardslist {
+
+  padding-bottom: 7.2rem;
+
+  background-color: var(--secondary-grey);
+
+  @include breakpoint(mobile) {
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(small-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+
+  &__more-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2.8rem;
+  }
+
+  &__more {
+    min-height: 4.2rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      color: var(--black) !important;
+      border-color: var(--black);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Акции",
+    "socials": [
+        {
+            "name": "Instagram",
+            "icon": "#instagram",
+            "link": "https://www.instagram.com/globalmall.ru/"
+        },
+        {
+            "name": "YouTube",
+            "icon": "#youtube",
+            "link": "https://vk.com/globalmall_ru"
+        },
+        {
+            "name": "Facebook",
+            "icon": "#facebook",
+            "link": "https://www.facebook.com/GlobalMall.ru/"
+        },
+        {
+            "name": "VK",
+            "icon": "#vk",
+            "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+        }
+    ]
+}

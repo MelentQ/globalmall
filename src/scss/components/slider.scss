@@ -22,7 +22,7 @@
 
     transition: background-color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
 
     &:focus-visible {
       background-color: var(--dark);
@@ -52,7 +52,7 @@
 
       transition: fill $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 }

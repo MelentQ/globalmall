@@ -11,8 +11,6 @@
 
   overflow: hidden;
 
-  transform: translate3d(0,0,0);
-
   &--light {
     color: var(--dark) !important;
   }
@@ -50,7 +48,7 @@
 
     transition: transform $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
   }
 
   &__overlay {
@@ -107,6 +105,10 @@
     max-width: 23rem;
 
     @extend %fs-h3;
+
+    @include breakpoint(small-mobile) {
+      max-width: 16.9rem;
+    }
   }
 
   &__description {
@@ -115,5 +117,9 @@
 
     @extend %secondary-ff;
     @extend %fs-t4;
+
+    @include breakpoint(small-mobile) {
+      max-width: 16.9rem;
+    }
   }
 }

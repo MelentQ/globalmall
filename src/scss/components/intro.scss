@@ -164,7 +164,7 @@
 
       transition: transform $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
 
     @include breakpoint(tablet) {

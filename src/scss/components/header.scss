@@ -107,7 +107,7 @@
 
       transition: fill $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
 
     &:focus-visible {
@@ -150,7 +150,7 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
 
     &::after {
       content: '';
@@ -166,7 +166,7 @@
 
       transition: background-color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 
@@ -254,7 +254,7 @@
 
       transition: color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
 
       &:hover {
         color: var(--primary-color);
@@ -296,7 +296,7 @@
 
       transition: fill $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 
@@ -327,7 +327,7 @@
     a {
       transition: color $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
       
       &:focus-visible {
         color: var(--dark);
@@ -370,7 +370,7 @@
 
       transition: fill $base-transition-time $base-transition-easing;
 
-      transform: translate3d(0,0,0);
+      
     }
   }
 

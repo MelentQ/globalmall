@@ -94,7 +94,7 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    transform: translate3d(0,0,0);
+    
 
     &:focus-visible {
       color: var(--dark);
