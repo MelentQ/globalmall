@@ -1,25 +1,34 @@
 {
     "title": "Ресторнаны и кафе",
-    "socials": [
+    "name": "Ресторнаны и&nbsp;кафе",
+    "breadcrumbs": [
         {
-            "name": "Instagram",
-            "icon": "#instagram",
-            "link": "https://www.instagram.com/globalmall.ru/"
+            "name": "Главная",
+            "link": "./index.html"
         },
         {
-            "name": "YouTube",
-            "icon": "#youtube",
-            "link": "https://vk.com/globalmall_ru"
-        },
-        {
-            "name": "Facebook",
-            "icon": "#facebook",
-            "link": "https://www.facebook.com/GlobalMall.ru/"
-        },
-        {
-            "name": "VK",
-            "icon": "#vk",
-            "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+            "name": "Ресторнаны и кафе",
+            "link": "#"
         }
+    ],
+    "floors": [
+        {
+            "name": "все этажи",
+            "checked": true
+        },
+        {
+            "name": "1 этаж"
+        },
+        {
+            "name": "2 этаж"
+        }
+    ],
+    "categories": [
+        "все категории",
+        "Фастфуд",
+        "Восточная кухня",
+        "Турецкая кухня",
+        "кафе",
+        "пицца"
     ]
 }

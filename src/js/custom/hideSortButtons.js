@@ -4,9 +4,16 @@ export default function hideSortButtons() {
     const btnsContainer = container.querySelector('.js-hidden-container');
     const hideBtn = container.querySelector('.js-hide-btn');
 
-    let isOpened = !btnsContainer.classList.contains('hidden');
+    let isOpened = true;
 
-    hideBtn.addEventListener('click', () => {
+    if (btnsContainer.clientHeight <= 40) {
+      hideBtn.remove();
+      return;
+    }
+
+    hideBtn.addEventListener('click', toggle)
+
+    function toggle() {
       isOpened = !isOpened;
 
       if (isOpened) {
@@ -16,6 +23,7 @@ export default function hideSortButtons() {
         btnsContainer.classList.add('hidden');
         hideBtn.textContent = "Показать ещё";
       }
-    })
+    }
+    toggle();
   }
 }

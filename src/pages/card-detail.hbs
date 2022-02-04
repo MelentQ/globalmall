@@ -1,60 +1,32 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-<section class="breadcrumbs">
-    <div class="container">
-        <nav class="breadcrumbs__list">
-            <a href="/">Главная</a>
-            <a href="/">Акции</a>
-            <a class="disabled" href="/">Триал-Спорт</a>
-        </nav>
-    </div>
-</section>
+{{>breadcrumbs}}
 
 <section class="detail">
   <div class="container container--grid">
     <div class="detail__header">
-      <h1 class="detail__title">ликвидация зимних коллекций</h1>
-      <ul class="hashtags">
-          <li class="hashtags__item">
-              <a class="hashtags__link" href="#">спорт</a>
-          </li>
-          <li class="hashtags__item">
-              <a class="hashtags__link" href="#">спортивные товары</a>
-          </li>
-      </ul>
+      <h1 class="detail__title">{{name}}</h1>
+      {{>hashtags data=hashtags}}
     </div>
     <div class="detail__content">
       <div class="swiper detail__slider js-init-slider" data-slides="1.5" data-space="24" data-delay="3000" data-loop="1">
         <ul class="swiper-wrapper detail__slider-wrapper">
-          <li class="swiper-slide detail__slide">
-            <div class="detail__slide-image">
-              <img src="img/content/detail-slider.jpg" alt="ликвидация зимних коллекций">
-            </div>
-          </li>
-           <li class="swiper-slide detail__slide">
-            <div class="detail__slide-image">
-              <img src="img/content/detail-slider-2.jpg" alt="ликвидация зимних коллекций">
-            </div>
-          </li>
+            {{#each imageSlider}}
+            <li class="swiper-slide detail__slide">
+                <div class="detail__slide-image">
+                <img src="{{this}}" alt="{{name}}">
+                </div>
+            </li>
+            {{/each}}
         </ul>
         <div class="slider__btns slider__btns--vertical detail__slider-btns js-slider-navigation">
-            <button class="slider__btn js-prev-slide" type="button" title="Назад">
-                <svg><use xlink:href="#arrow-left"></svg>
-            </button>
-            <button class="slider__btn js-next-slide" type="button" title="Вперёд">
-                <svg><use xlink:href="#arrow-right"></svg>
-            </button>
+            {{>utils/slider-buttons}}
         </div>
       </div>
 
       <div class="detail__text-container editable-text-container">
-        <h3>скидки от 40 до 70%</h3>
-        <p>В магазине Триал-Спорт ликвидация зимних коллекций прошлых лет* со скидками от 40 до 70% на: горные и беговые лыжи, сноуборды, ледовые коньки и хоккейную экипировку, товары для туризма и скалолазания, одежду и обувь!</p>
-        <br>
-        <p>* — зимние коллекции 2017/2018 и более ранние.</p>
-        <p>Скидка по дисконтной карте на уцененный товар не распространяется.</p>
-        <p>Скидки действительны пока товар участвующий в акции есть в наличии в магазинах.</p>
+        {{{text}}}
 
         {{>utils/user-text}}
       </div>
@@ -67,85 +39,7 @@
   </div>
 </section>
 
-<section class="news-list news-list--grey">
-    <div class="container">
-        <div class="news-list__inner">
-            <div class="swiper news-list__slider js-init-slider" data-loop="1" data-slides="3" data-space="24" data-delay="3000">
-                <div class="news-list__header">
-                    <h2 class="news-list__title">акции</h2>
-                    <div class="news-list__btns-container">
-                        <div class="slider__btns js-slider-navigation">
-                            <button class="slider__btn news-list__btns js-prev-slide" type="button" title="Назад">
-                                <svg><use xlink:href="#arrow-left"></svg>
-                            </button>
-                            <button class="slider__btn js-next-slide" type="button" title="Вперёд">
-                                <svg><use xlink:href="#arrow-right"></svg>
-                            </button>
-                        </div>
-                        <a class="button button--narrow news-list__link" href="#">
-                            <span>все акции</span>
-                            <svg><use xlink:href="#arrow-right"></svg>
-                        </a>
-                    </div>
-                </div>
-                <ul class="swiper-wrapper news-list__slider-wrapper">
-                    <li class="swiper-slide">
-                        <a class="card card--light" href="#">
-                            <img src="img/content/card-2.jpg" alt="Карточка">
-                            <div class="card__overlay"></div>
-                            <div class="card__content">
-                                <ul class="card__tags">
-                                    <li>акция</li>
-                                    <li>спорт</li>
-                                </ul>
-                                <h3 class="card__title">ликвидация зимних коллекций</h3>
-                                <div class="card__description">
-                                    <p>В Триал-Спорт скидка от 40 до 70%</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="card card--light" href="#">
-                            <img src="img/content/card-3.jpg" alt="Карточка">
-                            <div class="card__overlay"></div>
-                            <div class="card__content">
-                                <ul class="card__tags">
-                                    <li>акция</li>
-                                    <li>мужская одежда</li>
-                                </ul>
-                                <h3 class="card__title">Скидка <br> до 50% <br> в FANT</h3>
-                                <div class="card__description">
-                                    <p>На всю мужскую <br> коллецию</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a class="card card--light" href="#">
-                            <img src="img/content/card-4.jpg" alt="Карточка">
-                            <div class="card__overlay"></div>
-                            <div class="card__content">
-                                <ul class="card__tags">
-                                    <li>акция</li>
-                                    <li>одежда</li>
-                                </ul>
-                                <h3 class="card__title">новая коллекция exalta</h3>
-                                <div class="card__description">
-                                    <p>Теплые куртки, пальто и тренчи 2019 года</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="swiper-pagination"></div>
-                <a class="button button--narrow news-list__link-mobile" href="#">
-                    <span>все акции</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+{{>newslist newsList1 mods="news-list--grey"}}
 
 {{/content}}
 {{/extend}}

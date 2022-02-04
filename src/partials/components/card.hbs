@@ -1,14 +1,15 @@
-<a class="card" href="#">
-    <img src="img/content/card.jpg" alt="Карточка">
+<a class="card {{#if this.overlay}}card--overlay{{/if}} {{#if this.light}}card--light{{/if}}" href="{{this.link}}">
+    <img src="{{this.image}}" alt="Карточка">
     <div class="card__overlay"></div>
     <div class="card__content">
         <ul class="card__tags">
-            <li>акция</li>
-            <li>зоотовары</li>
+            {{#each this.tags}}
+            <li>{{this}}</li>
+            {{/each}}
         </ul>
-        <h3 class="card__title">Скидка на зоотовары</h3>
+        <h3 class="card__title">{{{this.title}}}</h3>
         <div class="card__description">
-            <p>В Детском мире скидка 10% на широкий ассортимент зоотоваров</p>
+            <p>{{{this.desc}}}</p>
         </div>
     </div>
 </a>

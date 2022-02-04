@@ -1,25 +1,28 @@
 {
     "title": "Новости",
-    "socials": [
+    "breadcrumbs": [
         {
-            "name": "Instagram",
-            "icon": "#instagram",
-            "link": "https://www.instagram.com/globalmall.ru/"
+            "name": "Главная",
+            "link": "./index.html"
         },
         {
-            "name": "YouTube",
-            "icon": "#youtube",
-            "link": "https://vk.com/globalmall_ru"
-        },
-        {
-            "name": "Facebook",
-            "icon": "#facebook",
-            "link": "https://www.facebook.com/GlobalMall.ru/"
-        },
-        {
-            "name": "VK",
-            "icon": "#vk",
-            "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+            "name": "Новости",
+            "link": "#"
         }
+    ],
+    "categories": [
+        "все категории",
+        "открытие",
+        "электроника",
+        "распродажа",
+        "black friday",
+        "книги",
+        "одежда",
+        "открытие",
+        "электроника",
+        "распродажа",
+        "black friday",
+        "книги",
+        "одежда"
     ]
 }

@@ -1,0 +1,31 @@
+<section class="news-list {{mods}}">
+    <div class="container">
+        <div class="news-list__inner">
+            <div class="swiper news-list__slider js-init-slider" data-loop="1" data-slides="3" data-space="24" data-delay="3000">
+                <div class="news-list__header">
+                    <h2 class="news-list__title">{{this.title}}</h2>
+                    <div class="news-list__btns-container">
+                        <div class="slider__btns js-slider-navigation">
+                            {{>utils/slider-buttons}}
+                        </div>
+                        <a class="button button--narrow news-list__link" href="{{this.link}}">
+                            <span>все {{this.title}}</span>
+                            <svg><use xlink:href="#arrow-right"></svg>
+                        </a>
+                    </div>
+                </div>
+                <ul class="swiper-wrapper news-list__slider-wrapper">
+                    {{#each this.cards}}
+                    <li class="swiper-slide">
+                        {{>card this}}
+                    </li>
+                    {{/each}}
+                </ul>
+                <div class="swiper-pagination"></div>
+                <a class="button button--narrow news-list__link-mobile" href="{{this.link}}">
+                    <span>все {{this.title}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

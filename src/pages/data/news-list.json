@@ -1,25 +1,50 @@
 {
     "title": "Магазины",
-    "socials": [
+    "name": "Магазины",
+    "breadcrumbs": [
         {
-            "name": "Instagram",
-            "icon": "#instagram",
-            "link": "https://www.instagram.com/globalmall.ru/"
+            "name": "Главная",
+            "link": "./index.html"
         },
         {
-            "name": "YouTube",
-            "icon": "#youtube",
-            "link": "https://vk.com/globalmall_ru"
-        },
-        {
-            "name": "Facebook",
-            "icon": "#facebook",
-            "link": "https://www.facebook.com/GlobalMall.ru/"
-        },
-        {
-            "name": "VK",
-            "icon": "#vk",
-            "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+            "name": "Магазины",
+            "link": "#"
         }
+    ],
+    "floors": [
+        {
+            "name": "все этажи",
+            "checked": true
+        },
+        {
+            "name": "1 этаж"
+        },
+        {
+            "name": "2 этаж"
+        }
+    ],
+    "categories": [
+        "все категории",
+        "Аксессуары",
+        "Детские товары",
+        "Женская одежда",
+        "кафе",
+        "Молодежная одежда",
+        "Обувь",
+        "Красота и здоровье",
+        "Мужская одежда",
+        "одежда",
+        "Подарки",
+        "Продукты",
+        "Салон связи",
+        "Товары для дома",
+        "Туризм",
+        "Услуги",
+        "спорт",
+        "Табак",
+        "Сигареты",
+        "Спортивные товары",
+        "Электронные сигареты",
+        "Электроника"
     ]
 }

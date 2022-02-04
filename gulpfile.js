@@ -62,6 +62,16 @@ gulp.task('handlebars', function() {
         .src('./src/pages/**/*.hbs')
         .pipe(debug({ title: 'handlebars compiler:' }))
         .pipe(
+            data(function() {
+                try {
+                    const data = JSON.parse(fs.readFileSync('./src/pages/data/default.json'));
+                    return data;
+                } catch (err) {
+                    return null;
+                }
+            })
+        )
+        .pipe(
             data(function(file) {
                 try {
                     const data = JSON.parse(fs.readFileSync('./src/pages/data/' + path.basename(file.path).replace('.hbs', '.json')));

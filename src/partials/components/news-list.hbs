@@ -1,0 +1,52 @@
+<section class="search">
+    <div class="container">
+        <div class="search__grid">
+            <div class="search__title-block">
+                <h1 class="search__title">{{{name}}}</h1>
+            </div>
+            <div class="search__form">
+                <form name="search" class="search-form js-backend-submit-handler">
+                    <div class="search-form__input-wrapper">
+                        <div class="search-form__input">
+                            <input name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
+                            <button class="search-form__btn js-submit" type="submit">
+                                <svg><use xlink:href="#search"></svg>
+                            </button>
+                        </div>
+                        <div class="search-form__no-result">
+                            <svg><use xlink:href="#info-circle"></svg>
+                            <span>Не найдено ни одного магазина</span>
+                        </div>
+                    </div>
+                    <ul class="search-form__filter-btns">
+                        {{#each floors}}
+                        <li class="search-form__filter-btn-wrapper">
+                            <label class="search-form__filter-radio">
+                                <input class="search-form__filter-radio-input visually-hidden" {{#if this.checked}}checked{{/if}} name="floor" value="all" type="radio">
+                                <span class="search-form__filter-radio-label">{{this.name}}</span>
+                            </label>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{>filter-buttons}}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newslist">
+    <div class="container">
+        <ul class="newslist__list">
+            {{#each cardsData}}
+            <li class="newslist__item">
+                {{>newslist-card this}}
+            </li>
+            {{/each}}
+        </ul>
+        <div class="newslist__more-container">
+            <a class="button button--filled newslist__more" href="#">Показать еще</a>
+        </div>
+        {{>mobile-modal-filter}}
+    </div>
+</section>

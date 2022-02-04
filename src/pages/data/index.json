@@ -1,25 +1,83 @@
 {
     "title": "Главная страница",
-    "socials": [
+    "introSlider": [
         {
-            "name": "Instagram",
-            "icon": "#instagram",
-            "link": "https://www.instagram.com/globalmall.ru/"
+            "image": "img/content/intro.jpg",
+            "imageMobile": "img/content/intro-mobile.jpg",
+            "title": "новогодний шопинг!",
+            "subtitle": "<p>Большая предновогодняя распродажа! Скидки до -50%!</p>",
+            "link": "#"
         },
         {
-            "name": "YouTube",
-            "icon": "#youtube",
-            "link": "https://vk.com/globalmall_ru"
+            "image": "img/content/intro.jpg",
+            "imageMobile": "img/content/intro-mobile.jpg",
+            "title": "новогодний шопинг!",
+            "subtitle": "<p>Большая предновогодняя распродажа! Скидки до -50%!</p>",
+            "link": "#"
         },
         {
-            "name": "Facebook",
-            "icon": "#facebook",
-            "link": "https://www.facebook.com/GlobalMall.ru/"
+            "image": "img/content/intro.jpg",
+            "imageMobile": "img/content/intro-mobile.jpg",
+            "title": "новогодний шопинг!",
+            "subtitle": "<p>Большая предновогодняя распродажа! Скидки до -50%!</p>",
+            "link": "#"
+        }
+    ],
+    "favoritePromotion": {
+        "overlay": false,
+        "light": false,
+        "tags": [
+            "акция",
+            "зоотовары"
+        ],
+        "title": "Скидка на зоотовары",
+        "desc": "В Детском мире скидка 10% на широкий ассортимент зоотоваров",
+        "image": "img/content/card.jpg",
+        "link": "./card-detail.html"
+    },
+    "sections": [
+        {
+            "active": "true",
+            "name": "шопинг",
+            "desc": "<p>Форма времяпрепровождения в виде посещения магазинов, обычно в торговых центрах и комплексах, и покупки товаров</p>",
+            "hashtags": [
+                "Аксессуары",
+                "Детские товары",
+                "Женская одежда",
+                "Красота и здоровье",
+                "Кафе",
+                "Электроника"
+            ],
+            "link": "#",
+            "icon": "img/section-1.svg"
         },
         {
-            "name": "VK",
-            "icon": "#vk",
-            "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+            "name": "развлечения",
+            "desc": "<p>Посетители  смогут найти все необходимые магазины и много развлечений, особенно для своих детей.</p>",
+            "hashtags": [
+                "Детские развлечения",
+                "Гонки",
+                "Женская одежда",
+                "кино",
+                "Игровые комнаты",
+                "игровые автоматы"
+            ],
+            "link": "#",
+            "icon": "img/section-2.svg"
+        },
+        {
+            "name": "фудкорт",
+            "desc": "<p>Ресторанный дворик, или фуд-корт (англ. food court) — зона питания в торговом центре, гостинице, аэропорте на вокзале.</p>",
+            "hashtags": [
+                "Фастфуд",
+                "Восточная кухня",
+                "Турецкая кухня",
+                "кафе",
+                "пицца",
+                "кофе"
+            ],
+            "link": "#",
+            "icon": "img/section-3.svg"
         }
     ]
 }

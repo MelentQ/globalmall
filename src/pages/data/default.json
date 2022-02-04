@@ -1,0 +1,524 @@
+{
+  "title": "Новая страница",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Новая страница",
+      "link": "#"
+    }
+  ],
+  "menu1": [
+    {
+      "name": "магазины",
+      "link": "./news-list.html"
+    },
+    {
+      "name": "услуги",
+      "link": "#"
+    },
+    {
+      "name": "развлечения",
+      "link": "#"
+    },
+    {
+      "name": "рестораны и кафе",
+      "link": "./news-list-2.html"
+    },
+    {
+      "name": "новости",
+      "link": "./cards-2.html"
+    },
+    {
+      "name": "акции",
+      "link": "./cards.html"
+    }
+  ],
+  "menu2": [
+    {
+      "name": "Торговый центр",
+      "link": "#"
+    },
+    {
+      "name": "Арендаторам",
+      "link": "#"
+    },
+    {
+      "name": "Реклама в ТЦ",
+      "link": "#"
+    },
+    {
+      "name": "Вакансии",
+      "link": "#"
+    },
+    {
+      "name": "Контакты",
+      "link": "#"
+    }
+  ],
+  "contacts": {
+    "address": "м.&nbsp;Автозаводская, ул.Ленинская&nbsp;Слобода, д.&nbsp;26,&nbsp;стр.2"
+  },
+  "newsList1": {
+    "title": "акции",
+    "link": "./cards.html",
+    "cards": [
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "спорт"
+        ],
+        "title": "ликвидация зимних коллекций",
+        "desc": "<p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>",
+        "image": "img/content/card-2.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "мужская одежда"
+        ],
+        "title": "Скидка <br> до 50% <br> в FANT",
+        "desc": "<p>На всю мужскую <br> коллецию</p>",
+        "image": "img/content/card-3.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "одежда"
+        ],
+        "title": "новая коллекция exalta",
+        "desc": "<p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>",
+        "image": "img/content/card-4.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "одежда"
+        ],
+        "title": "новая коллекция exalta",
+        "desc": "<p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>",
+        "image": "img/content/card-4.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "спорт"
+        ],
+        "title": "ликвидация зимних коллекций",
+        "desc": "<p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>",
+        "image": "img/content/card-2.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "мужская одежда"
+        ],
+        "title": "Скидка <br> до 50% <br> в FANT",
+        "desc": "<p>На всю мужскую <br> коллецию</p>",
+        "image": "img/content/card-3.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "мужская одежда"
+        ],
+        "title": "Скидка <br> до 50% <br> в FANT",
+        "desc": "<p>На всю мужскую <br> коллецию</p>",
+        "image": "img/content/card-3.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "одежда"
+        ],
+        "title": "новая коллекция exalta",
+        "desc": "<p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>",
+        "image": "img/content/card-4.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "спорт"
+        ],
+        "title": "ликвидация зимних коллекций",
+        "desc": "<p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>",
+        "image": "img/content/card-2.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "спорт"
+        ],
+        "title": "ликвидация зимних коллекций",
+        "desc": "<p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>",
+        "image": "img/content/card-2.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "мужская одежда"
+        ],
+        "title": "Скидка <br> до 50% <br> в FANT",
+        "desc": "<p>На всю мужскую <br> коллецию</p>",
+        "image": "img/content/card-3.jpg",
+        "link": "./card-detail.html"
+      },
+      {
+        "overlay": false,
+        "light": true,
+        "tags": [
+          "акция",
+          "одежда"
+        ],
+        "title": "новая коллекция exalta",
+        "desc": "<p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>",
+        "image": "img/content/card-4.jpg",
+        "link": "./card-detail.html"
+      }
+    ]
+  },
+  "newsList2": {
+    "title": "новости",
+    "link": "./cards-2.html",
+    "cards": [
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "распродажа",
+          "black friday"
+        ],
+        "title": "Черная пятница",
+        "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
+        "image": "img/content/card-5.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "электроника",
+          "открытие"
+        ],
+        "title": "открылся новый Эльдорадо",
+        "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
+        "image": "img/content/card-6.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "книги",
+          "открытие"
+        ],
+        "title": "Открылся Книжный Лабиринт",
+        "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
+        "image": "img/content/card-7.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "электроника",
+          "открытие"
+        ],
+        "title": "открылся новый Эльдорадо",
+        "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
+        "image": "img/content/card-6.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "книги",
+          "открытие"
+        ],
+        "title": "Открылся Книжный Лабиринт",
+        "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
+        "image": "img/content/card-7.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "распродажа",
+          "black friday"
+        ],
+        "title": "Черная пятница",
+        "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
+        "image": "img/content/card-5.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "книги",
+          "открытие"
+        ],
+        "title": "Открылся Книжный Лабиринт",
+        "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
+        "image": "img/content/card-7.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "распродажа",
+          "black friday"
+        ],
+        "title": "Черная пятница",
+        "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
+        "image": "img/content/card-5.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "электроника",
+          "открытие"
+        ],
+        "title": "открылся новый Эльдорадо",
+        "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
+        "image": "img/content/card-6.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "распродажа",
+          "black friday"
+        ],
+        "title": "Черная пятница",
+        "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
+        "image": "img/content/card-5.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "электроника",
+          "открытие"
+        ],
+        "title": "открылся новый Эльдорадо",
+        "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
+        "image": "img/content/card-6.jpg",
+        "link": "./card-2-detail.html"
+      },
+      {
+        "overlay": true,
+        "light": false,
+        "tags": [
+          "книги",
+          "открытие"
+        ],
+        "title": "Открылся Книжный Лабиринт",
+        "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
+        "image": "img/content/card-7.jpg",
+        "link": "./card-2-detail.html"
+      }
+    ]
+  },
+  "nl1": [
+    {
+      "image": "img/content/news-1.jpg",
+      "name": "Триал-Спорт",
+      "link": "#",
+      "tags": [
+        "спорт",
+        "спортивные товары"
+      ]
+    },
+    {
+      "image": "img/content/news-2.png",
+      "name": "NL International",
+      "link": "#",
+      "tags": [
+        "Красота и здоровье"
+      ]
+    },
+    {
+      "image": "img/content/news-3.png",
+      "name": "Детский мир",
+      "link": "#",
+      "tags": [
+        "Детские товары",
+        "детская одежда"
+      ]
+    },
+    {
+      "image": "img/content/news-4.png",
+      "name": "TOPGUN",
+      "link": "#",
+      "tags": [
+        "Услуги",
+        "барбершоп"
+      ]
+    },
+    {
+      "image": "img/content/news-1.jpg",
+      "name": "Триал-Спорт",
+      "link": "#",
+      "tags": [
+        "спорт",
+        "спортивные товары"
+      ]
+    },
+    {
+      "image": "img/content/news-2.png",
+      "name": "NL International",
+      "link": "#",
+      "tags": [
+        "Красота и здоровье"
+      ]
+    },
+    {
+      "image": "img/content/news-3.png",
+      "name": "Детский мир",
+      "link": "#",
+      "tags": [
+        "Детские товары",
+        "детская одежда"
+      ]
+    },
+    {
+      "image": "img/content/news-4.png",
+      "name": "TOPGUN",
+      "link": "#",
+      "tags": [
+        "Услуги",
+        "барбершоп"
+      ]
+    }
+  ],
+  "nl2": [
+    {
+      "image": "img/content/news-5.png",
+      "name": "COFFEE MOMENTS",
+      "link": "#",
+      "tags": [
+        "кофе"
+      ]
+    },
+    {
+      "image": "img/content/news-6.png",
+      "name": "KFC",
+      "link": "#",
+      "tags": [
+        "фастфуд"
+      ]
+    },
+    {
+      "image": "img/content/news-7.png",
+      "name": "Теремок",
+      "link": "#",
+      "tags": [
+        "кафе"
+      ]
+    },
+    {
+      "image": "img/content/news-5.png",
+      "name": "COFFEE MOMENTS",
+      "link": "#",
+      "tags": [
+        "кофе"
+      ]
+    },
+    {
+      "image": "img/content/news-6.png",
+      "name": "KFC",
+      "link": "#",
+      "tags": [
+        "фастфуд"
+      ]
+    },
+    {
+      "image": "img/content/news-7.png",
+      "name": "Теремок",
+      "link": "#",
+      "tags": [
+        "кафе"
+      ]
+    },
+    {
+      "image": "img/content/news-5.png",
+      "name": "COFFEE MOMENTS",
+      "link": "#",
+      "tags": [
+        "кофе"
+      ]
+    },
+    {
+      "image": "img/content/news-6.png",
+      "name": "KFC",
+      "link": "#",
+      "tags": [
+        "фастфуд"
+      ]
+    }
+  ],
+  "socials": [
+    {
+      "name": "Instagram",
+      "icon": "#instagram",
+      "link": "https://www.instagram.com/globalmall.ru/"
+    },
+    {
+      "name": "YouTube",
+      "icon": "#youtube",
+      "link": "https://vk.com/globalmall_ru"
+    },
+    {
+      "name": "Facebook",
+      "icon": "#facebook",
+      "link": "https://www.facebook.com/GlobalMall.ru/"
+    },
+    {
+      "name": "VK",
+      "icon": "#vk",
+      "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+    }
+  ]
+}

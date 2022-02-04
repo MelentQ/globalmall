@@ -1,0 +1,21 @@
+<div class="js-hide-sort-buttons">
+    <ul class="search-form__filter-list js-hidden-container">
+        {{#each categories}}
+        <li class="search-form__filter-item">
+            <label class="search-form__filter-checkbox">
+                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                <span class="search-form__filter-checkbox-label">{{this}}</span>
+            </label>
+        </li>
+        {{/each}}
+    </ul>
+    <div class="search-form__footer">
+        <button class="search-form__hide-btn js-hide-btn" type="button">
+            Показать ещё
+        </button>
+        <button class="search-form__reset-btn js-reset" type="button">
+            <svg><use xlink:href="#close-small"></svg>
+            <span class="search-form__reset-btn-label">Сбросить фильтр</span>
+        </button>
+    </div>
+</div>

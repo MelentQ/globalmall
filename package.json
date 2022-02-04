@@ -64,6 +64,7 @@
     "gulp-hb": "^8.0.0",
     "gulp-html-beautify": "^1.0.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-merge-json": "^2.1.1",
     "gulp-newer": "^1.4.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-plumber": "^1.2.1",

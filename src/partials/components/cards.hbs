@@ -1,0 +1,30 @@
+<section class="search">
+    <div class="container">
+        <div class="search__grid">
+            <div class="search__title-block">
+                <h1 class="search__title">{{title}}</h1>
+            </div>
+            <div class="search__form">
+                <form name="search" class="search-form js-backend-submit-handler">
+                    {{>filter-buttons}}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cardslist">
+    <div class="container">
+        <ul class="cardslist__list">
+            {{#each cardsData.cards}}
+            <li class="cardslist__item">
+                {{>card this}}
+            </li>
+            {{/each}}
+        </ul>
+        <div class="cardslist__more-container">
+            <a class="button button--filled cardslist__more" href="#">Показать еще</a>
+        </div>
+        {{>mobile-modal-filter}}
+    </div>
+</section>

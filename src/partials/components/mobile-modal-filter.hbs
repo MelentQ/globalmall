@@ -1,0 +1,43 @@
+<a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
+    <svg><use xlink:href="#filter-mini"></svg>
+    <span class="newslist__open-mobile-filter-dot"></span>
+</a>
+<div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
+    <div class="hystmodal__wrap modal__wrapper">
+        <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+        <div class="modal__header">
+            <div class="container">
+            <div class="modal__header-inner">
+                <button data-hystclose title="Закрыть">
+                <svg class="accordion-item__btn-icon">
+                    <use xlink:href="#menu-back">
+                </svg>
+                </button>
+                <span class="modal__title">Категории</span>
+                <div class="modal__header-ghost"></div>
+            </div>
+            </div>
+        </div>
+        <div class="modal__content">
+            <div class="container">
+                <form class="serach-form__mobile-form">
+                    {{!-- todo: input hidden --}}
+                    <ul class="search-form__filter-list">
+                        {{#each categories}}
+                        <li class="search-form__filter-item">
+                            <label class="search-form__filter-checkbox">
+                                <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                <span class="search-form__filter-checkbox-label">{{this}}</span>
+                            </label>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    <div class="search-form__mobile-form-footer">
+                        <button class="button search-form__mobile-form-reset" type="reset">Сбросить фильтр</button>
+                        <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

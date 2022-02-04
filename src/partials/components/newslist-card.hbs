@@ -1,0 +1,25 @@
+<div class="newslist__card-wrapper">
+  <a class="newslist__card" href="{{this.link}}">
+      <div class="newslist__card-image-wrapper">
+          <img class="newslist__card-image" src="{{this.image}}" alt="Карточка">
+      </div>
+      <div class="newslist__card-text">
+          <h3 class="newslist__card-name">{{this.name}}</h3>
+          <div class="newslist__card-info">
+              <span class="newslist__card-floor">1 этаж</span>
+              <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+          </div>
+      </div>
+  </a>
+  <a href="#" class="newslist__card-btn">
+        <svg><use xlink:href="#location"></svg>
+        <span class="newslist__card-btn-label">Расположение на схеме</span>
+    </a>
+</div>
+<ul class="hashtags">
+    {{#each this.tags}}
+    <li class="hashtags__item">
+        <a class="hashtags__link" href="#">{{this}}</a>
+    </li>
+    {{/each}}
+</ul>
