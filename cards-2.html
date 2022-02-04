@@ -61,6 +61,9 @@
                 <symbol viewBox="0 0 24 24" id="filter-mini" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 2H5a3 3 0 00-3 3v1.17a3 3 0 00.25 1.2v.06c.14.32.34.61.59.86L9 14.41V21a1 1 0 001.45.89l4-2A1 1 0 0015 19v-4.59l6.12-6.12c.25-.25.45-.54.59-.86v-.06a3 3 0 00.29-1.2V5a3 3 0 00-3-3zm-5.71 11.29A1 1 0 0013 14v4.38l-2 1V14a1 1 0 00-.29-.71L5.41 8h13.18l-5.3 5.29zM20 6H4V5a1 1 0 011-1h14a1 1 0 011 1v1z" />
                 </symbol>
+                <symbol viewBox="0 0 24 25" fill="none" id="info-circle" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.5a10 10 0 1010 10 10.011 10.011 0 00-10-10zm0 18a8 8 0 118-8 8.01 8.01 0 01-8 8zm0-8.5a1 1 0 00-1 1v3a1 1 0 002 0v-3a1 1 0 00-1-1zm0-4a1.25 1.25 0 100 2.5A1.25 1.25 0 0012 8z" fill="#DB4444" />
+                </symbol>
                 <symbol viewBox="0 0 22 22" id="instagram" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M6.465.066C7.638.012 8.012 0 11 0c2.988 0 3.362.013 4.534.066 1.172.053 1.972.24 2.672.511.733.277 1.398.71 1.948 1.27.56.549.992 1.213 1.268 1.947.272.7.458 1.5.512 2.67C21.988 7.639 22 8.013 22 11c0 2.988-.013 3.362-.066 4.535-.053 1.17-.24 1.97-.512 2.67a5.396 5.396 0 01-1.268 1.949c-.55.56-1.215.992-1.948 1.268-.7.272-1.5.458-2.67.512-1.174.054-1.548.066-4.536.066-2.988 0-3.362-.013-4.535-.066-1.17-.053-1.97-.24-2.67-.512a5.396 5.396 0 01-1.949-1.268 5.392 5.392 0 01-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C.012 14.361 0 13.987 0 11c0-2.988.013-3.362.066-4.534.053-1.172.24-1.972.511-2.672a5.396 5.396 0 011.27-1.948A5.392 5.392 0 013.794.577c.7-.271 1.5-.457 2.67-.511h.001zm8.98 1.98c-1.16-.053-1.508-.064-4.445-.064-2.937 0-3.285.011-4.445.064-1.073.049-1.655.228-2.043.379-.513.2-.88.437-1.265.822a3.412 3.412 0 00-.822 1.265c-.151.388-.33.97-.379 2.043-.053 1.16-.064 1.508-.064 4.445 0 2.937.011 3.285.064 4.445.049 1.073.228 1.655.379 2.043.176.477.457.91.822 1.265.355.365.788.646 1.265.822.388.151.97.33 2.043.379 1.16.053 1.507.064 4.445.064 2.938 0 3.285-.011 4.445-.064 1.073-.049 1.655-.228 2.043-.379.513-.2.88-.437 1.265-.822.365-.355.646-.788.822-1.265.151-.388.33-.97.379-2.043.053-1.16.064-1.508.064-4.445 0-2.937-.011-3.285-.064-4.445-.049-1.073-.228-1.655-.379-2.043-.2-.513-.437-.88-.822-1.265a3.413 3.413 0 00-1.265-.822c-.388-.151-.97-.33-2.043-.379zm-5.85 12.345a3.67 3.67 0 102.641-6.846 3.67 3.67 0 00-2.641 6.846zM7.002 7.002a5.654 5.654 0 117.996 7.996 5.654 5.654 0 01-7.996-7.996zm10.906-.814a1.336 1.336 0 10-1.834-1.944 1.336 1.336 0 001.834 1.944z" clip-rule="evenodd" />
                 </symbol>
@@ -542,6 +545,121 @@
                         </ul>
                         <div class="cardslist__more-container">
                             <a class="button button--filled cardslist__more" href="#">Показать еще</a>
+                        </div>
+                        <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
+                            <svg>
+                                <use xlink:href="#filter-mini"></use>
+                            </svg>
+                            <span class="newslist__open-mobile-filter-dot"></span>
+                        </a>
+                        <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
+                            <div class="hystmodal__wrap modal__wrapper">
+                                <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                                    <div class="modal__header">
+                                        <div class="container">
+                                            <div class="modal__header-inner">
+                                                <button data-hystclose title="Закрыть">
+                                                    <svg class="accordion-item__btn-icon">
+                                                        <use xlink:href="#menu-back"></use>
+                                                    </svg>
+                                                </button>
+                                                <span class="modal__title">Категории</span>
+                                                <div class="modal__header-ghost"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal__content">
+                                        <div class="container">
+                                            <form class="serach-form__mobile-form">
+                                                <ul class="search-form__filter-list">
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">все категории</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">открытие</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">электроника</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">распродажа одежда</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">black friday</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">книги</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">одежда</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">открытие</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">электроника</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">распродажа одежда</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">black friday</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">книги</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="search-form__filter-item">
+                                                        <label class="search-form__filter-checkbox">
+                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                            <span class="search-form__filter-checkbox-label">одежда</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="search-form__mobile-form-footer">
+                                                    <button class="button search-form__mobile-form-reset" type="reset">Сбросить фильтр</button>
+                                                    <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
