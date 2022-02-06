@@ -34,6 +34,9 @@
                 <symbol viewBox="0 0 24 24" id="arrow-right" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.92 11.62a1 1 0 00-.21-.33l-5-5a1 1 0 10-1.42 1.42l3.3 3.29H7a1 1 0 000 2h7.59l-3.3 3.29a1 1 0 101.42 1.42l5-5a1 1 0 00.21-.33 1 1 0 000-.76z" />
                 </symbol>
+                <symbol fill="none" viewBox="0 0 36 36" id="arrows" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#010102" d="M31.5 12a1.5 1.5 0 001.5-1.5v-6l-.1-.6a1.5 1.5 0 00-1.4-.9h-6a1.5 1.5 0 000 3h2.4L18 15.9 8.1 6h2.4a1.5 1.5 0 000-3h-6l-.6.1A1.5 1.5 0 003 4.5v6a1.5 1.5 0 003 0V8.1l9.9 9.9L6 27.9v-2.4a1.5 1.5 0 00-3 0v6l.1.6a1.5 1.5 0 001.4.9h6a1.5 1.5 0 100-3H8.1l9.9-9.9 9.9 9.9h-2.4a1.5 1.5 0 100 3h6l.6-.1a1.5 1.5 0 00.9-1.4v-6a1.5 1.5 0 10-3 0v2.4L20.1 18 30 8.1v2.4a1.5 1.5 0 001.5 1.5z" />
+                </symbol>
                 <symbol viewBox="0 0 20 12" id="bar" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 2h18a1 1 0 100-2H1a1 1 0 000 2zm18 8H1a1 1 0 000 2h18a1 1 0 000-2zm0-5H1a1 1 0 000 2h18a1 1 0 100-2z" />
                 </symbol>
@@ -720,7 +723,7 @@
                             <div class="container">
                                 <div class="modal__header-inner">
                                     <button data-hystclose title="Закрыть">
-                                        <svg class="accordion-item__btn-icon">
+                                        <svg>
                                             <use xlink:href="#menu-back"></use>
                                         </svg>
                                     </button>
@@ -833,6 +836,18 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hystmodal modal-light" id="image-modal" aria-hidden="true">
+                <div class="hystmodal__wrap modal-light__wrapper">
+                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
+                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-big"></use>
+                            </svg>
+                        </button>
+                        <img class="image-modal__image js-image" src="" alt="">
                     </div>
                 </div>
             </div>
