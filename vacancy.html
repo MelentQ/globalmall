@@ -20,7 +20,7 @@
         <meta property="og:locale" content="ru_RU">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="assets/backend/backend.css">
-        <title>Акции</title>
+        <title>Вакансии</title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -239,474 +239,65 @@
                     <div class="container">
                         <nav class="breadcrumbs__list">
                             <a href="./index.html">Главная</a>
-                            <a href="#">Акции</a>
+                            <a href="#">Вакансии</a>
                         </nav>
                     </div>
                 </section>
-                <section class="search">
+                <section>
                     <div class="container">
-                        <div class="search__grid">
-                            <div class="search__title-block">
-                                <h1 class="search__title">Акции</h1>
-                            </div>
-                            <div class="search__form">
-                                <form name="search" class="search-form js-backend-submit-handler">
-                                    <div class="js-hide-sort-buttons">
-                                        <ul class="search-form__filter-list js-hidden-container">
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="все категории" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">все категории</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="спорт" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">спорт</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="детская одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">детская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">кафе</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Молодежная одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="спорт" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">спорт</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="детская одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">детская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">кафе</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Молодежная одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                        <div class="search-form__footer">
-                                            <button class="search-form__hide-btn js-hide-btn" type="button">Показать ещё</button>
-                                            <button class="search-form__reset-btn js-reset" type="button">
-                                                <svg>
-                                                    <use xlink:href="#close-small"></use>
-                                                </svg>
-                                                <span class="search-form__reset-btn-label">Сбросить фильтр</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                        <h1 class="page-title">Вакансии</h1>
                     </div>
                 </section>
-                <section class="cardslist">
-                    <div class="container js-ajax-show-more-container">
-                        <ul class="cardslist__list js-ajax-elements-container">
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-2.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>спорт</li>
-                                        </ul>
-                                        <h3 class="card__title">ликвидация зимних коллекций</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
+                <section class="vacancy">
+                    <div class="container container--grid">
+                        <div class="vacancy__header">
+                            <div class="vacancy__contacts">
+                                <a class="vacancy__link vacancy__phone" href="tel:+74951919797">
+                                    <svg>
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                    <span>+7 (495) 191-97-97</span>
                                 </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-3.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>мужская одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">Скидка
-                                            <br>до 50%
-                                            <br>в FANT
-                                        </h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>На всю мужскую
-                                                <br>коллецию
-                                            </p>
-                                            <p></p>
-                                        </div>
-                                    </div>
+                                <a class="vacancy__link vacancy__email" href="mailto:info@globalmall.ru">
+                                    <svg>
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                    <span class="vacancy__email-label">info@globalmall.ru</span>
                                 </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-4.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">новая коллекция exalta</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-4.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">новая коллекция exalta</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-2.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>спорт</li>
-                                        </ul>
-                                        <h3 class="card__title">ликвидация зимних коллекций</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-3.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>мужская одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">Скидка
-                                            <br>до 50%
-                                            <br>в FANT
-                                        </h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>На всю мужскую
-                                                <br>коллецию
-                                            </p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-3.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>мужская одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">Скидка
-                                            <br>до 50%
-                                            <br>в FANT
-                                        </h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>На всю мужскую
-                                                <br>коллецию
-                                            </p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-4.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">новая коллекция exalta</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-2.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>спорт</li>
-                                        </ul>
-                                        <h3 class="card__title">ликвидация зимних коллекций</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-2.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>спорт</li>
-                                        </ul>
-                                        <h3 class="card__title">ликвидация зимних коллекций</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>В Триал-Спорт скидка от&nbsp;40&nbsp;до&nbsp;70%</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-3.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>мужская одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">Скидка
-                                            <br>до 50%
-                                            <br>в FANT
-                                        </h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>На всю мужскую
-                                                <br>коллецию
-                                            </p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="cardslist__item js-ajax-element">
-                                <a class="card card--light" href="./card-detail.html">
-                                    <img src="img/content/card-4.jpg" alt="Карточка">
-                                    <div class="card__overlay"></div>
-                                    <div class="card__content">
-                                        <ul class="card__tags">
-                                            <li>акция</li>
-                                            <li>одежда</li>
-                                        </ul>
-                                        <h3 class="card__title">новая коллекция exalta</h3>
-                                        <div class="card__description">
-                                            <p></p>
-                                            <p>Теплые куртки, пальто и&nbsp;тренчи 2019 года</p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="cardslist__more-container js-ajax-show-more-btn-container">
-                            <a class="button button--filled cardslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
-                        </div>
-                        <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
-                            <svg>
-                                <use xlink:href="#filter-mini"></use>
-                            </svg>
-                            <span class="newslist__open-mobile-filter-dot"></span>
-                        </a>
-                        <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
-                            <div class="hystmodal__wrap modal__wrapper">
-                                <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
-                                    <div class="modal__header">
-                                        <div class="container">
-                                            <div class="modal__header-inner">
-                                                <button data-hystclose title="Закрыть">
-                                                    <svg class="accordion-item__btn-icon">
-                                                        <use xlink:href="#menu-back"></use>
-                                                    </svg>
-                                                </button>
-                                                <span class="modal__title">Категории</span>
-                                                <div class="modal__header-ghost"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal__content">
-                                        <div class="container">
-                                            <form action="#" name="search-mobile" class="serach-form__mobile-form js-search-form">
-                                                <input name="offset" value="8" type="hidden">
-                                                <input name="search" value="" type="hidden">
-                                                <input name="floor" value="all" type="hidden">
-                                                <ul class="search-form__filter-list">
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="все категории" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">все категории</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="спорт" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">спорт</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="детская одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">детская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">кафе</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Молодежная одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="спорт" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">спорт</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="детская одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">детская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">кафе</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Молодежная одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="мужская одежда" value="Y" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">мужская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                                <div class="search-form__mobile-form-footer">
-                                                    <button class="button search-form__mobile-form-reset js-reset" type="button">Сбросить фильтр</button>
-                                                    <button class="button button--filled-gold search-form__mobile-form-submit" data-hystclose type="submit">Показать 3</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                                <span class="vacancy__contacts-label">По вопросам трудоустройства</span>
                             </div>
+                        </div>
+                        <div class="vacancy__body">
+                            <div class="vacancy__hh-block">
+                                <div class="vacancy__hh-text">
+                                    <h2 class="vacancy__hh-title">Все вакансии компании на&nbsp;HH.ru</h2>
+                                    <a class="button button--narrow vacancy__hh-link" href="#" target="_blank">
+                                        <span>Смотреть все</span>
+                                        <svg>
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <img class="vacancy__hh-logo" src="img/HeadHunter.png" alt="HH">
+                            </div>
+                            <div class="vacancy__text editable-text-container">
+                                <p>Первоначально этим словом обозначалась исключительно вакантная епископская кафедра. Так как лица, от которых зависело замещение кафедры, часто с умыслом медлили, дабы пользоваться пока епископскими доходами, то церковь уже очень рано постановила, чтобы духовные должности, замещение которых составляет привилегию светских лиц, не оставались вакантными более шести месяцев, а зависящие от духовных лиц — более четырех месяцев; нарушивший это постановление лишался на этот раз своей привилегии и вакантная должность замещалась помимо него.</p>
+                            </div>
+                            <form class="form" name="feedback" action="">
+                                <h2 class="form__title">обратная связь</h2>
+                                <div class="form__inputs">
+                                    <input name="name" type="text" placeholder="Ваше имя" autocomplete="off" class="form__input" required>
+                                    <input name="contacts" type="text" placeholder="Телефон или e-mail" autocomplete="off" class="form__input">
+                                    <textarea class="form__input form__textarea" name="message" placeholder="Сообщение"></textarea>
+                                </div>
+                                <label class="checkbox-container form__policy">
+                                    <div class="form__policy-text">Даю свое согласие на<a href="#">Обработку персональных данных</a>и соглашаюсь с<a href="#">Политикой конфиденциальности</a>
+                                    </div>
+                                    <input type="checkbox" name="policy" checked="checked" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button class="button button--filled button--narrow form__submit" type="submit">отправить</button>
+                            </form>
                         </div>
                     </div>
                 </section>
