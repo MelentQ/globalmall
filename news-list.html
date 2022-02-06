@@ -95,9 +95,8 @@
                 <symbol viewBox="0 0 21 12" id="vk" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.58.85c.14-.46 0-.8-.66-.8h-2.2c-.55 0-.8.3-.95.62 0 0-1.11 2.72-2.7 4.48-.5.51-.74.67-1.02.67-.13 0-.34-.16-.34-.62V.85c0-.55-.16-.8-.62-.8H7.64c-.35 0-.56.26-.56.5 0 .53.8.65.88 2.14v3.23c0 .7-.13.83-.41.83C6.8 6.75 5 4.03 3.92.9 3.72.3 3.5.05 2.94.05H.75C.12.05 0 .35 0 .67c0 .58.74 3.46 3.46 7.27 1.81 2.6 4.36 4.01 6.69 4.01 1.4 0 1.56-.31 1.56-.85V9.13c0-.62.14-.75.58-.75.32 0 .88.16 2.18 1.42 1.49 1.48 1.73 2.15 2.57 2.15h2.19c.63 0 .94-.31.76-.93-.2-.62-.9-1.51-1.85-2.57-.51-.6-1.28-1.25-1.51-1.58-.33-.42-.23-.6 0-.98 0 0 2.67-3.76 2.95-5.04z" />
                 </symbol>
-                <symbol viewBox="0 0 22 16" id="youtube" xmlns="http://www.w3.org/2000/svg">
-                    <path id="youtube-icon-rectangle" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 8l-3.5 2V6L13 8z" />
-                    <path id="youtube-icon-border" stroke-width="1.5" d="M1 8.7V7.3c0-2.9 0-4.35.9-5.28.91-.93 2.34-.97 5.19-1.05a144.8 144.8 0 017.82 0c2.85.08 4.28.12 5.18 1.05.91.93.91 2.38.91 5.27v1.42c0 2.9 0 4.34-.9 5.27-.91.93-2.34.97-5.19 1.05a140.97 140.97 0 01-7.82 0c-2.85-.08-4.28-.12-5.18-1.05C1 13.05 1 11.6 1 8.71z" />
+                <symbol viewBox="0 0 24 24" id="youtube" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.935 14.628v-5.62l5.403 2.82-5.403 2.8zM21.8 8.035s-.195-1.379-.795-1.986c-.76-.796-1.613-.8-2.004-.847C16.203 5 12.004 5 12.004 5h-.008s-4.198 0-6.997.202c-.391.047-1.243.05-2.004.847-.6.607-.795 1.986-.795 1.986S2 9.653 2 11.272v1.517c0 1.618.2 3.237.2 3.237s.195 1.378.795 1.985c.76.797 1.76.771 2.205.855 1.6.153 6.8.2 6.8.2s4.203-.006 7.001-.208c.391-.047 1.244-.05 2.004-.847.6-.607.795-1.985.795-1.985s.2-1.619.2-3.237v-1.517c0-1.619-.2-3.237-.2-3.237z" />
                 </symbol>
             </svg>
         </div>
@@ -268,19 +267,19 @@
                                     <ul class="search-form__filter-btns">
                                         <li class="search-form__filter-btn-wrapper">
                                             <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden" checked="checked" name="floor" value="all" type="radio">
+                                                <input class="search-form__filter-radio-input visually-hidden js-radio" checked="checked" name="floor" value="all" type="radio">
                                                 <span class="search-form__filter-radio-label">все этажи</span>
                                             </label>
                                         </li>
                                         <li class="search-form__filter-btn-wrapper">
                                             <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="all" type="radio">
+                                                <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="all" type="radio">
                                                 <span class="search-form__filter-radio-label">1 этаж</span>
                                             </label>
                                         </li>
                                         <li class="search-form__filter-btn-wrapper">
                                             <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden" name="floor" value="all" type="radio">
+                                                <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="all" type="radio">
                                                 <span class="search-form__filter-radio-label">2 этаж</span>
                                             </label>
                                         </li>
@@ -289,133 +288,133 @@
                                         <ul class="search-form__filter-list js-hidden-container">
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">все категории</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Аксессуары</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Детские товары</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Женская одежда</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">кафе</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Обувь</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Красота и здоровье</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Мужская одежда</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">одежда</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Подарки</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Продукты</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Салон связи</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Товары для дома</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Туризм</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Услуги</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">спорт</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Табак</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Сигареты</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Спортивные товары</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Электронные сигареты</span>
                                                 </label>
                                             </li>
                                             <li class="search-form__filter-item">
                                                 <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
+                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
                                                     <span class="search-form__filter-checkbox-label">Электроника</span>
                                                 </label>
                                             </li>

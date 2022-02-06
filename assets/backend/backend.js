@@ -6,23 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
  * Сабмит формы поиска на страницах списка элементов
  */
 function searchFormSubmitHandler() {
-  const form = document.querySelector('.js-backend-submit-handler');
-  if (form) {
-    const resetBtn = form.querySelector('.js-reset');
-    resetBtn.addEventListener('click', () => {
-      form.reset();
-      submitForm();
-    })
+  const forms = Array.from(document.querySelectorAll('.js-backend-submit-handler'));
 
-    function submitForm() {
-      // ОНО НЕ РАБОТАЕТ
-      // НАДО У АРТЁМА УЗНАТЬ ЧТО ДЕЛАТЬ В ЭТОЙ СИТУАЦИИ
-      form.submit();
-    }
-
+  forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      console.log('submit');
+      get(form);
     })
+
+    const resetBtn = form.querySelector('.js-reset');
+    if(resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        get(form);
+      })
+    }
+
+    const radioButtons = Array.from(form.querySelectorAll('.js-radio'))
+    const checkboxes = Array.from(form.querySelectorAll('.js-checkbox'))
+    const formInputs = [...radioButtons, ...checkboxes];
+    formInputs.forEach(input => {
+      input.addEventListener('change', () => {
+        get(form);
+      })
+    })
+  })
+
+  // Основная логика
+  function get(form) {
+    // const url = form.action;
+    console.log('backend.js')
   }
 }
