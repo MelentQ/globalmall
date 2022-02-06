@@ -1,0 +1,52 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+{{>breadcrumbs}}
+
+<section class="contacts">
+  <div class="container container--grid">
+    <div class="contacts__header">
+      <h1 class="contacts__title">{{title}}</h1>
+      <div class="contacts__info">
+        <div class="contacts__info-item">
+          <svg><use xlink:href="#location"></svg>
+          <span>{{{contacts.address}}}</span>
+        </div>
+        <div class="contacts__info-item">
+          <svg><use xlink:href="#clock"></svg>
+          <div class="contacts__info-item-text-block">
+            <span>ежедневно 10:00 - 22:00</span>
+            <span>супермаркет 24 часа</span>
+          </div>
+        </div>
+        <a class="contacts__info-link contacts__info-phone" href="tel:+74951919797">
+          <svg><use xlink:href="#phone"></svg>
+          <span>+7 (495) 191-97-97</span>
+        </a>
+        <a class="contacts__info-link contacts__info-email" href="mailto:info@globalmall.ru">
+          <svg><use xlink:href="#mail"></svg>
+          <span class="contacts__info-email-label">info@globalmall.ru</span>
+        </a>
+        <span class="contacts__info-label">По всем вопросам, коммерческим предложениям и вопросам размещения</span>
+        {{>socials mods="socials--light"}}
+      </div>
+    </div>
+    <div class="contacts__content">
+      <div class="contacts__tabs js-init-tabs">
+        <div class="contacts__tabs-btns js-tabs">
+          <button class="button button--narrow" type="button">
+              <svg><use xlink:href="#car-1"></svg>
+              <span>Как добраться</span>
+          </button>
+          <button class="button button--narrow" type="button">
+              <svg><use xlink:href="#block"></svg>
+              <span>Схема этажей</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/content}}
+{{/extend}}

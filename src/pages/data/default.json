@@ -51,7 +51,7 @@
     },
     {
       "name": "Вакансии",
-      "link": "#"
+      "link": "./vacancy.html"
     },
     {
       "name": "Контакты",
@@ -61,6 +61,21 @@
   "contacts": {
     "address": "м.&nbsp;Автозаводская, ул.Ленинская&nbsp;Слобода, д.&nbsp;26,&nbsp;стр.2"
   },
+  "floors": [
+    {
+      "name": "все этажи",
+      "checked": true,
+      "value": "all"
+    },
+    {
+      "name": "1 этаж",
+      "value": "1"
+    },
+    {
+      "name": "2 этаж",
+      "value": "2"
+    }
+  ],
   "newsList1": {
     "title": "акции",
     "link": "./cards.html",
@@ -508,7 +523,7 @@
     {
       "name": "YouTube",
       "icon": "#youtube",
-      "link": "https://vk.com/globalmall_ru"
+      "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
     },
     {
       "name": "Facebook",
@@ -518,7 +533,7 @@
     {
       "name": "VK",
       "icon": "#vk",
-      "link": "https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g"
+      "link": "https://vk.com/globalmall_ru"
     }
   ]
 }

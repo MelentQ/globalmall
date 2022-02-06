@@ -1,0 +1,13 @@
+{
+  "title": "Вакансии",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Вакансии",
+      "link": "#"
+    }
+  ]
+}

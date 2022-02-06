@@ -1,96 +1,118 @@
-/* ######
+export default class FormValidator {
+  /**
+   * 
+   * @param {Object} selectors - Селекторы, их очень много...
+   * @param {*} formElement - Элемент формы, который надо валидировать
+   */
+  constructor(selectors, formElement, showErrors = false, errorElementPostfix = '-error') {
+    this._submitButtonSelector = selectors.submitButtonSelector;
+    this._inactiveButtonClass = selectors.inactiveButtonClass;
+    this._inputErrorClass = selectors.inputErrorClass;
+    this._errorClass = selectors.errorClass;
 
-Как пользоваться:
+    this._formElement = formElement;
 
-Пример:
+    this.inputList = Array.from(this._formElement.querySelectorAll(selectors.inputSelector));
 
-###### */
+    this._errorElementPostfix = errorElementPostfix;
+    this._showErrors = showErrors;
+  }
 
-import 'parsleyjs';
-import dayjs from 'dayjs';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
+  /**
+   * Включает валидацию элемента формы formElement
+   */
+  enableValidation() {
+    this._setEventListeners()
+  }
 
-dayjs.extend(customParseFormat);
+  _setEventListeners() {
+    this._buttonElement = this._formElement.querySelector(this._submitButtonSelector);
 
-window.Parsley.addValidator('requiredIfChecked', {
-    requirementType: 'string',
-    validateString: function (value, requirement) {
-        console.log('Validating', value);
+    this._toggleButtonState();
 
-        const checkbox = document.querySelector(requirement);
+    this.inputList.forEach(inputElement => {
+      inputElement.addEventListener('input', evt => {
+        this._checkInputValidity(inputElement);
+        this._toggleButtonState();
+      })
+    })
+  }
 
-        if (!checkbox) {
-            return false;
-        }
+  /**
+   * Включает или отключает кнопку сабмита формы в зависимости от валидности формы
+   */
+  _toggleButtonState() {
+    if (this._isInputListInvalid(this.inputList)) {
+      this.disableSubmitButton();
+    }
+    else {
+      this.enableSubmitButton();
+    }
+  }
 
-        if (checkbox.checked && !value.trim()) {
-            return false;
-        }
+  /**
+   * Отключает кнопку сабмита
+   */
+  disableSubmitButton() {
+    this._buttonElement.setAttribute('disabled', true);
+    this._buttonElement.classList.add(this._inactiveButtonClass);
+  }
 
-        return true;
-    },
-    messages: {
-        en: 'Required field',
-        ru: 'Обязательное поле',
-    },
-    priority: 33,
-});
+  /**
+   * Включает кнопку сабмита
+   */
+  enableSubmitButton() {
+    this._buttonElement.removeAttribute('disabled');
+    this._buttonElement.classList.remove(this._inactiveButtonClass);
+  }
 
-window.Parsley.addValidator('phone', {
-    requirementType: 'string',
-    validateString: function (value) {
-        if (value.trim() === '') return true;
-        return /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
-    },
-    messages: {
-        en: 'This value should be a mobile number',
-        ru: 'Введите правильный номер мобильного телефона',
-    },
-});
+  _isInputListInvalid() {
+    return this.inputList.some(
+      inputElement => !inputElement.validity.valid
+    )
+  }
 
-window.Parsley.addValidator('date', {
-    requirementType: 'string',
-    validateString: function (value) {
-        if (value.trim() === '') return true;
-        return dayjs(value, 'DD.MM.YYYY', true).isValid();
-    },
-    messages: {
-        en: 'Enter correct date',
-        ru: 'Введите правильно дату',
-    },
-});
+  /**
+   * Проверяет валидность поля inputElement
+   * @param {*} inputElement - поле ввода
+   */
+  _checkInputValidity(inputElement) {
+    if (inputElement.validity.valid) {
+      this._hideInputError(inputElement);
+    }
+    else {
+      this._showInputError(inputElement, inputElement.validationMessage);
+    }
+  }
 
-Parsley.addMessages('ru', {
-    defaultMessage: 'Некорректное значение.',
-    type: {
-        email: 'В данном поле может быть только E-mail',
-        url: 'Адрес сайта введен неверно.',
-        number: 'Введите число.',
-        integer: 'Введите целое число.',
-        digits: 'Введите только цифры.',
-        alphanum: 'Введите буквенно-цифровое значение.',
-    },
-    notblank: 'Это поле должно быть заполнено.',
-    required: 'Обязательное поле',
-    pattern: 'Это значение некорректно.',
-    min: 'Это значение должно быть не менее чем %s.',
-    max: 'Это значение должно быть не более чем %s.',
-    range: 'Это значение должно быть от %s до %s.',
-    minlength: 'Это значение должно содержать не менее %s символов.',
-    maxlength: 'Это значение должно содержать не более %s символов.',
-    length: 'Это значение должно содержать от %s до %s символов.',
-    mincheck: 'Выберите не менее %s значений.',
-    maxcheck: 'Выберите не более %s значений.',
-    check: 'Выберите от %s до %s значений.',
-    equalto: 'Это значение должно совпадать.',
-});
+  _showInputError(inputElement, errorMessage) {
+    if (this._showErrors) {
+      this._errorElement = this._formElement.querySelector(`#${inputElement.id}${this._errorElementPostfix}`);
+      this._errorElement.textContent = errorMessage;
+      this._errorElement.classList.add(this._errorClass);
+    }
+    inputElement.classList.add(this._inputErrorClass)
+  }
+  
+  /**
+   * Скрывает сообщение об ошибке валидации
+   * @param {*} inputElement - элемент ввода
+   */
+  _hideInputError(inputElement) {
+    if (this._showErrors) {
+      this._errorElement = this._formElement.querySelector(`#${inputElement.id}${this._errorElementPostfix}`);
+      this._errorElement.textContent = "";
+      this._errorElement.classList.remove(this._errorClass);
+    }
+    inputElement.classList.remove(this._inputErrorClass)
+  }
 
-Parsley.setLocale('ru');
-
-export default function validation() {
-    const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
-
-    formsToValidate.forEach((form) => {
-        $(form).parsley();
-    });
+  /**
+   * Сбрасывает ошибки полей ввода (только визуально)
+   */
+  resetInputsError() {
+    this.inputList.forEach(inputElement => {
+      this._hideInputError(inputElement);
+    })
+  }
 }

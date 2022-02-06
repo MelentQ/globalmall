@@ -15,6 +15,13 @@
     align-items: stretch;
     justify-content: flex-start;
     gap: 2.4rem;
+
+    &.js-ajax-elements-container {
+      transition: opacity $base-transition-time $base-transition-easing;
+    }
+    &.js-ajax-elements-container.loading {
+      opacity: 0.5;
+    }
   }
 
   &__card-wrapper {

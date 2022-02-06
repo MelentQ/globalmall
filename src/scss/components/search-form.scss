@@ -14,7 +14,7 @@
   }
 
   &__no-result {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-start;
     gap: 1.2rem;
@@ -29,6 +29,9 @@
       height: 2.4rem;
     }
     
+    &.visible {
+      display: flex;
+    }
   }
 
   &__input {

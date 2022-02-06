@@ -1,52 +1,85 @@
-<section class="search">
-    <div class="container">
-        <div class="search__grid">
-            <div class="search__title-block">
-                <h1 class="search__title">{{{name}}}</h1>
-            </div>
-            <div class="search__form">
-                <form name="search" class="search-form js-backend-submit-handler">
-                    <div class="search-form__input-wrapper">
-                        <div class="search-form__input">
-                            <input name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
-                            <button class="search-form__btn js-submit" type="submit">
-                                <svg><use xlink:href="#search"></svg>
-                            </button>
+<div class="js-newslist-search-form-wrapper">
+    <section class="search">
+        <div class="container">
+            <div class="search__grid">
+                <div class="search__title-block">
+                    <h1 class="search__title">{{{name}}}</h1>
+                </div>
+                <div class="search__form">
+                    <form action="#" name="search" class="search-form js-search-form">
+                        <input name="offset" value="8" type="hidden">
+                        <div class="search-form__input-wrapper">
+                            <div class="search-form__input">
+                                <input class="js-text-input" name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
+                                <button class="search-form__btn js-submit" type="submit">
+                                    <svg><use xlink:href="#search"></svg>
+                                </button>
+                            </div>
+                            <div class="search-form__no-result js-error-message">
+                                <svg><use xlink:href="#info-circle"></svg>
+                                <span>Не найдено ни одного магазина</span>
+                            </div>
                         </div>
-                        <div class="search-form__no-result">
-                            <svg><use xlink:href="#info-circle"></svg>
-                            <span>Не найдено ни одного магазина</span>
-                        </div>
-                    </div>
-                    <ul class="search-form__filter-btns">
-                        {{#each floors}}
-                        <li class="search-form__filter-btn-wrapper">
-                            <label class="search-form__filter-radio">
-                                <input class="search-form__filter-radio-input visually-hidden js-radio" {{#if this.checked}}checked{{/if}} name="floor" value="all" type="radio">
-                                <span class="search-form__filter-radio-label">{{this.name}}</span>
-                            </label>
-                        </li>
-                        {{/each}}
-                    </ul>
-                    {{>filter-buttons}}
-                </form>
+                        <ul class="search-form__filter-btns">
+                            {{#each floors}}
+                            <li class="search-form__filter-btn-wrapper">
+                                <label class="search-form__filter-radio">
+                                    <input class="search-form__filter-radio-input visually-hidden js-radio" {{#if this.checked}}checked{{/if}} name="floor" value="{{this.value}}" type="radio">
+                                    <span class="search-form__filter-radio-label">{{this.name}}</span>
+                                </label>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{>filter-buttons}}
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="newslist">
-    <div class="container js-ajax-show-more-container">
-        <ul class="newslist__list js-ajax-elements-container">
-            {{#each cardsData}}
-            <li class="newslist__item js-ajax-element">
-                {{>newslist-card this}}
-            </li>
-            {{/each}}
-        </ul>
-        <div class="newslist__more-container js-ajax-show-more-btn-container">
-            <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
+    <section class="newslist">
+        <div class="container js-ajax-show-more-container">
+            <ul class="newslist__list js-ajax-elements-container js-search-form-elements-container">
+                {{#each cardsData}}
+                <li class="newslist__item js-ajax-element js-search-form-element">
+                    {{>newslist-card this}}
+                </li>
+                {{/each}}
+            </ul>
+            <div class="newslist__more-container js-ajax-show-more-btn-container">
+                <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
+            </div>
+            {{>mobile-modal-filter}}
         </div>
-        {{>mobile-modal-filter}}
-    </div>
-</section>
+    </section>
+</div>
+
+<template id="newsListItemTemplate">
+    <li class="newslist__item js-ajax-element js-search-form-element">
+        <div class="newslist__card-wrapper">
+            <a class="newslist__card" href="">
+                <div class="newslist__card-image-wrapper">
+                    <img class="newslist__card-image" src="" alt="">
+                </div>
+                <div class="newslist__card-text">
+                    <h3 class="newslist__card-name"></h3>
+                    <div class="newslist__card-info">
+                        <span class="newslist__card-floor"></span>
+                        <span class="newslist__card-time"></span>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="newslist__card-btn">
+                <svg><use xlink:href="#location"></use></svg>
+                <span class="newslist__card-btn-label">Расположение на схеме</span>
+            </a>
+        </div>
+        <ul class="hashtags">
+        </ul>
+    </li>
+</template>
+<template id="hashtagItemTemplate">
+    <li class="hashtags__item">
+        <a class="hashtags__link" href=""></a>
+    </li>
+</template>

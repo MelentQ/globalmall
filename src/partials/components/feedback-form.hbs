@@ -1,0 +1,17 @@
+<form class="form js-init-validation" name="feedback" action="" novalidate>
+  <h2 class="form__title">обратная связь</h2>
+  <div class="form__inputs">
+    <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
+    <input class="form__input js-input" name="contacts" type="text" placeholder="Телефон или e-mail" autocomplete="off">
+    <textarea class="form__input form__textarea js-input" name="message" placeholder="Сообщение"></textarea>
+  </div>
+  
+  <label class="checkbox-container form__policy">
+      <div class="form__policy-text">
+        Даю свое согласие на <a href="#">Обработку персональных данных</a> и соглашаюсь с <a href="#">Политикой конфиденциальности</a>
+      </div>
+      <input class="js-input" type="checkbox" name="policy" checked required>
+      <span class="checkmark"></span>
+  </label>
+  <button class="button button--filled button--narrow form__submit" type="submit">отправить</button>
+</form>

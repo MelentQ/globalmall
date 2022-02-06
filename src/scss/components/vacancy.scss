@@ -1,0 +1,166 @@
+.vacancy {
+
+  // ******
+  // Header
+
+  padding-top: 3.4rem;
+  padding-bottom: 7.2rem;
+
+  @include breakpoint(tablet) {
+    padding-top: 2.4rem;
+  }
+
+  &__header {
+  }
+
+  &__contacts {
+    padding: 3.4rem;
+
+    background-color: var(--secondary-grey);
+
+    @include breakpoint(tablet) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    @extend %fs-h6;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    svg {
+      flex-shrink: 0;
+
+      fill: var(--grey);
+      width: 2.4rem;
+      height: 2.4rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+
+    &:hover {
+      color: var(--grey);
+
+      svg {
+        fill: var(--primary-color);
+      }
+
+      .vacancy__email-label::after {
+        background-color: var(--grey);
+      }
+    }
+  }
+
+  &__phone {
+    margin-bottom: 2.4rem;
+  }
+
+  &__email {
+    text-transform: lowercase;
+  }
+
+  &__email-label {
+    position: relative;
+
+    &::after {
+      content: '';
+      
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--dark);
+
+      transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+
+  &__contacts-label {
+    display: block;
+
+    margin-left: 3.9rem;
+    margin-top: 1.2rem;
+
+    color: black;
+    opacity: 0.5;
+    @extend %fs-t6;
+    @extend %secondary-ff;
+  }
+
+  // ******
+  // Body
+
+  &__body {
+    
+  }
+
+  // ******
+  // HH
+
+  &__hh-block {
+    padding: 6.4rem;
+
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include breakpoint(laptop) {
+      padding: 3.6rem;
+    }
+
+    @include breakpoint(tablet) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__hh-text {
+    flex-grow: 1;
+  }
+
+  &__hh-title {
+    max-width: 50rem;
+    margin-bottom: 4.2rem;
+
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4.4rem;
+    }
+  }
+
+  &__hh-link {
+  }
+
+  &__hh-logo {
+    flex-shrink: 0;
+
+    width: 6.5rem;
+    height: auto;
+    object-fit: contain;
+
+    @include breakpoint(tablet) {
+      width: 4.5rem;
+    }
+  }
+
+  // ******
+  // Text
+
+  &__text {
+    margin-top: 3.6rem;
+    margin-bottom: 7.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.6rem;
+    }
+  }
+}

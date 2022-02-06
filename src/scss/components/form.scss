@@ -1,0 +1,100 @@
+.form {
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @extend %fs-h3;
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+
+    margin-bottom: 1.6rem;
+
+    @include breakpoint(small-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__input {
+    padding: 1.1rem 1.6rem;
+    background-color: var(--secondary-light);
+
+    border-bottom: 1px solid var(--secondary-light);
+
+    transition: border-color $base-transition-time $base-transition-easing;
+
+    @extend %fs-t6;
+    @extend %secondary-ff;
+
+    &::placeholder {
+      @extend %fs-t6;
+      @extend %secondary-ff;
+    }
+
+    &:focus {
+      border-color: var(--primary-color);
+    }
+
+    &.js-error {
+      border-color: var(--error);
+    }
+  }
+
+  &__textarea {
+    grid-column: span 2;
+
+    height: 7.4rem;
+
+    @include breakpoint(small-mobile) {
+      grid-column: span 1;
+    }
+  }
+
+  &__policy {
+    margin-bottom: 3.6rem;
+  }
+
+  &__policy-text {
+    @extend %fs-t6;
+    @extend %secondary-ff;
+    color: rgba(#212121, 0.5);
+
+    a {
+      text-decoration: underline;
+      transition: color $base-transition-time $base-transition-easing;
+
+      &:hover {
+        color: rgba(#212121, 1);
+      }
+      &:focus-visible {
+        color: rgba(#212121, 1);
+      }
+    }
+  }
+
+  &__submit {
+    min-height: 4.2rem;
+
+    transition: opacity $base-transition-time $base-transition-easing;
+
+    @include breakpoint(small-mobile) {
+      width: 100%;
+    }
+
+    &.disabled {
+      opacity: 0.8;
+      cursor: default;
+
+      &:hover {
+        color: var(--white) !important;
+      }
+
+      &:focus-visible {
+        color: var(--white) !important;
+      }
+    }
+  }
+}

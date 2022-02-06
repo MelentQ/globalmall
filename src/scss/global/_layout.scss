@@ -14,6 +14,10 @@
     grid-template-columns: 3fr 8fr;
     gap: 12rem;
 
+    @include breakpoint(laptop) {
+        gap: 6rem;
+    }
+
     @include breakpoint(tablet) {
         grid-template-columns: 1fr;
         gap: 2.4rem;
@@ -33,6 +37,10 @@
     flex-direction: column;
 
     margin-top: var(--js-main-header-height);;
+}
+
+.page-title {
+    @extend %fs-h1;
 }
 
 .section {

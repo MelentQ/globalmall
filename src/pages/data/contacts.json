@@ -1,0 +1,13 @@
+{
+    "title": "Контакты",
+    "breadcrumbs": [
+        {
+            "name": "Главная",
+            "link": "./index.html"
+        },
+        {
+            "name": "Контакты",
+            "link": "#"
+        }
+    ]
+}
