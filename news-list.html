@@ -243,612 +243,647 @@
                         </nav>
                     </div>
                 </section>
-                <section class="search">
-                    <div class="container">
-                        <div class="search__grid">
-                            <div class="search__title-block">
-                                <h1 class="search__title">Магазины</h1>
-                            </div>
-                            <div class="search__form">
-                                <form name="search" class="search-form js-backend-submit-handler">
-                                    <div class="search-form__input-wrapper">
-                                        <div class="search-form__input">
-                                            <input name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
-                                            <button class="search-form__btn js-submit" type="submit">
+                <div class="js-newslist-search-form-wrapper">
+                    <section class="search">
+                        <div class="container">
+                            <div class="search__grid">
+                                <div class="search__title-block">
+                                    <h1 class="search__title">Магазины</h1>
+                                </div>
+                                <div class="search__form">
+                                    <form action="#" name="search" class="search-form js-search-form">
+                                        <input name="offset" value="8" type="hidden">
+                                        <div class="search-form__input-wrapper">
+                                            <div class="search-form__input">
+                                                <input class="js-text-input" name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
+                                                <button class="search-form__btn js-submit" type="submit">
+                                                    <svg>
+                                                        <use xlink:href="#search"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="search-form__no-result js-error-message">
                                                 <svg>
-                                                    <use xlink:href="#search"></use>
+                                                    <use xlink:href="#info-circle"></use>
                                                 </svg>
-                                            </button>
+                                                <span>Не найдено ни одного магазина</span>
+                                            </div>
                                         </div>
-                                        <div class="search-form__no-result">
-                                            <svg>
-                                                <use xlink:href="#info-circle"></use>
-                                            </svg>
-                                            <span>Не найдено ни одного магазина</span>
-                                        </div>
-                                    </div>
-                                    <ul class="search-form__filter-btns">
-                                        <li class="search-form__filter-btn-wrapper">
-                                            <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden js-radio" checked="checked" name="floor" value="all" type="radio">
-                                                <span class="search-form__filter-radio-label">все этажи</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-btn-wrapper">
-                                            <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="all" type="radio">
-                                                <span class="search-form__filter-radio-label">1 этаж</span>
-                                            </label>
-                                        </li>
-                                        <li class="search-form__filter-btn-wrapper">
-                                            <label class="search-form__filter-radio">
-                                                <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="all" type="radio">
-                                                <span class="search-form__filter-radio-label">2 этаж</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <div class="js-hide-sort-buttons">
-                                        <ul class="search-form__filter-list js-hidden-container">
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">все категории</span>
+                                        <ul class="search-form__filter-btns">
+                                            <li class="search-form__filter-btn-wrapper">
+                                                <label class="search-form__filter-radio">
+                                                    <input class="search-form__filter-radio-input visually-hidden js-radio" checked="checked" name="floor" value="all" type="radio">
+                                                    <span class="search-form__filter-radio-label">все этажи</span>
                                                 </label>
                                             </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Аксессуары</span>
+                                            <li class="search-form__filter-btn-wrapper">
+                                                <label class="search-form__filter-radio">
+                                                    <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="all" type="radio">
+                                                    <span class="search-form__filter-radio-label">1 этаж</span>
                                                 </label>
                                             </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Детские товары</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Женская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">кафе</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Обувь</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Красота и здоровье</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Мужская одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">одежда</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Подарки</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Продукты</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Салон связи</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Товары для дома</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Туризм</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Услуги</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">спорт</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Табак</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Сигареты</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Спортивные товары</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Электронные сигареты</span>
-                                                </label>
-                                            </li>
-                                            <li class="search-form__filter-item">
-                                                <label class="search-form__filter-checkbox">
-                                                    <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="" value="" type="checkbox">
-                                                    <span class="search-form__filter-checkbox-label">Электроника</span>
+                                            <li class="search-form__filter-btn-wrapper">
+                                                <label class="search-form__filter-radio">
+                                                    <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="all" type="radio">
+                                                    <span class="search-form__filter-radio-label">2 этаж</span>
                                                 </label>
                                             </li>
                                         </ul>
-                                        <div class="search-form__footer">
-                                            <button class="search-form__hide-btn js-hide-btn" type="button">Показать ещё</button>
-                                            <button class="search-form__reset-btn js-reset" type="button">
-                                                <svg>
-                                                    <use xlink:href="#close-small"></use>
-                                                </svg>
-                                                <span class="search-form__reset-btn-label">Сбросить фильтр</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="newslist">
-                    <div class="container js-ajax-show-more-container">
-                        <ul class="newslist__list js-ajax-elements-container">
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-1.jpg" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">Триал-Спорт</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">спорт</a>
-                                    </li>
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">спортивные товары</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-2.png" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">NL International</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">Красота и здоровье</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-3.png" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">Детский мир</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">Детские товары</a>
-                                    </li>
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">детская одежда</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-4.png" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">TOPGUN</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">Услуги</a>
-                                    </li>
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">барбершоп</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-1.jpg" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">Триал-Спорт</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">спорт</a>
-                                    </li>
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">спортивные товары</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-2.png" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">NL International</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">Красота и здоровье</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-3.png" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">Детский мир</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">Детские товары</a>
-                                    </li>
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">детская одежда</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="newslist__item js-ajax-element">
-                                <div class="newslist__card-wrapper">
-                                    <a class="newslist__card" href="#">
-                                        <div class="newslist__card-image-wrapper">
-                                            <img class="newslist__card-image" src="img/content/news-4.png" alt="Карточка">
-                                        </div>
-                                        <div class="newslist__card-text">
-                                            <h3 class="newslist__card-name">TOPGUN</h3>
-                                            <div class="newslist__card-info">
-                                                <span class="newslist__card-floor">1 этаж</span>
-                                                <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="newslist__card-btn">
-                                        <svg>
-                                            <use xlink:href="#location"></use>
-                                        </svg>
-                                        <span class="newslist__card-btn-label">Расположение на схеме</span>
-                                    </a>
-                                </div>
-                                <ul class="hashtags">
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">Услуги</a>
-                                    </li>
-                                    <li class="hashtags__item">
-                                        <a class="hashtags__link" href="#">барбершоп</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="newslist__more-container js-ajax-show-more-btn-container">
-                            <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
-                        </div>
-                        <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
-                            <svg>
-                                <use xlink:href="#filter-mini"></use>
-                            </svg>
-                            <span class="newslist__open-mobile-filter-dot"></span>
-                        </a>
-                        <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
-                            <div class="hystmodal__wrap modal__wrapper">
-                                <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
-                                    <div class="modal__header">
-                                        <div class="container">
-                                            <div class="modal__header-inner">
-                                                <button data-hystclose title="Закрыть">
-                                                    <svg class="accordion-item__btn-icon">
-                                                        <use xlink:href="#menu-back"></use>
+                                        <div class="js-hide-sort-buttons">
+                                            <ul class="search-form__filter-list js-hidden-container">
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="все категории" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">все категории</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Аксессуары" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Аксессуары</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Детские товары" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Детские товары</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Женская одежда" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Женская одежда</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">кафе</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Молодежная одежда" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Обувь" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Обувь</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Красота и здоровье" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Красота и здоровье</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Мужская одежда" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Мужская одежда</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="одежда" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">одежда</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Подарки" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Подарки</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Продукты" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Продукты</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Салон связи" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Салон связи</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Товары для дома" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Товары для дома</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Туризм" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Туризм</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Услуги" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Услуги</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="спорт" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">спорт</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Табак" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Табак</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Сигареты" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Сигареты</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Спортивные товары" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Спортивные товары</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Электронные сигареты" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Электронные сигареты</span>
+                                                    </label>
+                                                </li>
+                                                <li class="search-form__filter-item">
+                                                    <label class="search-form__filter-checkbox">
+                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Электроника" value="Y" type="checkbox">
+                                                        <span class="search-form__filter-checkbox-label">Электроника</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <div class="search-form__footer">
+                                                <button class="search-form__hide-btn js-hide-btn" type="button">Показать ещё</button>
+                                                <button class="search-form__reset-btn js-reset" type="button">
+                                                    <svg>
+                                                        <use xlink:href="#close-small"></use>
                                                     </svg>
+                                                    <span class="search-form__reset-btn-label">Сбросить фильтр</span>
                                                 </button>
-                                                <span class="modal__title">Категории</span>
-                                                <div class="modal__header-ghost"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal__content">
-                                        <div class="container">
-                                            <form class="serach-form__mobile-form">
-                                                <ul class="search-form__filter-list">
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">все категории</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Аксессуары</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Детские товары</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Женская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">кафе</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Обувь</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Красота и здоровье</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Мужская одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">одежда</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Подарки</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Продукты</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Салон связи</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Товары для дома</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Туризм</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Услуги</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">спорт</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Табак</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Сигареты</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Спортивные товары</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Электронные сигареты</span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="search-form__filter-item">
-                                                        <label class="search-form__filter-checkbox">
-                                                            <input class="search-form__filter-checkbox-input visually-hidden" name="" value="" type="checkbox">
-                                                            <span class="search-form__filter-checkbox-label">Электроника</span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                                <div class="search-form__mobile-form-footer">
-                                                    <button class="button search-form__mobile-form-reset" type="reset">Сбросить фильтр</button>
-                                                    <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="newslist">
+                        <div class="container js-ajax-show-more-container">
+                            <ul class="newslist__list js-ajax-elements-container js-search-form-elements-container">
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-1.jpg" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">Триал-Спорт</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
                                                 </div>
-                                            </form>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">спорт</a>
+                                        </li>
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">спортивные товары</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-2.png" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">NL International</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">Красота и здоровье</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-3.png" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">Детский мир</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">Детские товары</a>
+                                        </li>
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">детская одежда</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-4.png" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">TOPGUN</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">Услуги</a>
+                                        </li>
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">барбершоп</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-1.jpg" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">Триал-Спорт</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">спорт</a>
+                                        </li>
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">спортивные товары</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-2.png" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">NL International</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">Красота и здоровье</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-3.png" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">Детский мир</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">Детские товары</a>
+                                        </li>
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">детская одежда</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="newslist__item js-ajax-element js-search-form-element">
+                                    <div class="newslist__card-wrapper">
+                                        <a class="newslist__card" href="#">
+                                            <div class="newslist__card-image-wrapper">
+                                                <img class="newslist__card-image" src="img/content/news-4.png" alt="Карточка">
+                                            </div>
+                                            <div class="newslist__card-text">
+                                                <h3 class="newslist__card-name">TOPGUN</h3>
+                                                <div class="newslist__card-info">
+                                                    <span class="newslist__card-floor">1 этаж</span>
+                                                    <span class="newslist__card-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="newslist__card-btn">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="newslist__card-btn-label">Расположение на схеме</span>
+                                        </a>
+                                    </div>
+                                    <ul class="hashtags">
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">Услуги</a>
+                                        </li>
+                                        <li class="hashtags__item">
+                                            <a class="hashtags__link" href="#">барбершоп</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="newslist__more-container js-ajax-show-more-btn-container">
+                                <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
+                            </div>
+                            <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
+                                <svg>
+                                    <use xlink:href="#filter-mini"></use>
+                                </svg>
+                                <span class="newslist__open-mobile-filter-dot"></span>
+                            </a>
+                            <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
+                                <div class="hystmodal__wrap modal__wrapper">
+                                    <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                                        <div class="modal__header">
+                                            <div class="container">
+                                                <div class="modal__header-inner">
+                                                    <button data-hystclose title="Закрыть">
+                                                        <svg class="accordion-item__btn-icon">
+                                                            <use xlink:href="#menu-back"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <span class="modal__title">Категории</span>
+                                                    <div class="modal__header-ghost"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal__content">
+                                            <div class="container">
+                                                <form class="serach-form__mobile-form js-search-form">
+                                                    <input name="search" value="" type="hidden">
+                                                    <input name="floor" value="" type="hidden">
+                                                    <ul class="search-form__filter-list">
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="все категории" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">все категории</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Аксессуары" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Аксессуары</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Детские товары" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Детские товары</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Женская одежда" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Женская одежда</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">кафе</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Молодежная одежда" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Молодежная одежда</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Обувь" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Обувь</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Красота и здоровье" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Красота и здоровье</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Мужская одежда" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Мужская одежда</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="одежда" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">одежда</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Подарки" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Подарки</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Продукты" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Продукты</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Салон связи" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Салон связи</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Товары для дома" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Товары для дома</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Туризм" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Туризм</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Услуги" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Услуги</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="спорт" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">спорт</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Табак" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Табак</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Сигареты" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Сигареты</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Спортивные товары" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Спортивные товары</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Электронные сигареты" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Электронные сигареты</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-item">
+                                                            <label class="search-form__filter-checkbox">
+                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Электроника" value="Y" type="checkbox">
+                                                                <span class="search-form__filter-checkbox-label">Электроника</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="search-form__mobile-form-footer">
+                                                        <button class="button search-form__mobile-form-reset js-reset" type="button">Сбросить фильтр</button>
+                                                        <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
+                <template id="newsListItemTemplate">
+                    <li class="newslist__item js-ajax-element js-search-form-element">
+                        <div class="newslist__card-wrapper">
+                            <a class="newslist__card" href="">
+                                <div class="newslist__card-image-wrapper">
+                                    <img class="newslist__card-image" src="" alt="">
+                                </div>
+                                <div class="newslist__card-text">
+                                    <h3 class="newslist__card-name"></h3>
+                                    <div class="newslist__card-info">
+                                        <span class="newslist__card-floor"></span>
+                                        <span class="newslist__card-time"></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="newslist__card-btn">
+                                <svg>
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <span class="newslist__card-btn-label">Расположение на схеме</span>
+                            </a>
+                        </div>
+                        <ul class="hashtags"></ul>
+                    </li>
+                </template>
+                <template id="hashtagItemTemplate">
+                    <li class="hashtags__item">
+                        <a class="hashtags__link" href=""></a>
+                    </li>
+                </template>
             </main>
 
             <footer class="footer">
