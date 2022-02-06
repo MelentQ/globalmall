@@ -20,7 +20,7 @@
         <meta property="og:locale" content="ru_RU">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="assets/backend/backend.css">
-        <title>Вакансии</title>
+        <title>Контакты</title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -239,65 +239,92 @@
                     <div class="container">
                         <nav class="breadcrumbs__list">
                             <a href="./index.html">Главная</a>
-                            <a href="#">Вакансии</a>
+                            <a href="#">Контакты</a>
                         </nav>
                     </div>
                 </section>
-                <section>
-                    <div class="container">
-                        <h1 class="page-title">Вакансии</h1>
-                    </div>
-                </section>
-                <section class="vacancy">
+                <section class="contacts">
                     <div class="container container--grid">
-                        <div class="vacancy__header">
-                            <div class="vacancy__contacts">
-                                <a class="vacancy__link vacancy__phone" href="tel:+74951919797">
+                        <div class="contacts__header">
+                            <h1 class="contacts__title">Контакты</h1>
+                            <div class="contacts__info">
+                                <div class="contacts__info-item">
+                                    <svg>
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                    <span>м.&nbsp;Автозаводская, ул.Ленинская&nbsp;Слобода, д.&nbsp;26,&nbsp;стр.2</span>
+                                </div>
+                                <div class="contacts__info-item">
+                                    <svg>
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                    <div class="contacts__info-item-text-block">
+                                        <span>ежедневно 10:00 - 22:00</span>
+                                        <span>супермаркет 24 часа</span>
+                                    </div>
+                                </div>
+                                <a class="contacts__info-link contacts__info-phone" href="tel:+74951919797">
                                     <svg>
                                         <use xlink:href="#phone"></use>
                                     </svg>
                                     <span>+7 (495) 191-97-97</span>
                                 </a>
-                                <a class="vacancy__link vacancy__email" href="mailto:info@globalmall.ru">
+                                <a class="contacts__info-link contacts__info-email" href="mailto:info@globalmall.ru">
                                     <svg>
                                         <use xlink:href="#mail"></use>
                                     </svg>
-                                    <span class="vacancy__email-label">info@globalmall.ru</span>
+                                    <span class="contacts__info-email-label">info@globalmall.ru</span>
                                 </a>
-                                <span class="vacancy__contacts-label">По вопросам трудоустройства</span>
+                                <span class="contacts__info-label">По всем вопросам, коммерческим предложениям и вопросам размещения</span>
+                                <ul class="socials socials--light">
+                                    <li class="socials__item">
+                                        <a class="socials__item-link" href="https://www.instagram.com/globalmall.ru/" title="Instagram" target="_blank">
+                                            <svg>
+                                                <use xlink:href="#instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__item-link" href="https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g" title="YouTube" target="_blank">
+                                            <svg>
+                                                <use xlink:href="#youtube"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__item-link" href="https://www.facebook.com/GlobalMall.ru/" title="Facebook" target="_blank">
+                                            <svg>
+                                                <use xlink:href="#facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a class="socials__item-link" href="https://vk.com/globalmall_ru" title="VK" target="_blank">
+                                            <svg>
+                                                <use xlink:href="#vk"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="vacancy__body">
-                            <div class="vacancy__hh-block">
-                                <div class="vacancy__hh-text">
-                                    <h2 class="vacancy__hh-title">Все вакансии компании на&nbsp;HH.ru</h2>
-                                    <a class="button button--narrow vacancy__hh-link" href="#" target="_blank">
-                                        <span>Смотреть все</span>
+                        <div class="contacts__content">
+                            <div class="contacts__tabs js-init-tabs">
+                                <div class="contacts__tabs-btns js-tabs">
+                                    <button class="button button--narrow" type="button">
                                         <svg>
-                                            <use xlink:href="#arrow-right"></use>
+                                            <use xlink:href="#car-1"></use>
                                         </svg>
-                                    </a>
+                                        <span>Как добраться</span>
+                                    </button>
+                                    <button class="button button--narrow" type="button">
+                                        <svg>
+                                            <use xlink:href="#block"></use>
+                                        </svg>
+                                        <span>Схема этажей</span>
+                                    </button>
                                 </div>
-                                <img class="vacancy__hh-logo" src="img/HeadHunter.png" alt="HH">
                             </div>
-                            <div class="vacancy__text editable-text-container">
-                                <p>Первоначально этим словом обозначалась исключительно вакантная епископская кафедра. Так как лица, от которых зависело замещение кафедры, часто с умыслом медлили, дабы пользоваться пока епископскими доходами, то церковь уже очень рано постановила, чтобы духовные должности, замещение которых составляет привилегию светских лиц, не оставались вакантными более шести месяцев, а зависящие от духовных лиц — более четырех месяцев; нарушивший это постановление лишался на этот раз своей привилегии и вакантная должность замещалась помимо него.</p>
-                            </div>
-                            <form class="form js-init-validation" name="feedback" action="" novalidate>
-                                <h2 class="form__title">обратная связь</h2>
-                                <div class="form__inputs">
-                                    <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
-                                    <input class="form__input js-input" name="contacts" type="text" placeholder="Телефон или e-mail" autocomplete="off">
-                                    <textarea class="form__input form__textarea js-input" name="message" placeholder="Сообщение"></textarea>
-                                </div>
-                                <label class="checkbox-container form__policy">
-                                    <div class="form__policy-text">Даю свое согласие на<a href="#">Обработку персональных данных</a>и соглашаюсь с<a href="#">Политикой конфиденциальности</a>
-                                    </div>
-                                    <input class="js-input" type="checkbox" name="policy" checked="checked" required>
-                                    <span class="checkmark"></span>
-                                </label>
-                                <button class="button button--filled button--narrow form__submit" type="submit">отправить</button>
-                            </form>
                         </div>
                     </div>
                 </section>
