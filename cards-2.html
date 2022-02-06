@@ -594,9 +594,10 @@
                                     </div>
                                     <div class="modal__content">
                                         <div class="container">
-                                            <form class="serach-form__mobile-form js-search-form">
+                                            <form action="#" name="search-mobile" class="serach-form__mobile-form js-search-form">
+                                                <input name="offset" value="8" type="hidden">
                                                 <input name="search" value="" type="hidden">
-                                                <input name="floor" value="" type="hidden">
+                                                <input name="floor" value="all" type="hidden">
                                                 <ul class="search-form__filter-list">
                                                     <li class="search-form__filter-item">
                                                         <label class="search-form__filter-checkbox">
@@ -679,7 +680,7 @@
                                                 </ul>
                                                 <div class="search-form__mobile-form-footer">
                                                     <button class="button search-form__mobile-form-reset js-reset" type="button">Сбросить фильтр</button>
-                                                    <button class="button button--filled-gold search-form__mobile-form-submit" type="submit">Показать 3</button>
+                                                    <button class="button button--filled-gold search-form__mobile-form-submit" data-hystclose type="submit">Показать 3</button>
                                                 </div>
                                             </form>
                                         </div>

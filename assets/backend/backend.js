@@ -21,9 +21,10 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
     const elementsContainer = container.querySelector('.js-search-form-elements-container');
     const elementTemplate = elementsContainer.querySelector('.js-search-form-element');
     
-    forms.forEach(form => {
+    forms.forEach((form, i) => {
       const getSettings = {
-        form,
+        forms,
+        i,
         errorMessageElement,
         elementsContainer,
         elementTemplate,
@@ -68,15 +69,20 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
   /**
    * Основная логика получения новых данных по сабмиту форму
    */
-  function get({form, errorMessageElement, elementsContainer, createElementFunction}) {
+  function get({forms, i, errorMessageElement, elementsContainer, createElementFunction}) {
+    const form = forms[i];
     // Добавляем в скрытый инпут количество уже показанных элементов
     if (form.offset) {
       form.offset.value = elementsContainer.childElementCount;
     }
 
+    // Синхронизируем формы
+    syncForms(forms, i);
+
     const url = form.action;
     const formData = new FormData(form);
 
+    // todo: удалить
     console.log(_debugFormData(formData));
 
     // Добавляем класс контейнеру во время загрузки
@@ -93,7 +99,6 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           return response.json();
       })
       .then(data => {
-        console.log(data);
         // Очищаем контейнер
         elementsContainer.innerHTML = "";
 
@@ -116,6 +121,33 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         // Удаляем класс загрузки
         elementsContainer.classList.remove('loading');
       })
+  }
+
+  /**
+   * Обновляет все устаревшие формы
+   * @param {Array} forms - массив всех форм
+   * @param {Number} i - индекс актуальной формы
+   */
+  function syncForms(forms, i) {
+    forms.forEach((form, j) => {
+      if (i != j) {
+        const updatedInputs = Array.from(forms[i].querySelectorAll('input'));
+        const outdatedInputs = Array.from(forms[j].querySelectorAll('input'));
+
+        for(let k = 0; k < outdatedInputs.length; k++) {
+          for(let x = 0; x < updatedInputs.length; x++) {
+            if (updatedInputs[x].type != "hidden" && outdatedInputs[k].name == updatedInputs[x].name) {
+              if (updatedInputs[x].type == "radio" && updatedInputs[x].checked) {
+                outdatedInputs[k].value = updatedInputs[x].value;
+              } else if (updatedInputs[x].type != "radio") {
+                outdatedInputs[k].checked = updatedInputs[x].checked;
+                outdatedInputs[k].value = updatedInputs[x].value;
+              }
+            }
+          }
+        }
+      }
+    })
   }
 }
 
