@@ -1,0 +1,29 @@
+.modal-light {
+  background-color: rgba(233, 208, 172, 0.9);
+
+  &__wrapper {
+    
+  }
+
+  &__window {
+    position: relative;
+
+    width: unset;
+
+    max-width: 80vw;
+    max-height: 80vh;
+    margin: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: -4.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

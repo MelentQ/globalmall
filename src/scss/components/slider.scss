@@ -44,6 +44,12 @@
       }
     }
 
+    &:focus {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
     svg {
       width: 2.4rem;
       height: 2.4rem;

@@ -14,16 +14,16 @@
 </section>
 
 <section class="cardslist">
-    <div class="container">
-        <ul class="cardslist__list">
+    <div class="container js-ajax-show-more-container">
+        <ul class="cardslist__list js-ajax-elements-container">
             {{#each cardsData.cards}}
-            <li class="cardslist__item">
+            <li class="cardslist__item js-ajax-element">
                 {{>card this}}
             </li>
             {{/each}}
         </ul>
-        <div class="cardslist__more-container">
-            <a class="button button--filled cardslist__more" href="#">Показать еще</a>
+        <div class="cardslist__more-container js-ajax-show-more-btn-container">
+            <a class="button button--filled cardslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
         </div>
         {{>mobile-modal-filter}}
     </div>

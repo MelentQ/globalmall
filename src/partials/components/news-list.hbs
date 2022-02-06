@@ -22,7 +22,7 @@
                         {{#each floors}}
                         <li class="search-form__filter-btn-wrapper">
                             <label class="search-form__filter-radio">
-                                <input class="search-form__filter-radio-input visually-hidden" {{#if this.checked}}checked{{/if}} name="floor" value="all" type="radio">
+                                <input class="search-form__filter-radio-input visually-hidden js-radio" {{#if this.checked}}checked{{/if}} name="floor" value="all" type="radio">
                                 <span class="search-form__filter-radio-label">{{this.name}}</span>
                             </label>
                         </li>
@@ -36,16 +36,16 @@
 </section>
 
 <section class="newslist">
-    <div class="container">
-        <ul class="newslist__list">
+    <div class="container js-ajax-show-more-container">
+        <ul class="newslist__list js-ajax-elements-container">
             {{#each cardsData}}
-            <li class="newslist__item">
+            <li class="newslist__item js-ajax-element">
                 {{>newslist-card this}}
             </li>
             {{/each}}
         </ul>
-        <div class="newslist__more-container">
-            <a class="button button--filled newslist__more" href="#">Показать еще</a>
+        <div class="newslist__more-container js-ajax-show-more-btn-container">
+            <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
         </div>
         {{>mobile-modal-filter}}
     </div>

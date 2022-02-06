@@ -20,6 +20,13 @@
     @include breakpoint(small-mobile) {
       grid-template-columns: 1fr;
     }
+
+    &.js-ajax-elements-container {
+      transition: opacity $base-transition-time $base-transition-easing;
+    }
+    &.js-ajax-elements-container.loading {
+      opacity: 0.5;
+    }
   }
 
   &__item {

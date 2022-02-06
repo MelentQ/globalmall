@@ -225,7 +225,7 @@
         "title": "Черная пятница",
         "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
         "image": "img/content/card-5.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -237,7 +237,7 @@
         "title": "открылся новый Эльдорадо",
         "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
         "image": "img/content/card-6.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -249,7 +249,7 @@
         "title": "Открылся Книжный Лабиринт",
         "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
         "image": "img/content/card-7.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -261,7 +261,7 @@
         "title": "открылся новый Эльдорадо",
         "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
         "image": "img/content/card-6.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -273,7 +273,7 @@
         "title": "Открылся Книжный Лабиринт",
         "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
         "image": "img/content/card-7.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -285,7 +285,7 @@
         "title": "Черная пятница",
         "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
         "image": "img/content/card-5.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -297,7 +297,7 @@
         "title": "Открылся Книжный Лабиринт",
         "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
         "image": "img/content/card-7.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -309,7 +309,7 @@
         "title": "Черная пятница",
         "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
         "image": "img/content/card-5.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -321,7 +321,7 @@
         "title": "открылся новый Эльдорадо",
         "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
         "image": "img/content/card-6.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -333,7 +333,7 @@
         "title": "Черная пятница",
         "desc": "<p>Только 7 дней максимальные скидки на товары! Успейте купить, пока он есть в наличии!</p>",
         "image": "img/content/card-5.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -345,7 +345,7 @@
         "title": "открылся новый Эльдорадо",
         "desc": "<p>В ТЦ «Глобал Молл» открылся новый Эльдорадо.</p>",
         "image": "img/content/card-6.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       },
       {
         "overlay": true,
@@ -357,7 +357,7 @@
         "title": "Открылся Книжный Лабиринт",
         "desc": "<p>50 000 уникальных книг на&nbsp;любой вкус</p>",
         "image": "img/content/card-7.jpg",
-        "link": "./card-2-detail.html"
+        "link": "./card-detail-2.html"
       }
     ]
   },

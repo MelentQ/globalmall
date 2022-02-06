@@ -6,6 +6,10 @@
   @extend %fs-t6;
   color: var(--grey);
 
+  @include breakpoint(tablet) {
+    margin-top: 0;
+  }
+
   @include breakpoint(mobile) {
     display: none;
   }
