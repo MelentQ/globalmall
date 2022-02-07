@@ -1,6 +1,8 @@
 {
     "title": "Ресторнаны и кафе",
     "name": "Ресторнаны и&nbsp;кафе",
+    "hasSearchTextInput": true,
+    "hasFloorInput": true,
     "breadcrumbs": [
         {
             "name": "Главная",

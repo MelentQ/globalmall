@@ -22,8 +22,12 @@
             <div class="container">
                 <form action="#" name="search-mobile" class="serach-form__mobile-form js-search-form">
                     <input name="offset" value="8" type="hidden">
+                    {{#if hasSearchTextInput}}
                     <input name="search" value="" type="hidden">
+                    {{/if}}
+                    {{#if hasFloorInput}}
                     <input name="floor" value="all" type="hidden">
+                    {{/if}}
                     <ul class="search-form__filter-list">
                         {{#each categories}}
                         <li class="search-form__filter-item">

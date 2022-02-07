@@ -1,41 +1,5 @@
 <div class="js-newslist-search-form-wrapper">
-    <section class="search">
-        <div class="container">
-            <div class="search__grid">
-                <div class="search__title-block">
-                    <h1 class="search__title">{{{name}}}</h1>
-                </div>
-                <div class="search__form">
-                    <form action="#" name="search" class="search-form js-search-form">
-                        <input name="offset" value="8" type="hidden">
-                        <div class="search-form__input-wrapper">
-                            <div class="search-form__input">
-                                <input class="js-text-input" name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
-                                <button class="search-form__btn js-submit" type="submit">
-                                    <svg><use xlink:href="#search"></svg>
-                                </button>
-                            </div>
-                            <div class="search-form__no-result js-error-message">
-                                <svg><use xlink:href="#info-circle"></svg>
-                                <span>Не найдено ни одного магазина</span>
-                            </div>
-                        </div>
-                        <ul class="search-form__filter-btns">
-                            {{#each floors}}
-                            <li class="search-form__filter-btn-wrapper">
-                                <label class="search-form__filter-radio">
-                                    <input class="search-form__filter-radio-input visually-hidden js-radio" {{#if this.checked}}checked{{/if}} name="floor" value="{{this.value}}" type="radio">
-                                    <span class="search-form__filter-radio-label">{{this.name}}</span>
-                                </label>
-                            </li>
-                            {{/each}}
-                        </ul>
-                        {{>filter-buttons}}
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{>search}}
 
     <section class="newslist">
         <div class="container js-ajax-show-more-container">
@@ -49,7 +13,6 @@
             <div class="newslist__more-container js-ajax-show-more-btn-container">
                 <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
             </div>
-            {{>mobile-modal-filter}}
         </div>
     </section>
 </div>
