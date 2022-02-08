@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   searchFormSubmitHandler('.js-newslist-search-form-wrapper', createNewsListElement);
-  showMore()
+  searchFormSubmitHandler('.js-cards-search-form-wrapper', createCardsListElement);
+  showMore();
 });
 
 /**
@@ -153,7 +154,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
 
 /**
  * Функция для формы поиска
- * Для страниц "Магазины, новости" (news-list.html)
+ * Для страниц "Магазины, рестораны и кафе" (news-list.html)
  */
 function createNewsListElement(itemData) {
   const element = _getTemplateBySelector('#newsListItemTemplate');
@@ -185,6 +186,40 @@ function createNewsListElement(itemData) {
     hashtagLink.textContent = hashtag.name;
 
     hashtagsContainer.append(hashtagElement);
+  })
+
+  return element;
+}
+
+/**
+ * Функция для формы поиска
+ * Для страниц "Новости, акции" (cards.html)
+ */
+ function createCardsListElement(itemData) {
+  const element = _getTemplateBySelector('#cardsListItemTemplate');
+
+  const link = element.querySelector('.card');
+  link.href = itemData.link;
+
+  if (itemData.hasOverlay) link.classList.add('card--overlay');
+  if (itemData.isLight) link.classList.add('card--light');
+
+  const image = element.querySelector('img');
+  image.src = itemData.image;
+  image.alt = itemData.name;
+
+  const name = element.querySelector('.card__title');
+  name.textContent = itemData.name;
+
+  const description = element.querySelector('.card__description');
+  description.textContent = itemData.time;
+
+  const tagsContainer = element.querySelector('.card__tags');
+  itemData.tags.forEach(tag => {
+    const tagElement = document.createElement('li');
+    tagElement.textContent = tag;
+
+    tagsContainer.append(tagElement);
   })
 
   return element;

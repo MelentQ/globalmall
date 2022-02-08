@@ -339,6 +339,82 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
+                                        <svg>
+                                            <use xlink:href="#filter-mini"></use>
+                                        </svg>
+                                        <span class="newslist__open-mobile-filter-dot"></span>
+                                    </a>
+                                    <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
+                                        <div class="hystmodal__wrap modal__wrapper">
+                                            <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                                                <div class="modal__header">
+                                                    <div class="container">
+                                                        <div class="modal__header-inner">
+                                                            <button data-hystclose title="Закрыть">
+                                                                <svg class="accordion-item__btn-icon">
+                                                                    <use xlink:href="#menu-back"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <span class="modal__title">Категории</span>
+                                                            <div class="modal__header-ghost"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal__content">
+                                                    <div class="container">
+                                                        <form action="#" name="search-mobile" class="serach-form__mobile-form js-search-form">
+                                                            <input name="offset" value="8" type="hidden">
+                                                            <input name="search" value="" type="hidden">
+                                                            <input name="floor" value="all" type="hidden">
+                                                            <ul class="search-form__filter-list">
+                                                                <li class="search-form__filter-item">
+                                                                    <label class="search-form__filter-checkbox">
+                                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="все категории" value="Y" type="checkbox">
+                                                                        <span class="search-form__filter-checkbox-label">все категории</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="search-form__filter-item">
+                                                                    <label class="search-form__filter-checkbox">
+                                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Фастфуд" value="Y" type="checkbox">
+                                                                        <span class="search-form__filter-checkbox-label">Фастфуд</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="search-form__filter-item">
+                                                                    <label class="search-form__filter-checkbox">
+                                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Восточная кухня" value="Y" type="checkbox">
+                                                                        <span class="search-form__filter-checkbox-label">Восточная кухня</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="search-form__filter-item">
+                                                                    <label class="search-form__filter-checkbox">
+                                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Турецкая кухня" value="Y" type="checkbox">
+                                                                        <span class="search-form__filter-checkbox-label">Турецкая кухня</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="search-form__filter-item">
+                                                                    <label class="search-form__filter-checkbox">
+                                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
+                                                                        <span class="search-form__filter-checkbox-label">кафе</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="search-form__filter-item">
+                                                                    <label class="search-form__filter-checkbox">
+                                                                        <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="пицца" value="Y" type="checkbox">
+                                                                        <span class="search-form__filter-checkbox-label">пицца</span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="search-form__mobile-form-footer">
+                                                                <button class="button search-form__mobile-form-reset js-reset" type="button">Сбросить фильтр</button>
+                                                                <button class="button button--filled-gold search-form__mobile-form-submit" data-hystclose type="submit">Показать 3</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -565,82 +641,6 @@
                             </ul>
                             <div class="newslist__more-container js-ajax-show-more-btn-container">
                                 <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
-                            </div>
-                            <a href="javascript:void(0)" data-hystmodal="#newslist-modal" class="newslist__open-mobile-filter" title="Фильтр">
-                                <svg>
-                                    <use xlink:href="#filter-mini"></use>
-                                </svg>
-                                <span class="newslist__open-mobile-filter-dot"></span>
-                            </a>
-                            <div class="hystmodal modal" id="newslist-modal" aria-hidden="true">
-                                <div class="hystmodal__wrap modal__wrapper">
-                                    <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
-                                        <div class="modal__header">
-                                            <div class="container">
-                                                <div class="modal__header-inner">
-                                                    <button data-hystclose title="Закрыть">
-                                                        <svg class="accordion-item__btn-icon">
-                                                            <use xlink:href="#menu-back"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <span class="modal__title">Категории</span>
-                                                    <div class="modal__header-ghost"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal__content">
-                                            <div class="container">
-                                                <form action="#" name="search-mobile" class="serach-form__mobile-form js-search-form">
-                                                    <input name="offset" value="8" type="hidden">
-                                                    <input name="search" value="" type="hidden">
-                                                    <input name="floor" value="all" type="hidden">
-                                                    <ul class="search-form__filter-list">
-                                                        <li class="search-form__filter-item">
-                                                            <label class="search-form__filter-checkbox">
-                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="все категории" value="Y" type="checkbox">
-                                                                <span class="search-form__filter-checkbox-label">все категории</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="search-form__filter-item">
-                                                            <label class="search-form__filter-checkbox">
-                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Фастфуд" value="Y" type="checkbox">
-                                                                <span class="search-form__filter-checkbox-label">Фастфуд</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="search-form__filter-item">
-                                                            <label class="search-form__filter-checkbox">
-                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Восточная кухня" value="Y" type="checkbox">
-                                                                <span class="search-form__filter-checkbox-label">Восточная кухня</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="search-form__filter-item">
-                                                            <label class="search-form__filter-checkbox">
-                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="Турецкая кухня" value="Y" type="checkbox">
-                                                                <span class="search-form__filter-checkbox-label">Турецкая кухня</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="search-form__filter-item">
-                                                            <label class="search-form__filter-checkbox">
-                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="кафе" value="Y" type="checkbox">
-                                                                <span class="search-form__filter-checkbox-label">кафе</span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="search-form__filter-item">
-                                                            <label class="search-form__filter-checkbox">
-                                                                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox" name="пицца" value="Y" type="checkbox">
-                                                                <span class="search-form__filter-checkbox-label">пицца</span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="search-form__mobile-form-footer">
-                                                        <button class="button search-form__mobile-form-reset js-reset" type="button">Сбросить фильтр</button>
-                                                        <button class="button button--filled-gold search-form__mobile-form-submit" data-hystclose type="submit">Показать 3</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -912,18 +912,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hystmodal modal-light" id="image-modal" aria-hidden="true">
-                <div class="hystmodal__wrap modal-light__wrapper">
-                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
-                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
-                            <svg>
-                                <use xlink:href="#close-big"></use>
-                            </svg>
-                        </button>
-                        <img class="image-modal__image js-image" src="" alt="">
                     </div>
                 </div>
             </div>
