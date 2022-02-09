@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 2 функции только потому что разная разметка у карточек
   searchFormSubmitHandler('.js-newslist-search-form-wrapper', createNewsListElement);
   searchFormSubmitHandler('.js-cards-search-form-wrapper', createCardsListElement);
+  // Универсальная "Показать ещё"
   showMore();
+  // Отправка формы
+  feedbackFormSubmitHandler();
 });
 
 /**
@@ -294,6 +298,40 @@ function showMore() {
 
           // Удаляем класс для загрузки
           elementsContainer.classList.remove('loading');
+        })
+    })
+  })
+}
+
+function feedbackFormSubmitHandler() {
+  const forms = Array.from(document.querySelectorAll('.js-handle-feedback-form'));
+  forms.forEach(form => {
+    const url = form.action;
+    const formData = new FormData(form);
+    const submitBtn = form.querySelector('.js-disable-on-send');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      submitBtn.classList.add('disabled');
+
+      fetch(url, {
+        body: formData,
+        method: "POST"
+      })
+        .then(response => {
+          if (response.ok) {
+            form.reset();
+            window.modalApi.open('#success-modal');
+          } else {
+            window.modalApi.open('#error-modal');
+          }
+        })
+        .catch((err) => {
+          console.error(err);
+        })
+        .finally(() => {
+          submitBtn.classList.remove('disabled');
         })
     })
   })
