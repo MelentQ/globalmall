@@ -32,18 +32,44 @@
       </div>
     </div>
     <div class="contacts__content">
-      <div class="contacts__tabs js-init-tabs">
-        <div class="contacts__tabs-btns js-tabs">
-          <button class="button button--narrow" type="button">
+      <div class="swiper js-init-slider contacts__tabs" data-fade="1" data-slides="1" data-space="0" data-hash="1" data-no-touch="1">
+        <div class="contacts__tabs-btns js-slider-navigation">
+          <button class="button button--narrow js-prev-slide" type="button">
               <svg><use xlink:href="#car-1"></svg>
               <span>Как добраться</span>
           </button>
-          <button class="button button--narrow" type="button">
+          <button class="button button--narrow js-next-slide" type="button">
               <svg><use xlink:href="#block"></svg>
               <span>Схема этажей</span>
           </button>
         </div>
+        <ul class="swiper-wrapper contacts__tabs-container">
+          <li class="swiper-slide contacts__tab-item" data-hash="map">
+            <div class="contacts__tab-map js-init-map js-init-overlay-map-container"
+              data-initial-longitude="55.712142"
+              data-initial-latitude="37.656631"
+              data-initial-zoom="17"
+            >
+              <div class="contacts__tab-map-overlay js-init-overlay">
+                <svg><use xlink:href="#location"></svg>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide contacts__tab-item" data-hash="scheme">
+            <div class="contacts__tab-scheme"></div>
+          </li>
+        </ul>
       </div>
+
+      <div class="contacts__form-wrapper">
+        {{>feedback-form}}
+      </div>
+
+      <hr>
+
+      {{>link-to-page}}
+
+      {{>images-slider}}
     </div>
   </div>
 </section>

@@ -1,0 +1,18 @@
+{{> image-modal}}
+<div class="swiper detail__slider js-init-slider" data-slides="1.5" data-space="24" data-delay="3000">
+  <ul class="swiper-wrapper detail__slider-wrapper">
+      {{#each imageSlider}}
+      <li class="swiper-slide detail__slide">
+          <div class="detail__slide-image" data-hystmodal="#image-modal">
+            <img class="js-image" src="{{this}}" alt="{{name}}">
+            <div class="detail__slide-image-overlay">
+              <svg><use xlink:href="#arrows"></svg>
+            </div>
+          </div>
+      </li>
+      {{/each}}
+  </ul>
+  <div class="slider__btns slider__btns--vertical detail__slider-btns js-slider-navigation">
+      {{>utils/slider-buttons}}
+  </div>
+</div>

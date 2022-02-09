@@ -18,7 +18,7 @@ export default function toggleDesktopBurger() {
 
       } else {
         btn.addEventListener('click', () => {
-          window.modalAPI.open('#menu-modal');
+          window.modalApi.open('#menu-modal');
         })
       }
     }

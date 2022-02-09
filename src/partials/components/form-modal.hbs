@@ -1,0 +1,16 @@
+<div class="hystmodal modal-light" id="{{data.id}}" aria-hidden="true">
+    <div class="hystmodal__wrap modal-light__wrapper">
+        <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
+          <button class="modal-light__close-btn" data-hystclose title="Закрыть">
+            <svg><use xlink:href="#close-big"></svg>
+          </button>
+          <div class="form-modal">
+            <svg><use xlink:href="{{data.icon}}"></svg>
+            <div class="form-modal__text">
+              <h3 class="form-modal__title">{{data.title}}</h3>
+              <span class="form-modal__description">{{data.description}}</span>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

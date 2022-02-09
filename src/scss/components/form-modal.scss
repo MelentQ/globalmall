@@ -1,0 +1,33 @@
+.form-modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.6rem;
+
+  padding: 3.2rem;
+
+  background-color: white;
+
+  svg {
+    flex-shrink: 0;
+
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &__text {
+  }
+
+  &__title {
+    margin-bottom: 0.4rem;
+
+    @extend %fs-h5;
+  }
+
+  &__description {
+    display: block;
+
+    @extend %fs-t6;
+    color: var(--secondary-dark);
+  }
+}

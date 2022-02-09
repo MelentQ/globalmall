@@ -535,5 +535,23 @@
       "icon": "#vk",
       "link": "https://vk.com/globalmall_ru"
     }
-  ]
+  ],
+  "imageSlider": [
+    "img/content/detail-slider.jpg",
+    "img/content/detail-slider-2.jpg",
+    "img/content/detail-slider.jpg",
+    "img/content/detail-slider-2.jpg"
+  ],
+  "errorModalData": {
+    "id": "error-modal",
+    "icon": "#error",
+    "title": "заявка не отправлена!",
+    "description": "Повторите попытку позже"
+  },
+  "successModalData": {
+    "id": "success-modal",
+    "icon": "#success",
+    "title": "Спасибо за заявку!",
+    "description": "Мы свяжемся с вами в ближайшее время"
+  }
 }

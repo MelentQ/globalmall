@@ -137,6 +137,9 @@
     @include breakpoint(laptop) {
       left: -5.5rem;
     }
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &__text-container {

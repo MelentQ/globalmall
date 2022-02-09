@@ -1,8 +1,8 @@
-<form class="form js-init-validation" name="feedback" action="" novalidate>
+<form class="form js-init-validation js-handle-feedback-form" name="feedback" action="" novalidate>
   <h2 class="form__title">обратная связь</h2>
   <div class="form__inputs">
     <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
-    <input class="form__input js-input" name="contacts" type="text" placeholder="Телефон или e-mail" autocomplete="off">
+    <input class="form__input js-input js-phone-mask" name="phone" type="tel" placeholder="Телефон" autocomplete="off" required>
     <textarea class="form__input form__textarea js-input" name="message" placeholder="Сообщение"></textarea>
   </div>
   
@@ -13,5 +13,7 @@
       <input class="js-input" type="checkbox" name="policy" checked required>
       <span class="checkmark"></span>
   </label>
-  <button class="button button--filled button--narrow form__submit" type="submit">отправить</button>
+  <button class="button button--filled button--narrow form__submit js-disable-on-send" type="submit">отправить</button>
 </form>
+{{>form-modal data=errorModalData}}
+{{>form-modal data=successModalData}}

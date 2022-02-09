@@ -15,6 +15,8 @@ import toggleDesktopBurger from './custom/toggleDesktopBurger';
 import initModals from './custom/initModals';
 import hideSortButtons from './custom/hideSortButtons';
 import initValidation from './custom/initValidation';
+import initMaps from './custom/initMaps';
+import initPhoneMask from './custom/initPhoneMask';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleDesktopBurger();
     hideSortButtons();
     initValidation();
+    initMaps();
+    initPhoneMask();
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -1,0 +1,20 @@
+.link-to-page {
+  padding: 4.8rem 0;
+
+  &__title {
+    margin-bottom: 2rem;
+
+    @extend %fs-h3;
+  }
+
+  &__text {
+    margin-bottom: 2.4rem;
+    
+    @extend %fs-t4;
+    @extend %secondary-ff;
+  }
+
+  &__btn {
+    min-height: 4.2rem;
+  }
+}

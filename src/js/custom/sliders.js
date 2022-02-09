@@ -1,22 +1,28 @@
-import {Swiper, Navigation, EffectFade, Autoplay, Pagination} from "swiper";
+import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination]);
+Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation]);
 
 export default function initSliders() {
   const sliders = Array.from(document.querySelectorAll('.js-init-slider'));
-  sliders.forEach((slider) => {
+
+  let controlledSwiper;
+  let controlledSwiperId;
+
+  sliders.forEach((slider, i) => {
     const fadeEffect = slider.dataset.fade ? {effect: 'fade', fadeEffect: {crossFade: true}} : {};
-    const autoplay = slider.dataset.delay ? {delay: Number(slider.dataset.delay), disableOnInteraction: true} : {};
+    const autoplay = slider.dataset.delay ? {autoplay:{delay: Number(slider.dataset.delay), disableOnInteraction: true}} : {};
     const slidesPerView = slider.dataset.slides ? Number(slider.dataset.slides) : 1;
     const spaceBetween = slider.dataset.space ? Number(slider.dataset.space) : 0;
     const loop = !!slider.dataset.loop;
+    const hashNavigation = !!slider.dataset.hash;
+    const allowTouchMove = !slider.dataset.noTouch;
 
     let navigation = slider.querySelector('.js-slider-navigation');
     if (navigation) {
-      navigation = {
+      navigation = {navigation: {
         nextEl: navigation.querySelector('.js-next-slide'),
         prevEl: navigation.querySelector('.js-prev-slide'),
-      }
+      }}
     }
 
     let breakpoints = {
@@ -25,10 +31,10 @@ export default function initSliders() {
         spaceBetween: 14
       },
       576: {
-        slidesPerView: slidesPerView == 1 ? 1 : 2
+        slidesPerView: slidesPerView < 2 ? slidesPerView : 2
       },
       1024: {
-        slidesPerView: slidesPerView == 1 ? 1 : slidesPerView,
+        slidesPerView,
         spaceBetween
       }
     }
@@ -36,8 +42,12 @@ export default function initSliders() {
     const swiper = new Swiper(slider, {
       slidesPerView,
       spaceBetween,
-      navigation,
-      autoplay,
+      ...navigation,
+      hashNavigation,
+      allowTouchMove,
+      autoHeight: true,
+      disableOnInteraction: true,
+      ...autoplay,
       loop,
       ...fadeEffect,
       pagination: {
@@ -48,5 +58,18 @@ export default function initSliders() {
       },
       breakpoints
     })
+
+    if (i == controlledSwiperId + 1) {
+      swiper.slides.forEach((slide, j) => {
+        slide.addEventListener('click', () => {
+          controlledSwiper.slideToLoop(j, 0);
+        })
+      })
+    }
+
+    if (slider.dataset.controlled) {
+      controlledSwiper = swiper;
+      controlledSwiperId = i;
+    }
   })
 }

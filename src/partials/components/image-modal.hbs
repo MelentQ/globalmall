@@ -6,7 +6,15 @@
               <use xlink:href="#close-big">
             </svg>
           </button>
-          <img class="image-modal__image js-image" src="" alt="">
+          <div class="swiper image-modal__slider js-init-slider" data-slides="1" data-fade="1" data-controlled="1">
+            <ul class="swiper-wrapper image-modal__slider-wrapper">
+              {{#each imageSlider}}
+              <li class="swiper-slide image-modal__slide">
+                <img class="image-modal__slide-image js-image" src="{{this}}" alt="{{name}}">
+              </li>
+              {{/each}}
+            </ul>
+          </div>
         </div>
     </div>
 </div>
