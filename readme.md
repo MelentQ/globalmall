@@ -1,3 +1,18 @@
+# Ссылки
+
+* [Главная страница](https://melentq.github.io/globalmall/)
+* [Магазины (список)](https://melentq.github.io/globalmall/news-list)
+* [Рестораны и кафе (список)](https://melentq.github.io/globalmall/news-list-2)
+* [Акции (список)](https://melentq.github.io/globalmall/cards)
+* [Новости (список)](https://melentq.github.io/globalmall/cards-2)
+* [Акции (детальная)](https://melentq.github.io/globalmall/card-detail)
+* [Новости (детальная)](https://melentq.github.io/globalmall/card-detail-2)
+* [Вакансии](https://melentq.github.io/globalmall/vacancy)
+* [Контакты](https://melentq.github.io/globalmall/contacts)
+* [Магазины (детальная)](https://melentq.github.io/globalmall/news-detail)
+* [Рестораны и кафе (детальная)](https://melentq.github.io/globalmall/news-detail-2)
+* [404](https://melentq.github.io/globalmall/404)
+
 # Handlebars Boilerplate
 
 Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
