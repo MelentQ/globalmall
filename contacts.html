@@ -25,8 +25,8 @@
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <symbol viewBox="0 0 12 8" id="accordion-arrow" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 5L10.7.5 12 1.8 6 7.5 0 1.8 1.3.5 6 5z" />
+                <symbol viewBox="0 0 8 5" fill="none" id="accordion-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.71 1.71L3.3 4.3c.39.39 1.02.39 1.41 0L7.3 1.71C7.93 1.08 7.48 0 6.59 0H1.41C.52 0 .08 1.08.71 1.71z" fill="#222E3C" />
                 </symbol>
                 <symbol viewBox="0 0 24 24" id="arrow-left" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 11H9.41l3.3-3.29a1 1 0 10-1.42-1.42l-5 5a1 1 0 00-.21.33 1 1 0 000 .76 1 1 0 00.21.33l5 5a1 1 0 101.42-1.42L9.41 13H17a1 1 0 000-2z" />
@@ -121,13 +121,13 @@
                                 <span>Супермаркет 24 часа</span>
                             </div>
                             <div class="header__buttons">
-                                <a class="header__btn" href="#">
+                                <a class="header__btn" href="./contacts.html#map">
                                     <svg>
                                         <use xlink:href="#car-1"></use>
                                     </svg>
                                     <span class="header__btn-label">Как добраться</span>
                                 </a>
-                                <a class="header__btn" href="#">
+                                <a class="header__btn" href="./contacts.html#scheme">
                                     <svg>
                                         <use xlink:href="#block"></use>
                                     </svg>
@@ -253,77 +253,79 @@
                     <div class="container container--grid">
                         <div class="contacts__header">
                             <h1 class="contacts__title">Контакты</h1>
-                            <div class="contacts__info">
-                                <div class="contacts__info-item">
-                                    <svg>
-                                        <use xlink:href="#location"></use>
-                                    </svg>
-                                    <span>м.&nbsp;Автозаводская, ул.Ленинская&nbsp;Слобода, д.&nbsp;26,&nbsp;стр.2</span>
-                                </div>
-                                <div class="contacts__info-item">
-                                    <svg>
-                                        <use xlink:href="#clock"></use>
-                                    </svg>
-                                    <div class="contacts__info-item-text-block">
-                                        <span>ежедневно 10:00 - 22:00</span>
-                                        <span>супермаркет 24 часа</span>
+                            <div class="contacts__info-desktop">
+                                <div class="contacts__info">
+                                    <div class="contacts__info-item">
+                                        <svg>
+                                            <use xlink:href="#location"></use>
+                                        </svg>
+                                        <span>м.&nbsp;Автозаводская, ул.Ленинская&nbsp;Слобода, д.&nbsp;26,&nbsp;стр.2</span>
                                     </div>
+                                    <div class="contacts__info-item">
+                                        <svg>
+                                            <use xlink:href="#clock"></use>
+                                        </svg>
+                                        <div class="contacts__info-item-text-block">
+                                            <span>ежедневно 10:00 - 22:00</span>
+                                            <span>супермаркет 24 часа</span>
+                                        </div>
+                                    </div>
+                                    <a class="contacts__info-link contacts__info-phone" href="tel:+74951919797">
+                                        <svg>
+                                            <use xlink:href="#phone"></use>
+                                        </svg>
+                                        <span>+7 (495) 191-97-97</span>
+                                    </a>
+                                    <a class="contacts__info-link contacts__info-email" href="mailto:info@globalmall.ru">
+                                        <svg>
+                                            <use xlink:href="#mail"></use>
+                                        </svg>
+                                        <span class="contacts__info-email-label">info@globalmall.ru</span>
+                                    </a>
+                                    <span class="contacts__info-label">По всем вопросам, коммерческим предложениям и вопросам размещения</span>
+                                    <ul class="socials socials--light">
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://www.instagram.com/globalmall.ru/" title="Instagram" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#instagram"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g" title="YouTube" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#youtube"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://www.facebook.com/GlobalMall.ru/" title="Facebook" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://vk.com/globalmall_ru" title="VK" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <a class="contacts__info-link contacts__info-phone" href="tel:+74951919797">
-                                    <svg>
-                                        <use xlink:href="#phone"></use>
-                                    </svg>
-                                    <span>+7 (495) 191-97-97</span>
-                                </a>
-                                <a class="contacts__info-link contacts__info-email" href="mailto:info@globalmall.ru">
-                                    <svg>
-                                        <use xlink:href="#mail"></use>
-                                    </svg>
-                                    <span class="contacts__info-email-label">info@globalmall.ru</span>
-                                </a>
-                                <span class="contacts__info-label">По всем вопросам, коммерческим предложениям и вопросам размещения</span>
-                                <ul class="socials socials--light">
-                                    <li class="socials__item">
-                                        <a class="socials__item-link" href="https://www.instagram.com/globalmall.ru/" title="Instagram" target="_blank">
-                                            <svg>
-                                                <use xlink:href="#instagram"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__item-link" href="https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g" title="YouTube" target="_blank">
-                                            <svg>
-                                                <use xlink:href="#youtube"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__item-link" href="https://www.facebook.com/GlobalMall.ru/" title="Facebook" target="_blank">
-                                            <svg>
-                                                <use xlink:href="#facebook"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="socials__item">
-                                        <a class="socials__item-link" href="https://vk.com/globalmall_ru" title="VK" target="_blank">
-                                            <svg>
-                                                <use xlink:href="#vk"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                         <div class="contacts__content">
                             <div class="swiper js-init-slider contacts__tabs" data-fade="1" data-slides="1" data-space="0" data-hash="1" data-no-touch="1">
                                 <div class="contacts__tabs-btns js-slider-navigation">
-                                    <button class="button button--narrow js-prev-slide" type="button">
+                                    <button class="contacts__tabs-btn button button--narrow js-prev-slide" type="button">
                                         <svg>
                                             <use xlink:href="#car-1"></use>
                                         </svg>
                                         <span>Как добраться</span>
                                     </button>
-                                    <button class="button button--narrow js-next-slide" type="button">
+                                    <button class="contacts__tabs-btn button button--narrow js-next-slide" type="button">
                                         <svg>
                                             <use xlink:href="#block"></use>
                                         </svg>
@@ -341,9 +343,136 @@
                                         </div>
                                     </li>
                                     <li class="swiper-slide contacts__tab-item" data-hash="scheme">
-                                        <div class="contacts__tab-scheme"></div>
+                                        <div class="contacts__tab-scheme-block">
+                                            <form class="contacts__tab-scheme-form" name="scheme" action="/">
+                                                <div class="search-form__input-wrapper">
+                                                    <div class="search-form__input">
+                                                        <input class="js-text-input" name="search" type="text" placeholder="Поиск по магазинам" autocomplete="off">
+                                                        <button class="search-form__btn js-submit" type="submit">
+                                                            <svg>
+                                                                <use xlink:href="#search"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="search-form__no-result js-error-message">
+                                                        <svg>
+                                                            <use xlink:href="#info-circle"></use>
+                                                        </svg>
+                                                        <span>Не найдено ни одного магазина</span>
+                                                    </div>
+                                                </div>
+                                                <div class="contacts__tab-scheme-inputs">
+                                                    <ul class="search-form__filter-btns">
+                                                        <li class="search-form__filter-btn-wrapper">
+                                                            <label class="search-form__filter-radio">
+                                                                <input class="search-form__filter-radio-input visually-hidden js-radio" checked="checked" name="floor" value="1" type="radio">
+                                                                <span class="search-form__filter-radio-label">1 этаж</span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="search-form__filter-btn-wrapper">
+                                                            <label class="search-form__filter-radio">
+                                                                <input class="search-form__filter-radio-input visually-hidden js-radio" name="floor" value="2" type="radio">
+                                                                <span class="search-form__filter-radio-label">2 этаж</span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                    <fieldset class="contacts__tab-scheme-selects">
+                                                        <select class="js-custom-select" name="category">
+                                                            <option value="all">Категория</option>
+                                                            <option value="1">Детские товары</option>
+                                                            <option value="2">кафе</option>
+                                                            <option value="3">красота и здоровье</option>
+                                                            <option value="4">обувь</option>
+                                                            <option value="5">одежда</option>
+                                                            <option value="6">Подарки</option>
+                                                            <option value="7">мужская одежда</option>
+                                                            <option value="8">Аксессуары</option>
+                                                            <option value="9">Детские товары</option>
+                                                            <option value="10">Женская одежда</option>
+                                                            <option value="11">кино</option>
+                                                            <option value="12">Игровые комнаты</option>
+                                                            <option value="13">игровые автоматы</option>
+                                                            <option value="14">пицца</option>
+                                                            <option value="15">Турецкая кухня</option>
+                                                        </select>
+                                                        <select class="js-custom-select" name="shop">
+                                                            <option value="all">Магазин</option>
+                                                            <option value="1">Триал-Спорт</option>
+                                                            <option value="2">NL International</option>
+                                                            <option value="3">Детский мир</option>
+                                                            <option value="4">TOPGUN</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                            </form>
+                                            <div class="contacts__tab-scheme js-scheme">
+                                                <pre>Здесь будет схема этажей</pre>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
+                            </div>
+                            <div class="contacts__info-mobile">
+                                <div class="contacts__info">
+                                    <div class="contacts__info-item">
+                                        <svg>
+                                            <use xlink:href="#location"></use>
+                                        </svg>
+                                        <span>м.&nbsp;Автозаводская, ул.Ленинская&nbsp;Слобода, д.&nbsp;26,&nbsp;стр.2</span>
+                                    </div>
+                                    <div class="contacts__info-item">
+                                        <svg>
+                                            <use xlink:href="#clock"></use>
+                                        </svg>
+                                        <div class="contacts__info-item-text-block">
+                                            <span>ежедневно 10:00 - 22:00</span>
+                                            <span>супермаркет 24 часа</span>
+                                        </div>
+                                    </div>
+                                    <a class="contacts__info-link contacts__info-phone" href="tel:+74951919797">
+                                        <svg>
+                                            <use xlink:href="#phone"></use>
+                                        </svg>
+                                        <span>+7 (495) 191-97-97</span>
+                                    </a>
+                                    <a class="contacts__info-link contacts__info-email" href="mailto:info@globalmall.ru">
+                                        <svg>
+                                            <use xlink:href="#mail"></use>
+                                        </svg>
+                                        <span class="contacts__info-email-label">info@globalmall.ru</span>
+                                    </a>
+                                    <span class="contacts__info-label">По всем вопросам, коммерческим предложениям и вопросам размещения</span>
+                                    <ul class="socials socials--light">
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://www.instagram.com/globalmall.ru/" title="Instagram" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#instagram"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://www.youtube.com/channel/UCS2RiBS8oACjfvqJNOrQ49g" title="YouTube" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#youtube"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://www.facebook.com/GlobalMall.ru/" title="Facebook" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#facebook"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a class="socials__item-link" href="https://vk.com/globalmall_ru" title="VK" target="_blank">
+                                                <svg>
+                                                    <use xlink:href="#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="contacts__form-wrapper">
                                 <form class="form js-init-validation js-handle-feedback-form" name="feedback" action="" novalidate>
@@ -557,13 +686,13 @@
                                 <span>супермаркет 24 часа</span>
                             </div>
                             <div class="footer__buttons-mobile">
-                                <a class="button button--filled-gold" href="#">
+                                <a class="button button--filled-gold" href="./contacts.html#map">
                                     <svg>
                                         <use xlink:href="#car-1"></use>
                                     </svg>
                                     <span>Как добраться</span>
                                 </a>
-                                <a class="button button--filled-gold" href="#">
+                                <a class="button button--filled-gold" href="./contacts.html#scheme">
                                     <svg>
                                         <use xlink:href="#block"></use>
                                     </svg>
@@ -681,13 +810,13 @@
                                                 <span>супермаркет 24 часа</span>
                                             </div>
                                             <div class="footer__buttons-mobile">
-                                                <a class="button button--filled-gold" href="#">
+                                                <a class="button button--filled-gold" href="./contacts.html#map">
                                                     <svg>
                                                         <use xlink:href="#car-1"></use>
                                                     </svg>
                                                     <span>Как добраться</span>
                                                 </a>
-                                                <a class="button button--filled-gold" href="#">
+                                                <a class="button button--filled-gold" href="./contacts.html#scheme">
                                                     <svg>
                                                         <use xlink:href="#block"></use>
                                                     </svg>
