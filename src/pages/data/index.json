@@ -6,21 +6,21 @@
             "imageMobile": "img/content/intro-mobile.jpg",
             "title": "новогодний шопинг!",
             "subtitle": "<p>Большая предновогодняя распродажа! Скидки до -50%!</p>",
-            "link": "#"
+            "link": "./card-detail.html"
         },
         {
             "image": "img/content/intro.jpg",
             "imageMobile": "img/content/intro-mobile.jpg",
             "title": "новогодний шопинг!",
             "subtitle": "<p>Большая предновогодняя распродажа! Скидки до -50%!</p>",
-            "link": "#"
+            "link": "./card-detail.html"
         },
         {
             "image": "img/content/intro.jpg",
             "imageMobile": "img/content/intro-mobile.jpg",
             "title": "новогодний шопинг!",
             "subtitle": "<p>Большая предновогодняя распродажа! Скидки до -50%!</p>",
-            "link": "#"
+            "link": "./card-detail.html"
         }
     ],
     "favoritePromotion": {
@@ -48,7 +48,7 @@
                 "Кафе",
                 "Электроника"
             ],
-            "link": "#",
+            "link": "./news-list.html",
             "icon": "img/section-1.svg"
         },
         {
@@ -76,7 +76,7 @@
                 "пицца",
                 "кофе"
             ],
-            "link": "#",
+            "link": "./news-list-2.html",
             "icon": "img/section-3.svg"
         }
     ]

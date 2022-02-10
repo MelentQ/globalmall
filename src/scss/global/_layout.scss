@@ -97,9 +97,15 @@
     }
 
     a {
-        color: var(--primary-color);
-        transition: opacity $base-transition-time $base-transition-easing;
+        transition: color $base-transition-time $base-transition-easing;
         text-decoration: underline;
+
+        &:hover {
+            color: var(--grey);
+        }
+        &:focus-visible {
+            color: var(--grey);
+        }
     }
 
     b {

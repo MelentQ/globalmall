@@ -239,9 +239,9 @@ function showMore() {
   ajaxContainers.forEach((container, i) => {
     const elementsContainer = container.querySelector('.js-ajax-elements-container');
     const showMoreBtnContainer = container.querySelector('.js-ajax-show-more-btn-container');
-    const showMoreBtn = showMoreBtnContainer.querySelector('.js-ajax-show-more-btn');
+    const showMoreBtn = container.querySelector('.js-ajax-show-more-btn');
 
-    if (!elementsContainer && !showMoreBtnContainer && !showMoreBtn) return;
+    if (!elementsContainer || !showMoreBtnContainer || !showMoreBtn) return;
 
     showMoreBtn.addEventListener('click', (e) => {
       e.preventDefault();

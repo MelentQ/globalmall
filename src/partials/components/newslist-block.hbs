@@ -12,8 +12,12 @@
             </li>
             {{/each}}
         </ul>
+        {{#if noShowMore}}
+        
+        {{else}}
         <div class="newslist__more-container js-ajax-show-more-btn-container">
             <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
         </div>
+        {{/if}}
     </div>
 </section>

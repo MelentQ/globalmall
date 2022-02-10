@@ -1,0 +1,45 @@
+{
+    "title": "KFC",
+    "breadcrumbs": [
+        {
+            "name": "Главная",
+            "link": "./index.html"
+        },
+        {
+            "name": "Ресторнаны и кафе",
+            "link": "./news-list.html"
+        },
+        {
+            "name": "KFC",
+            "link": "#"
+        }
+    ],
+    "name": "KFC",
+    "hashtags": [
+        "фастфуд"
+    ],
+    "imageSlider": false,
+    "scheme": true,
+    "image": "img/content/news-6.png",
+    "info": true,
+    "preview": "<p>KFC – это всемирно известная сеть ресторанов быстрого обслуживания, которая стала популярной благодаря уникальной смеси из 11 трав и специй, придающей превосходный и незабываемый вкус основному продукту — жареному цыпленку. Рецепт приправы был придуман полковником Харландом Сандерсом в 1939 году.</p><br><a href=\"#\">Подробнее</a>",
+    "cardsData": [
+        {
+            "image": "img/content/news-5.png",
+            "name": "COFFEE MOMENTS",
+            "link": "./news-detail-2.html",
+            "tags": [
+                "кофе"
+            ]
+        },
+        {
+            "image": "img/content/news-7.png",
+            "name": "Теремок",
+            "link": "./news-detail-2.html",
+            "tags": [
+                "кафе"
+            ]
+        }
+    ],
+    "text": "<img src=\"img/content/detail-image-2.jpg\" alt=\"Картинка\">"
+}

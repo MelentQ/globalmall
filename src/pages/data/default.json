@@ -55,7 +55,7 @@
     },
     {
       "name": "Контакты",
-      "link": "#"
+      "link": "./contacts.html"
     }
   ],
   "contacts": {
@@ -380,7 +380,7 @@
     {
       "image": "img/content/news-1.jpg",
       "name": "Триал-Спорт",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "спорт",
         "спортивные товары"
@@ -389,7 +389,7 @@
     {
       "image": "img/content/news-2.png",
       "name": "NL International",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "Красота и здоровье"
       ]
@@ -397,7 +397,7 @@
     {
       "image": "img/content/news-3.png",
       "name": "Детский мир",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "Детские товары",
         "детская одежда"
@@ -406,7 +406,7 @@
     {
       "image": "img/content/news-4.png",
       "name": "TOPGUN",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "Услуги",
         "барбершоп"
@@ -415,7 +415,7 @@
     {
       "image": "img/content/news-1.jpg",
       "name": "Триал-Спорт",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "спорт",
         "спортивные товары"
@@ -424,7 +424,7 @@
     {
       "image": "img/content/news-2.png",
       "name": "NL International",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "Красота и здоровье"
       ]
@@ -432,7 +432,7 @@
     {
       "image": "img/content/news-3.png",
       "name": "Детский мир",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "Детские товары",
         "детская одежда"
@@ -441,7 +441,7 @@
     {
       "image": "img/content/news-4.png",
       "name": "TOPGUN",
-      "link": "#",
+      "link": "./news-detail.html",
       "tags": [
         "Услуги",
         "барбершоп"
@@ -452,7 +452,7 @@
     {
       "image": "img/content/news-5.png",
       "name": "COFFEE MOMENTS",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "кофе"
       ]
@@ -460,7 +460,7 @@
     {
       "image": "img/content/news-6.png",
       "name": "KFC",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "фастфуд"
       ]
@@ -468,7 +468,7 @@
     {
       "image": "img/content/news-7.png",
       "name": "Теремок",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "кафе"
       ]
@@ -476,7 +476,7 @@
     {
       "image": "img/content/news-5.png",
       "name": "COFFEE MOMENTS",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "кофе"
       ]
@@ -484,7 +484,7 @@
     {
       "image": "img/content/news-6.png",
       "name": "KFC",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "фастфуд"
       ]
@@ -492,7 +492,7 @@
     {
       "image": "img/content/news-7.png",
       "name": "Теремок",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "кафе"
       ]
@@ -500,7 +500,7 @@
     {
       "image": "img/content/news-5.png",
       "name": "COFFEE MOMENTS",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "кофе"
       ]
@@ -508,7 +508,7 @@
     {
       "image": "img/content/news-6.png",
       "name": "KFC",
-      "link": "#",
+      "link": "./news-detail-2.html",
       "tags": [
         "фастфуд"
       ]
