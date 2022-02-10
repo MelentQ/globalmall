@@ -7,38 +7,18 @@
   <div class="container container--grid">
     <div class="contacts__header">
       <h1 class="contacts__title">{{title}}</h1>
-      <div class="contacts__info">
-        <div class="contacts__info-item">
-          <svg><use xlink:href="#location"></svg>
-          <span>{{{contacts.address}}}</span>
-        </div>
-        <div class="contacts__info-item">
-          <svg><use xlink:href="#clock"></svg>
-          <div class="contacts__info-item-text-block">
-            <span>ежедневно 10:00 - 22:00</span>
-            <span>супермаркет 24 часа</span>
-          </div>
-        </div>
-        <a class="contacts__info-link contacts__info-phone" href="tel:+74951919797">
-          <svg><use xlink:href="#phone"></svg>
-          <span>+7 (495) 191-97-97</span>
-        </a>
-        <a class="contacts__info-link contacts__info-email" href="mailto:info@globalmall.ru">
-          <svg><use xlink:href="#mail"></svg>
-          <span class="contacts__info-email-label">info@globalmall.ru</span>
-        </a>
-        <span class="contacts__info-label">По всем вопросам, коммерческим предложениям и вопросам размещения</span>
-        {{>socials mods="socials--light"}}
+      <div class="contacts__info-desktop">
+        {{>contacts-info}}
       </div>
     </div>
     <div class="contacts__content">
       <div class="swiper js-init-slider contacts__tabs" data-fade="1" data-slides="1" data-space="0" data-hash="1" data-no-touch="1">
         <div class="contacts__tabs-btns js-slider-navigation">
-          <button class="button button--narrow js-prev-slide" type="button">
+          <button class="contacts__tabs-btn button button--narrow js-prev-slide" type="button">
               <svg><use xlink:href="#car-1"></svg>
               <span>Как добраться</span>
           </button>
-          <button class="button button--narrow js-next-slide" type="button">
+          <button class="contacts__tabs-btn button button--narrow js-next-slide" type="button">
               <svg><use xlink:href="#block"></svg>
               <span>Схема этажей</span>
           </button>
@@ -56,9 +36,27 @@
             </div>
           </li>
           <li class="swiper-slide contacts__tab-item" data-hash="scheme">
-            <div class="contacts__tab-scheme"></div>
+            <div class="contacts__tab-scheme-block">
+              <form class="contacts__tab-scheme-form" name="scheme" action="/">
+                {{>utils/search-input}}
+                <div class="contacts__tab-scheme-inputs">
+                  {{>utils/radio-inputs}}
+                  <fieldset class="contacts__tab-scheme-selects">
+                    {{>utils/select data=selectData1}}
+                    {{>utils/select data=selectData2}}
+                  </fieldset>
+                </div>
+              </form>
+              <div class="contacts__tab-scheme js-scheme">
+                <pre>Здесь будет схема этажей</pre>
+              </div>
+            </div>
           </li>
         </ul>
+      </div>
+
+      <div class="contacts__info-mobile">
+        {{>contacts-info}}
       </div>
 
       <div class="contacts__form-wrapper">

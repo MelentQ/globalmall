@@ -2,6 +2,7 @@ import './build-in/lazyload';
 import detectTouch from './build-in/detectTouch';
 import setScrollbarWidth from './build-in/setScrollbarWidth';
 import anchorLinks from './build-in/anchorLinks';
+import customSelects from './build-in/customSelects';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
     anchorLinks();
+    customSelects();
 
     // custom
 

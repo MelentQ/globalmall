@@ -10,6 +10,20 @@
     @extend %fs-h1;
   }
 
+  &__info-desktop {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__info-mobile {
+    display: none;
+    margin-top: 2.4rem;
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
   &__info {
     padding: 3.4rem;
 
@@ -69,7 +83,7 @@
         fill: var(--primary-color);
       }
 
-      .contacts__email-label::after {
+      .contacts__info-email-label::after {
         background-color: var(--grey);
       }
     }
@@ -120,10 +134,43 @@
   }
 
   &__tabs {
+    overflow: visible;
   }
 
   &__tabs-btns {
     margin-bottom: 3.7rem;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+
+  &__tabs-btn {
+    border-color: var(--primary-color);
+    color: var(--black);
+    svg {
+      fill: var(--primary-color);
+    }
+
+    &.swiper-button-disabled {
+      background-color: var(--black);
+      border-color: var(--black);
+      color: white;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    &:focus-visible {
+      color: white;
+    }
   }
 
   &__tabs-container {
@@ -171,10 +218,88 @@
     }
   }
 
+  &__tab-scheme-block {
+    @include breakpoint(mobile) {
+      margin: 0 calc(-1 * var(--content-padding));
+    }
+  }
+
+  &__tab-scheme-form {
+    padding-bottom: 2.4rem;
+
+    .search-form__filter-btns {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.2rem;
+      padding-top: 2.4rem;
+      padding-left: var(--content-padding);
+      padding-right: var(--content-padding);
+
+      background-color: #EEEDED;
+
+      .search-form__filter-btns {
+        order: unset;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .search-form__input {
+        background-color: white;
+      }
+    }
+  }
+
+  &__tab-scheme-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.2rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__tab-scheme-selects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+
+    border: none;
+
+    & > * {
+      flex-shrink: 0;
+
+      min-width: 20rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      & > * {
+        min-width: 16rem;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      & > * {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  }
+
   &__tab-scheme {
     height: 60rem;
 
-    background-color: var(--secondary-light);
+    background-color: #EEEDED;
+
+    @include breakpoint(mobile) {
+      height: 33rem;
+    }
   }
 
   &__form-wrapper {

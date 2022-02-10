@@ -24,9 +24,32 @@
     border: 1px solid var(--dark);
     border-radius: 2px;
 
-    transition: background-color $base-transition-time $base-transition-easing;
+    transition: background-color $base-transition-time $base-transition-easing, opacity $base-transition-time $base-transition-easing;
 
-    
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default;
+
+      &:hover {
+        background-color: var(--white);
+
+        svg {
+          fill: var(--dark);
+        }
+      }
+      &:focus-visible {
+        background-color: var(--white);
+
+        svg {
+          fill: var(--dark);
+        }
+      }
+      &:focus {
+        svg {
+          fill: var(--dark);
+        }
+      }
+    }
 
     &:focus-visible {
       background-color: var(--dark);
@@ -55,8 +78,6 @@
       height: 2.4rem;
 
       transition: fill $base-transition-time $base-transition-easing;
-
-      
     }
   }
 }

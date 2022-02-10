@@ -73,12 +73,14 @@
 @mixin customScrollbar {
     &::-webkit-scrollbar {
         background-color: white;
-        width: 4px;
+        width: 12px;
     }
 
     &::-webkit-scrollbar-thumb {
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+        border-radius: 9999px;
         background-color: var(--primary-color);
-        border-radius: 2px;
     }
 
     &::-webkit-scrollbar-button {
@@ -86,7 +88,6 @@
     }
 
     &::-webkit-scrollbar-track {
-        background-color: var(--secondary-grey);
         border-radius: 2px;
     }
 }

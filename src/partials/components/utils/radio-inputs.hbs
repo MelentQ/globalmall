@@ -1,0 +1,10 @@
+<ul class="search-form__filter-btns">
+    {{#each floors}}
+    <li class="search-form__filter-btn-wrapper">
+        <label class="search-form__filter-radio">
+            <input class="search-form__filter-radio-input visually-hidden js-radio" {{#if this.checked}}checked{{/if}} name="floor" value="{{this.value}}" type="radio">
+            <span class="search-form__filter-radio-label">{{this.name}}</span>
+        </label>
+    </li>
+    {{/each}}
+</ul>
