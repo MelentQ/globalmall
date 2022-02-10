@@ -1,20 +1,7 @@
 <div class="js-newslist-search-form-wrapper">
     {{>search}}
 
-    <section class="newslist">
-        <div class="container js-ajax-show-more-container">
-            <ul class="newslist__list js-ajax-elements-container js-search-form-elements-container">
-                {{#each cardsData}}
-                <li class="newslist__item js-ajax-element js-search-form-element">
-                    {{>newslist-card this}}
-                </li>
-                {{/each}}
-            </ul>
-            <div class="newslist__more-container js-ajax-show-more-btn-container">
-                <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
-            </div>
-        </div>
-    </section>
+    {{>newslist-block}}
 </div>
 
 <template id="newsListItemTemplate">

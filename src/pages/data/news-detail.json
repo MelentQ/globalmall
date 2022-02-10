@@ -1,0 +1,54 @@
+{
+    "title": "Триал-Спорт",
+    "breadcrumbs": [
+        {
+            "name": "Главная",
+            "link": "./index.html"
+        },
+        {
+            "name": "Акции",
+            "link": "./cards.html"
+        },
+        {
+            "name": "Триал-Спорт",
+            "link": "#"
+        }
+    ],
+    "name": "Триал-Спорт",
+    "hashtags": [
+        "спорт",
+        "спортивные товары"
+    ],
+    "scheme": true,
+    "image": true,
+    "info": true,
+    "preview": true,
+    "cardsData": [
+        {
+            "image": "img/content/news-2.png",
+            "name": "NL International",
+            "link": "#",
+            "tags": [
+                "Красота и здоровье"
+            ]
+        },
+        {
+            "image": "img/content/news-3.png",
+            "name": "Детский мир",
+            "link": "#",
+            "tags": [
+                "Детские товары",
+                "детская одежда"
+            ]
+        },
+        {
+            "image": "img/content/news-4.png",
+            "name": "TOPGUN",
+            "link": "#",
+            "tags": [
+                "Услуги",
+                "барбершоп"
+            ]
+        }
+    ]
+}

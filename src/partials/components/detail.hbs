@@ -6,17 +6,58 @@
       <time class="detail__date" datetime="2019-01-14">14.01.2019</time>
       {{/if}}
       {{>hashtags data=hashtags}}
+      {{#if image}}
+      <div class="detail__logo">
+        <img src="img/content/news-1.jpg" alt="Логотип">
+      </div>
+      {{/if}}
+      {{#if info}}
+      <div class="detail__info">
+        <div class="detail__info-row">
+          <span class="detail__info-floor">1 этаж</span>
+          <a class="detail__info-phone" href="tel:+74958032274">+7 (495) 803-22-74</a>
+        </div>
+        <span class="detail__info-working-time">пн-пт: 08:30–21:00, сб-вс: 09:45–21:00</span>
+      </div>
+      {{/if}}
+      {{#if preview}}
+      <div class="detail__preview-text editable-text-container">
+        <p>Сеть специализированных спортивных магазинов «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта! Велосипеды горные и bmx, роликовые коньки и скейтборды, горные и беговые лыжи, сноуборды, ледовые коньки и хоккейная экипировка, товары для альпинизма и скалолазания, туристическое снаряжение. Всегда грамотные консультанты, огромный ассортимент, известные марки и отличные цены!</p>
+      </div>
+      {{/if}}
     </div>
+
     <div class="detail__content">
       {{#if imageSlider}}
       {{>images-slider}}
       {{/if}}
 
+      {{#if text}}
       <div class="detail__text-container editable-text-container">
         {{{text}}}
 
         {{>utils/user-text}}
       </div>
+      {{/if}}
+
+      {{#if scheme}}
+      <div class="detail__scheme-block">
+        <div class="detail__scheme-header">
+          <h2 class="detail__scheme-title">расположение на&nbsp;схеме</h2>
+          <a class="button button--narrow detail__scheme-button" href="./contacts.html#scheme">
+            <svg><use xlink:href="#block"></svg>
+            <span>схема этажей</span>
+          </a>
+        </div>
+        <div class="detail__scheme js-scheme">
+          <pre>Здесь будет схема этажей</pre>
+        </div>
+        <a class="button button--narrow detail__scheme-button detail__scheme-button--mobile" href="./contacts.html#scheme">
+          <svg><use xlink:href="#block"></svg>
+          <span>схема этажей</span>
+        </a>
+      </div>
+      {{/if}}
 
       {{#if onMap}}
       <a class="detail__btn" href="./contacts.html#scheme">
