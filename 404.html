@@ -20,7 +20,7 @@
         <meta property="og:locale" content="ru_RU">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="assets/backend/backend.css">
-        <title>Вакансии</title>
+        <title>404</title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -241,109 +241,16 @@
             </header>
 
             <main class="page-main">
-                <section class="breadcrumbs">
+                <section class="error-page">
+                    <picture>
+                        <source srcset="img/content/404.jpg" media="(max-width: 640px)">
+                        <img class="error-page__image" src="img/content/404.jpg" alt="404">
+                    </picture>
                     <div class="container">
-                        <nav class="breadcrumbs__list">
-                            <a href="./index.html">Главная</a>
-                            <a href="#">Вакансии</a>
-                        </nav>
-                    </div>
-                </section>
-                <section class="page-title-block">
-                    <div class="container">
-                        <h1 class="page-title">Вакансии</h1>
-                    </div>
-                </section>
-                <section class="vacancy">
-                    <div class="container container--grid">
-                        <div class="vacancy__header">
-                            <div class="vacancy__contacts">
-                                <a class="vacancy__link vacancy__phone" href="tel:+74951919797">
-                                    <svg>
-                                        <use xlink:href="#phone"></use>
-                                    </svg>
-                                    <span>+7 (495) 191-97-97</span>
-                                </a>
-                                <a class="vacancy__link vacancy__email" href="mailto:info@globalmall.ru">
-                                    <svg>
-                                        <use xlink:href="#mail"></use>
-                                    </svg>
-                                    <span class="vacancy__email-label">info@globalmall.ru</span>
-                                </a>
-                                <span class="vacancy__contacts-label">По вопросам трудоустройства</span>
-                            </div>
-                        </div>
-                        <div class="vacancy__body">
-                            <div class="vacancy__hh-block">
-                                <div class="vacancy__hh-text">
-                                    <h2 class="vacancy__hh-title">Все вакансии компании на&nbsp;HH.ru</h2>
-                                    <a class="button button--narrow vacancy__hh-link" href="#" target="_blank">
-                                        <span>Смотреть все</span>
-                                        <svg>
-                                            <use xlink:href="#arrow-right"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <img class="vacancy__hh-logo" src="img/HeadHunter.png" alt="HH">
-                            </div>
-                            <div class="vacancy__text editable-text-container">
-                                <p>Первоначально этим словом обозначалась исключительно вакантная епископская кафедра. Так как лица, от которых зависело замещение кафедры, часто с умыслом медлили, дабы пользоваться пока епископскими доходами, то церковь уже очень рано постановила, чтобы духовные должности, замещение которых составляет привилегию светских лиц, не оставались вакантными более шести месяцев, а зависящие от духовных лиц — более четырех месяцев; нарушивший это постановление лишался на этот раз своей привилегии и вакантная должность замещалась помимо него.</p>
-                            </div>
-                            <form class="form js-init-validation js-handle-feedback-form" name="feedback" action="" novalidate>
-                                <h2 class="form__title">обратная связь</h2>
-                                <div class="form__inputs">
-                                    <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
-                                    <input class="form__input js-input js-phone-mask" name="phone" type="tel" placeholder="Телефон" autocomplete="off" required>
-                                    <textarea class="form__input form__textarea js-input" name="message" placeholder="Сообщение"></textarea>
-                                </div>
-                                <label class="checkbox-container form__policy">
-                                    <div class="form__policy-text">Даю свое согласие на<a href="#">Обработку персональных данных</a>и соглашаюсь с<a href="#">Политикой конфиденциальности</a>
-                                    </div>
-                                    <input class="js-input" type="checkbox" name="policy" checked="checked" required>
-                                    <span class="checkmark"></span>
-                                </label>
-                                <button class="button button--filled button--narrow form__submit js-disable-on-send" type="submit">отправить</button>
-                            </form>
-                            <div class="hystmodal modal-light" id="error-modal" aria-hidden="true">
-                                <div class="hystmodal__wrap modal-light__wrapper">
-                                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
-                                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
-                                            <svg>
-                                                <use xlink:href="#close-big"></use>
-                                            </svg>
-                                        </button>
-                                        <div class="form-modal">
-                                            <svg>
-                                                <use xlink:href="#error"></use>
-                                            </svg>
-                                            <div class="form-modal__text">
-                                                <h3 class="form-modal__title">заявка не отправлена!</h3>
-                                                <span class="form-modal__description">Повторите попытку позже</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hystmodal modal-light" id="success-modal" aria-hidden="true">
-                                <div class="hystmodal__wrap modal-light__wrapper">
-                                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
-                                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
-                                            <svg>
-                                                <use xlink:href="#close-big"></use>
-                                            </svg>
-                                        </button>
-                                        <div class="form-modal">
-                                            <svg>
-                                                <use xlink:href="#success"></use>
-                                            </svg>
-                                            <div class="form-modal__text">
-                                                <h3 class="form-modal__title">Спасибо за заявку!</h3>
-                                                <span class="form-modal__description">Мы свяжемся с вами в ближайшее время</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="error-page__inner">
+                            <h1 class="error-page__title">404</h1>
+                            <span class="error-page__subtitle">Cтраница не найдена</span>
+                            <span class="error-page__text">Чтобы найти интересующую Вас информацию —воспользуйтесь формой поиска</span>
                         </div>
                     </div>
                 </section>
