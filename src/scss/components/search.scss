@@ -3,6 +3,10 @@
 
   background: linear-gradient(180deg, #FFFFFF 37.5%, var(--secondary-grey) 100%);
 
+  @include breakpoint(tablet) {
+    margin-top: 2.4rem;
+  }
+
   @include breakpoint(mobile) {
     background: var(--white);
     padding-bottom: 0;

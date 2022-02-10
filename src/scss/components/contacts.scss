@@ -2,6 +2,10 @@
 
   padding-bottom: 7.2rem;
 
+  @include breakpoint(tablet) {
+    padding-top: 2.4rem;
+  }
+
   &__header {
   }
 

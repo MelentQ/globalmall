@@ -39,6 +39,12 @@
     margin-top: var(--js-main-header-height);;
 }
 
+.page-title-block {
+    @include breakpoint(tablet) {
+        margin-top: 2.4rem;
+    }
+}
+
 .page-title {
     @extend %fs-h1;
 }

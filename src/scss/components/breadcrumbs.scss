@@ -7,7 +7,7 @@
   color: var(--grey);
 
   @include breakpoint(tablet) {
-    margin-top: 0;
+    margin-top: 2.4rem;
   }
 
   @include breakpoint(mobile) {
