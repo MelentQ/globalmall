@@ -48,7 +48,9 @@
                     <div class="header__ghost-mobile"></div>
                     {{>logo img="img/logo-mini.svg"}}
                     <div class="search-block">
-                        <input class="search-block__input" placeholder="Поиск по сайту" id="searchInput" name="search" type="text">
+                        <form class="js-header-search-form" action="/" name="header-search">
+                        <input class="search-block__input js-header-search-input" placeholder="Поиск по сайту" id="searchInput" name="search" type="text">
+                        </form>
                     </div>
                     <button class="header__open-search js-toggle-search" type="button">
                         <svg><use xlink:href="#search"></svg>

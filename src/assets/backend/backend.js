@@ -1,12 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Поиск в хедере
+  headerSearch();
+
   // 2 функции только потому что разная разметка у карточек
   searchFormSubmitHandler('.js-newslist-search-form-wrapper', createNewsListElement);
   searchFormSubmitHandler('.js-cards-search-form-wrapper', createCardsListElement);
+
   // Универсальная "Показать ещё"
   showMore();
+  
   // Отправка формы
   feedbackFormSubmitHandler();
 });
+
+function headerSearch() {
+  const searchForm = document.querySelector('.js-header-search-form');
+  if (searchForm) {
+    const searchInput = searchForm.querySelector('.js-header-search-input');
+
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      console.log('БЕЗ БУЛДЫРАБЫЗ!');
+      // Тут какая-то логика поиска,
+      // переход на страницу с результатом поиска
+    });
+
+    searchInput.addEventListener('change', (e) => {
+      // Нажатие на Enter
+      console.log(`АЛГА! ${searchInput.value}`);
+    })
+  }
+}
 
 /**
  * Сабмит формы поиска на страницах списка элементов
@@ -159,6 +184,27 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
 /**
  * Функция для формы поиска
  * Для страниц "Магазины, рестораны и кафе" (news-list.html)
+ * Формат ответа сервера (data):
+ * [
+ *    {
+ *       "link": "/cards/card-1",
+ *       "image": "image.png",
+ *       "name": "Триал-спорт",
+ *       "floor": "1 ЭТАЖ",
+ *       "time": "ПН-ПТ: 08:30–21:00, СБ-ВС: 09:45–21:00",
+ *       "mapLink": "/contacts#map",
+ *       "hashtags": [
+ *          {
+ *             "name": "СПОРТ",
+ *             "link": "/catalog?sport=1"
+ *          },
+ *          {
+ *             "name": "СПОРТИВНЫЕ ТОВАРЫ",
+ *             "link": "/catalog?sport=1"
+ *          }
+ *       ],
+ *    }
+ * ]
  */
 function createNewsListElement(itemData) {
   const element = _getTemplateBySelector('#newsListItemTemplate');
@@ -180,7 +226,7 @@ function createNewsListElement(itemData) {
   time.textContent = itemData.time;
 
   const btn = element.querySelector('.newslist__card-btn');
-  btn.href = itemData.cardLink;
+  btn.href = itemData.mapLink;
 
   const hashtagsContainer = element.querySelector('.hashtags');
   itemData.hashtags.forEach(hashtag => {
@@ -198,6 +244,16 @@ function createNewsListElement(itemData) {
 /**
  * Функция для формы поиска
  * Для страниц "Новости, акции" (cards.html)
+ * Формат ответа сервера (data):
+ * [
+ *    {
+ *       "link": "/cards/card-1",
+ *       "image": "image.png",
+ *       "name": "Триал-спорт",
+ *       "text": "Какой-то текст",
+ *       "hashtags": ["СПОРТ","СПОРТИВНЫЕ ТОВАРЫ"],
+ *    }
+ * ]
  */
  function createCardsListElement(itemData) {
   const element = _getTemplateBySelector('#cardsListItemTemplate');
@@ -216,7 +272,7 @@ function createNewsListElement(itemData) {
   name.textContent = itemData.name;
 
   const description = element.querySelector('.card__description');
-  description.textContent = itemData.time;
+  description.textContent = itemData.text;
 
   const tagsContainer = element.querySelector('.card__tags');
   itemData.tags.forEach(tag => {
