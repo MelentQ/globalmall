@@ -221,6 +221,8 @@
 
     @include breakpoint(tablet) {
       justify-content: flex-end;
+      
+      padding-bottom: 2rem;
     }
 
     &.swiper-slide-active img {

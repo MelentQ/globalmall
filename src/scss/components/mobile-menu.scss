@@ -16,6 +16,15 @@
       flex-wrap: wrap;
       gap: 3.4rem;
       row-gap: 2.4rem;
+
+      a {
+        &:hover {
+          color: var(--grey) !important;
+        }
+        &:focus-visible {
+          color: var(--grey) !important;
+        }
+      }
     }
 
     &--gold {
