@@ -17,11 +17,11 @@
     },
     {
       "name": "услуги",
-      "link": "#"
+      "link": "./404.html"
     },
     {
       "name": "развлечения",
-      "link": "#"
+      "link": "./404.html"
     },
     {
       "name": "рестораны и кафе",
@@ -39,15 +39,15 @@
   "menu2": [
     {
       "name": "Торговый центр",
-      "link": "#"
+      "link": "./about.html"
     },
     {
       "name": "Арендаторам",
-      "link": "#"
+      "link": "./rent.html"
     },
     {
       "name": "Реклама в ТЦ",
-      "link": "#"
+      "link": "./advertising.html"
     },
     {
       "name": "Вакансии",

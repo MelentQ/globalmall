@@ -1,0 +1,13 @@
+{
+    "title": "О ТЦ",
+    "breadcrumbs": [
+        {
+            "name": "Главная",
+            "link": "./index.html"
+        },
+        {
+            "name": "О ТЦ",
+            "link": "#"
+        }
+    ]
+}

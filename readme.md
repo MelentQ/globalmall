@@ -12,6 +12,9 @@
 * [Магазины (детальная)](https://melentq.github.io/globalmall/news-detail)
 * [Рестораны и кафе (детальная)](https://melentq.github.io/globalmall/news-detail-2)
 * [404](https://melentq.github.io/globalmall/404)
+* [Реклама в ТЦ](https://melentq.github.io/globalmall/advertising)
+* [О ТЦ](https://melentq.github.io/globalmall/about)
+* [Арендодателям](https://melentq.github.io/globalmall/rent)
 
 # Handlebars Boilerplate
 
