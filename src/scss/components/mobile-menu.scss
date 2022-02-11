@@ -1,0 +1,122 @@
+.mobile-menu {
+
+  &__menu {
+    width: 100%;
+    max-width: 27rem;
+    padding: 2.4rem 0;
+
+    text-transform: uppercase;
+    @extend %fs-h6;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 3.4rem;
+      row-gap: 2.4rem;
+    }
+
+    &--gold {
+      color: var(--primary-color);
+
+      border-top: solid 1px var(--primary-color);
+      border-bottom: solid 1px var(--primary-color);
+    }
+  }
+
+  &__address {
+    margin-top: 4.4rem;
+    margin-bottom: 1.6rem;
+
+    text-transform: uppercase;
+    text-align: center;
+    @extend %fs-h6;
+  }
+
+  &__working-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 2.4rem;
+
+    text-transform: uppercase;
+    text-align: center;
+    @extend %fs-h6;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    margin-bottom: 4.4rem;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @extend %fs-h5;
+
+    margin-bottom: 4.2rem;
+  }
+
+  &__contacts-tel {
+    margin-bottom: 1.2rem;
+
+    transition: color $base-transition-time $base-transition-easing;
+    
+    &:focus-visible {
+      color: var(--primary-color);
+    }
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__contacts-email {
+    position: relative;
+
+    text-transform: lowercase;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    &:hover {
+      color: var(--primary-color);
+
+      &::after {
+        background-color: var(--primary-color);
+      }
+    }
+    
+    &:focus-visible {
+      color: var(--primary-color);
+
+      &::after {
+        background-color: var(--primary-color);
+      }
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--white);
+
+      transition: background-color $base-transition-time $base-transition-easing;
+    }
+  }
+}

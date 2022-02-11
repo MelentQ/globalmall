@@ -35,12 +35,12 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 3.2rem;
 
-    @include breakpoint(laptop) {
-      // 8888
-    }
     @include breakpoint(tablet) {
-      grid-template-columns: 1fr;
-      justify-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0;
     }
   }
 
@@ -129,227 +129,10 @@
     }
   }
 
-  // Links Block (Right)
-  // ######
-
-  &__links-block {
-    grid-column: span 3;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-
-    width: 100%;
-
-    @extend %fs-h5;
-
-    @include breakpoint(laptop) {
-      @include clamp(12, 14);
-    }
-    @include breakpoint(tablet) {
-      grid-column: span 1;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      gap: 1.6rem;
-    }
-  }
-
-  &__menu {
-    grid-column: span 3;
-
-    padding-bottom: 3.7rem;
-
-    color: var(--primary-color);
-
-    border-bottom: 1px solid var(--primary-color);
-
-    @include breakpoint(laptop) {
-      
-    }
-
-    @include breakpoint(tablet) {
-      grid-column: span 1;
-
-      width: calc(100% - 2.6rem * 2);
-      max-width: 27.5rem;
-      padding-top: 3.2rem;
-      padding-bottom: 3.2rem;
-      margin-bottom: 3.2rem;
-
-      border-top: 1px solid var(--primary-color);
-    }
-
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 3.4rem;
-      row-gap: 0.4rem;
-
-      @include breakpoint(tablet) {
-        flex-direction: column;
-        row-gap: 2.4rem;
-      }
-    }
-
-    a {
-      transition: color $base-transition-time $base-transition-easing;
-
-      
-      
-      &:focus-visible {
-        color: var(--white);
-      }
-
-      &:hover {
-        color: var(--white);
-      }
-    }
-  }
-
-  &__address {
-    @include breakpoint(tablet) {
-      text-align: center;
-    }
-  }
-
-  &__working-time {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    @include breakpoint(tablet) {
-      margin-bottom: 0.8rem;
-    }
-  }
-
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  &__tel {
-    margin-bottom: 0.7rem;
-
-    transition: color $base-transition-time $base-transition-easing;
-
-    
-    
-    &:focus-visible {
-      color: var(--primary-color);
-    }
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
-
-  &__email {
-    position: relative;
-
-    text-transform: lowercase;
-
-    transition: color $base-transition-time $base-transition-easing;
-
-    
-
-    &:hover {
-      color: var(--primary-color);
-
-      &::after {
-        background-color: var(--primary-color);
-      }
-    }
-    
-    &:focus-visible {
-      color: var(--primary-color);
-
-      &::after {
-        background-color: var(--primary-color);
-      }
-    }
-
-    &::after {
-      content: '';
-
-      position: absolute;
-      bottom: 0;
-      left: 0;
-
-      width: 100%;
-      height: 1px;
-
-      background-color: var(--white);
-
-      transition: background-color $base-transition-time $base-transition-easing;
-
-      
-    }
-  }
-
-  &__menu-mobile {
-    display: none;
-
-    width: 100%;
-
-    @extend %fs-h5;
-
-    @include breakpoint(tablet) {
-      display: block;
-    }
-
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 3.4rem;
-      row-gap: 0.4rem;
-
-      @include breakpoint(tablet) {
-        flex-direction: column;
-        row-gap: 2.4rem;
-      }
-    }
-
-    a {
-      transition: color $base-transition-time $base-transition-easing;
-
-      
-
-      &:focus-visible {
-        color: var(--primary-color);
-
-        
-      }
-
-      &:hover {
-        color: var(--primary-color);
-
-        
-      }
-    }
-  }
-
-  &__buttons-mobile {
-    display: none;
-
-    @include breakpoint(tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-
-      margin-bottom: 3.8rem;
-    }
-  }
-
   &__copyright-block-mobile {
     display: none;
+
+    margin-top: 4.2rem;
 
     @extend %fs-t4;
     @extend %secondary-ff;
@@ -377,6 +160,57 @@
         display: block;
         width: fit-content;
       }
+    }
+  }
+
+  &__links {
+    grid-column: span 3;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+    align-items: flex-start;
+  }
+}
+
+.footer {
+  @include breakpointMF(laptop) {
+    .mobile-menu__menu {
+      display: none;
+    }
+    .mobile-menu__menu.mobile-menu__menu--gold {
+      display: block;
+      grid-column: span 3;
+
+      padding-top: 0;
+      padding-bottom: 3.2rem;
+      max-width: unset;
+
+      border-top: none;
+
+      @include clamp(14, 18);
+
+      ul {
+        flex-direction: row;
+      }
+    }
+    .mobile-menu__buttons {
+      display: none;
+    }
+    .mobile-menu__address {
+      margin: 0;
+      text-align: left;
+      @include clamp(14, 18);
+    }
+    .mobile-menu__working-time {
+      margin: 0;
+      align-items: flex-start;
+      text-align: left;
+      @include clamp(14, 18);
+    }
+    .mobile-menu__contacts {
+      margin: 0;
+      text-align: left;
     }
   }
 }

@@ -1,39 +1,38 @@
-<nav class="footer__menu-mobile">
+<nav class="mobile-menu__menu">
     <ul>
         {{#each menu1}}
         <li><a href="{{this.link}}">{{this.name}}</a></li>
         {{/each}}
     </ul>
 </nav>
-<div class="footer__links-block">
-    <nav class="footer__menu">
-        <ul>
-            {{#each menu2}}
-            <li><a href="{{this.link}}">{{this.name}}</a></li>
-            {{/each}}
-        </ul>
-    </nav>
-    <address class="footer__address">{{{contacts.address}}}</address>
-    <div class="footer__working-time">
-        <span>ежедневно 10:00 - 22:00</span>
-        <span>супермаркет 24 часа</span>
-    </div>
+<nav class="mobile-menu__menu mobile-menu__menu--gold">
+    <ul>
+        {{#each menu2}}
+        <li><a href="{{this.link}}">{{this.name}}</a></li>
+        {{/each}}
+    </ul>
+</nav>
 
-    <div class="footer__buttons-mobile">
-        <a class="button button--filled-gold" href="./contacts.html#map">
-            <svg><use xlink:href="#car-1"></svg>
-            <span>Как добраться</span>
-        </a>
-        <a class="button button--filled-gold" href="./contacts.html#scheme">
-            <svg><use xlink:href="#block"></svg>
-            <span>Схема этажей</span>
-        </a>
-    </div>
+<address class="mobile-menu__address">{{{contacts.address}}}</address>
+<div class="mobile-menu__working-time">
+    <span>ежедневно 10:00 - 22:00</span>
+    <span>супермаркет 24 часа</span>
+</div>
 
-    <div class="footer__contacts">
-        <a href="tel:+74951919797" class="footer__tel">+7 (495) 191-97-97</a>
-        <a href="mailto:info@globalmall.ru" class="footer__email">info@globalmall.ru</a>
-    </div>
+<div class="mobile-menu__buttons">
+    <a class="button button--filled-gold" href="./contacts.html#map">
+        <svg><use xlink:href="#car-1"></svg>
+        <span>Как добраться</span>
+    </a>
+    <a class="button button--filled-gold" href="./contacts.html#scheme">
+        <svg><use xlink:href="#block"></svg>
+        <span>Схема этажей</span>
+    </a>
+</div>
+
+<div class="mobile-menu__contacts">
+    <a href="tel:+74951919797" class="mobile-menu__contacts-tel">+7 (495) 191-97-97</a>
+    <a href="mailto:info@globalmall.ru" class="mobile-menu__contacts-email">info@globalmall.ru</a>
 </div>
 
 {{>socials}}
