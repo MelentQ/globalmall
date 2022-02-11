@@ -129,8 +129,10 @@
   // ******
   // Bodies
 
-  &__bodies {
+  &__content-block {
     grid-column: span 5;
+
+    min-width: 0;
 
     @include breakpoint(small-tablet) {
       grid-column: span 1
@@ -138,11 +140,7 @@
   }
 
   &__body {
-    display: none;
 
-    &.active {
-      display: block;
-    }
   }
 
   &__body-text {
@@ -157,6 +155,7 @@
   }
 
   &__body-link {
+    width: fit-content;
     margin-top: 3.2rem;
   }
 
@@ -189,11 +188,12 @@
     background-color: var(--primary-color);
   }
 
-  &__icons {
+  &__icons-slider-container {
     position: absolute;
     bottom: 0;
     left: 0;
 
+    min-width: 0;
     width: calc(var(--disk-size) / 2);
     height: calc(var(--disk-size) / 2);
 
@@ -203,20 +203,28 @@
     }
   }
 
+  &__icons-slider {
+    height: 100%;
+  }
+
+  &__icons {
+   width: 100%;
+   height: 100% !important;
+  }
+
   &__icon {
-    position: absolute;
-    top: 6rem;
-    right: 6rem;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100% !important;
+
     @include breakpoint(tablet) {
-      right: unset;
-      left: 11rem;
+      justify-content: flex-end;
     }
 
-    display: none;
-
-    &.active {
-      display: block;
+    &.swiper-slide-active img {
+      transform: translateY(0);
     }
 
     img {
@@ -224,6 +232,9 @@
       height: auto;
 
       object-fit: contain;
+
+      transform: translateY(2rem);
+      transition: transform 0.4s ease-out;
 
       @include breakpoint(tablet) {
         width: 6rem;

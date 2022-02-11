@@ -4,7 +4,7 @@
       {{#each imageSlider}}
       <li class="swiper-slide detail__slide">
           <div class="detail__slide-image" data-hystmodal="#image-modal">
-            <img class="js-image" src="{{this}}" alt="{{name}}">
+            <img class="lazyload js-image" src="{{this}}" alt="{{name}}">
             <div class="detail__slide-image-overlay">
               <svg><use xlink:href="#arrows"></svg>
             </div>

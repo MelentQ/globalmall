@@ -33,7 +33,7 @@
                             <div class="intro__slide-link">
                                 <picture>
                                     <source srcset="{{this.imageMobile}}" media="(max-width: 576px)">
-                                    <img src="{{this.image}}" alt="{{this.title}}">
+                                    <img class="lazyload" src="{{this.image}}" alt="{{this.title}}">
                                 </picture>
                                 <div class="intro__slide-content">
                                     <div class="intro__slide-text">
@@ -61,46 +61,7 @@
     </div>
 </section>
 
-<section class="sections">
-    <div class="container">
-        <div class="sections__grid js-init-tabs">
-            <div class="sections__content">
-                <ul class="sections__names js-tabs">
-                    {{#each sections}}
-                    <li class="sections__name js-tab {{#if this.active}}active{{/if}}">
-                        <button class="sections__btn" type="button">{{this.name}}</button>
-                    </li>
-                    {{/each}}
-                </ul>
-                <ul class="sections__bodies js-bodies">
-                    {{#each sections}}
-                    <li class="sections__body js-body {{#if this.active}}active{{/if}}">
-                        <div class="sections__body-text">
-                            {{{this.desc}}}
-                        </div>
-                        {{>hashtags data=this.hashtags}}
-                        <a class="button button--narrow sections__body-link" href="{{this.link}}">
-                            <span>Смотреть все</span>
-                            <svg><use xlink:href="#arrow-right"></svg>
-                        </a>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
-            <div class="sections__icons-block">
-                <div class="sections__disk">
-                    <ul class="sections__icons js-bodies">
-                        {{#each sections}}
-                        <li class="sections__icon js-body {{#if this.active}}active{{/if}}">
-                            <img src="{{this.icon}}" alt="{{this.name}}">
-                        </li>
-                        {{/each}}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{>sections}}
 
 {{>newslist newsList1}}
 

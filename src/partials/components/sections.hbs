@@ -1,0 +1,48 @@
+<section class="sections">
+    <div class="container">
+        <div class="sections__grid js-init-tabs">
+            <div class="sections__content">
+                <ul class="sections__names js-tabs">
+                    {{#each sections}}
+                    <li class="sections__name js-tab {{#if this.active}}active{{/if}}">
+                        <button class="sections__btn" type="button">{{this.name}}</button>
+                    </li>
+                    {{/each}}
+                </ul>
+                <div class="sections__content-block">
+                  <div class="swiper js-bodies">
+                    <ul class="swiper-wrapper">
+                        {{#each sections}}
+                        <li class="swiper-slide sections__body">
+                            <div class="sections__body-text">
+                                {{{this.desc}}}
+                            </div>
+                            {{>hashtags data=this.hashtags}}
+                            <a class="button button--narrow sections__body-link" href="{{this.link}}">
+                                <span>Смотреть все</span>
+                                <svg><use xlink:href="#arrow-right"></svg>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="sections__icons-block">
+                <div class="sections__disk">
+                  <div class="sections__icons-slider-container">
+                    <div class="swiper js-bodies sections__icons-slider">
+                      <ul class="swiper-wrapper sections__icons">
+                          {{#each sections}}
+                          <li class="swiper-slide sections__icon">
+                              <img class="lazyload" src="{{this.icon}}" alt="{{this.name}}">
+                          </li>
+                          {{/each}}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
