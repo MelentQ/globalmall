@@ -20,6 +20,8 @@
     @include breakpoint(tablet) {
       display: none;
     }
+
+    transition: opacity $base-transition-time $base-transition-easing, visibility $base-transition-time $base-transition-easing;
   
     img {
       width: 34.7rem;
@@ -395,6 +397,11 @@
       }
 
       .header__burger {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .logo {
         opacity: 0;
         visibility: hidden;
       }

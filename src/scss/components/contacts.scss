@@ -191,6 +191,10 @@
     height: 49rem;
 
     background-color: var(--secondary-grey);
+
+    @include breakpoint(mobile) {
+      margin: 0 calc(-1 * var(--content-padding));
+    }
   }
 
   &__tab-map-overlay {

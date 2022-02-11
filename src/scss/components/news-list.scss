@@ -17,6 +17,9 @@
   }
 
   &__slider {
+    @include breakpoint(small-mobile) {
+      overflow: visible;
+    }
   }
 
   &__header {
