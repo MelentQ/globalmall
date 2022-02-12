@@ -58,6 +58,9 @@
                 <symbol viewBox="0 0 24 24" id="close-small" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.06 12l4.72-4.72a.75.75 0 00-1.07-1.06L12 10.94 7.29 6.22a.75.75 0 10-1.07 1.06L10.94 12l-4.72 4.7a.75.75 0 00.25 1.23.75.75 0 00.82-.16L12 13.06l4.71 4.72a.75.75 0 001.23-.82.75.75 0 00-.16-.25L13.06 12z" />
                 </symbol>
+                <symbol viewBox="0 0 13 12" id="download" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.7 5.3a1 1 0 00-1.4 0L7 8.6V1a1 1 0 00-2 0v7.6L1.7 5.3A1 1 0 00.3 6.7l5 5 .3.2a1 1 0 00.8 0l.3-.2 5-5a1 1 0 000-1.4z" />
+                </symbol>
                 <symbol viewBox="0 0 24 24" fill="none" id="error" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.71 8.29a.999.999 0 00-1.42 0L12 10.59l-2.29-2.3a1.004 1.004 0 10-1.42 1.42l2.3 2.29-2.3 2.29a.999.999 0 000 1.42 1 1 0 001.42 0l2.29-2.3 2.29 2.3a1 1 0 001.42 0 .998.998 0 000-1.42L13.41 12l2.3-2.29a.998.998 0 000-1.42zm3.36-3.36A10 10 0 104.93 19.07 10 10 0 1019.07 4.93zm-1.41 12.73A8 8 0 1120 12a7.95 7.95 0 01-2.34 5.66z" fill="#DB4444" />
                 </symbol>
@@ -91,6 +94,9 @@
                 </symbol>
                 <symbol viewBox="0 0 24 24" id="phone" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19.44 13c-.22 0-.45-.07-.67-.12-.45-.1-.88-.23-1.31-.39a2 2 0 00-2.48 1l-.22.45a12.18 12.18 0 01-4.66-4.66l.42-.28a2 2 0 001-2.48 10.32 10.32 0 01-.51-1.99 3 3 0 00-3-2.49h-3a3 3 0 00-3 3.41 19 19 0 0016.52 16.46h.38a3 3 0 003-3.01v-3a3 3 0 00-2.47-2.9zm.5 6a1 1 0 01-.72.96c-.14.05-.3.06-.44.04A17 17 0 014.07 5.22a1.09 1.09 0 01.25-.82 1 1 0 01.75-.34h3a1 1 0 011 .79 10.84 10.84 0 00.61 2.36l-1.4.65a1 1 0 00-.49 1.33 14.49 14.49 0 007 7c.24.1.52.1.76 0a1 1 0 00.57-.52l.62-1.4a13.69 13.69 0 002.39.61 1 1 0 01.79 1l.02 3.12z" />
+                </symbol>
+                <symbol viewBox="0 0 16 18" id="play" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 9c0 .45-.46.77-.46.77L2.2 17.73c-.94.61-1.7.16-1.7-1V1.27c0-1.17.76-1.62 1.7-1l12.84 7.95s.46.32.46.77z" />
                 </symbol>
                 <symbol viewBox="0 0 24 24" id="search" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.7 20.3L18 16.6a9 9 0 10-1.4 1.4l3.7 3.7a1 1 0 001.4 0 1 1 0 000-1.4zM11 18a7 7 0 110-14 7 7 0 010 14z" />
@@ -243,12 +249,25 @@
             </header>
 
             <main class="page-main">
-                <section class="breadcrumbs">
-                    <div class="container">
-                        <nav class="breadcrumbs__list">
-                            <a href="./index.html">Главная</a>
-                            <a href="#">О ТЦ</a>
-                        </nav>
+                <section class="intro-image">
+                    <div class="intro-image__header">
+                        <picture>
+                            <source srcset="img/content/bg-2-mobile.jpg" media="(max-width: 576px)">
+                            <img class="lazyload intro-image__image" src="img/content/bg-2.jpg" alt="Фон">
+                        </picture>
+                        <div class="intro-image__overlay"></div>
+                        <div class="container intro-image__header-inner">
+                            <div class="ghost"></div>
+                            <div class="intro-image__title-block">
+                                <nav class="breadcrumbs__list">
+                                    <a href="./index.html">Главная</a>
+                                    <a href="#">О ТЦ</a>
+                                </nav>
+                                <div class="intro-image__title-container">
+                                    <h1 class="intro-image__title">ТОРГОВЫЙ ЦЕНТР НОВОГО ПОКОЛЕНИЯ</h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
