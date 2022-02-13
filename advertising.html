@@ -273,7 +273,7 @@
                                     <a href="./index.html">Главная</a>
                                     <a href="#">Реклама в ТЦ</a>
                                 </nav>
-                                <div class="intro-image__title-container">
+                                <div class="intro-image__title-container js-title">
                                     <h1 class="intro-image__title">Стать центром притяжения ритейла и покупателей</h1>
                                 </div>
                             </div>
@@ -282,11 +282,11 @@
                 </section>
                 <section class="benefits">
                     <div class="container">
-                        <div class="benefits__inner">
+                        <div class="benefits__inner js-image-container">
                             <div class="benefits__tabs-container js-init-tabs">
                                 <div class="benefits__tabs js-tabs">
-                                    <button class="benefits__tabs-btn button button--narrow js-tab active" type="button">инфорация о тц</button>
-                                    <button class="benefits__tabs-btn button button--narrow js-tab" type="button">окружение тц</button>
+                                    <button class="button button--narrow benefits__tabs-btn js-tab active" type="button">инфорация о тц</button>
+                                    <button class="button button--narrow benefits__tabs-btn js-tab" type="button">окружение тц</button>
                                 </div>
                                 <div class="swiper benefits__bodies-slider js-bodies">
                                     <ul class="swiper-wrapper benefits__bodies-wrapper">
@@ -334,8 +334,327 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="benefits__image">
+                            <div class="ghost"></div>
+                            <div class="benefits__image js-image">
                                 <img class="lazyload" src="img/content/map.jpg" alt="Карта">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <hr>
+                </div>
+                <section class="slider-section">
+                    <div class="container container--grid">
+                        <div class="slider-section__text-block">
+                            <h2 class="slider-section__title">Внутренняя реклама</h2>
+                            <div class="slider-section__text editable-text-container">
+                                <ul>
+                                    <li>Большие видеостены на территории торгового центра;</li>
+                                    <li>Проведение мероприятий и промо-акций;</li>
+                                    <li>Размещение pop-up сторов и стендов;</li>
+                                    <li>Навигационная реклама в ТЦ;</li>
+                                    <li>Тейблстенды на фуд-корте;</li>
+                                    <li>Радиореклама.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slider-section__slider-block">
+                            <div class="hystmodal modal-light" id="image-modal" aria-hidden="true">
+                                <div class="hystmodal__wrap modal-light__wrapper">
+                                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
+                                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
+                                            <svg>
+                                                <use xlink:href="#close-big"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="swiper image-modal__slider js-init-slider" data-slides="1" data-fade="1" data-controlled="1">
+                                            <ul class="swiper-wrapper image-modal__slider-wrapper">
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-3.jpg" alt="">
+                                                </li>
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-4.jpg" alt="">
+                                                </li>
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-3.jpg" alt="">
+                                                </li>
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-4.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper detail__slider detail__slider--large js-init-slider" data-slides="1.5" data-space="24" data-delay="3000">
+                                <ul class="swiper-wrapper detail__slider-wrapper">
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-3.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-4.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-3.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-4.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="slider__btns slider__btns--vertical detail__slider-btns js-slider-navigation">
+                                    <button class="slider__btn js-prev-slide" type="button" title="Назад">
+                                        <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                                        <svg>
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <hr>
+                </div>
+                <section class="slider-section">
+                    <div class="container container--grid">
+                        <div class="slider-section__text-block">
+                            <h2 class="slider-section__title">Внешняя реклама</h2>
+                            <div class="slider-section__text editable-text-container">
+                                <p>Свободные рекламные места на фасаде.</p>
+                            </div>
+                        </div>
+                        <div class="slider-section__slider-block">
+                            <div class="hystmodal modal-light" id="image-modal" aria-hidden="true">
+                                <div class="hystmodal__wrap modal-light__wrapper">
+                                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
+                                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
+                                            <svg>
+                                                <use xlink:href="#close-big"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="swiper image-modal__slider js-init-slider" data-slides="1" data-fade="1" data-controlled="1">
+                                            <ul class="swiper-wrapper image-modal__slider-wrapper">
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-5.jpg" alt="">
+                                                </li>
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-6.jpg" alt="">
+                                                </li>
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-5.jpg" alt="">
+                                                </li>
+                                                <li class="swiper-slide image-modal__slide">
+                                                    <img class="lazyload image-modal__slide-image js-image" src="img/content/detail-slider-6.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper detail__slider detail__slider--large js-init-slider" data-slides="1.5" data-space="24" data-delay="3000">
+                                <ul class="swiper-wrapper detail__slider-wrapper">
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-5.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-6.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-5.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide detail__slide">
+                                        <div class="detail__slide-image" data-hystmodal="#image-modal">
+                                            <img class="lazyload js-image" src="img/content/detail-slider-6.jpg" alt="">
+                                            <div class="detail__slide-image-overlay">
+                                                <svg>
+                                                    <use xlink:href="#arrows"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="slider__btns slider__btns--vertical detail__slider-btns js-slider-navigation">
+                                    <button class="slider__btn js-prev-slide" type="button" title="Назад">
+                                        <svg>
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider__btn js-next-slide" type="button" title="Вперёд">
+                                        <svg>
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <hr>
+                </div>
+                <section class="contacts-section">
+                    <div class="container container--grid">
+                        <div class="contacts-section__links-block">
+                            <h2 class="contacts-section__title">Контакты</h2>
+                            <ul class="contacts-section__links">
+                                <li class="contacts-section__link-wrapper">
+                                    <a class="contacts-section__link" href="mailto:info@globalmall.ru">
+                                        <svg>
+                                            <use xlink:href="#mail"></use>
+                                        </svg>
+                                        <div class="contacts-section__link-text">
+                                            <span class="contacts-section__link-name">info@globalmall.ru</span>
+                                            <span class="contacts-section__link-description">По общим вопросам и вопросам аренды</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="contacts-section__link-wrapper">
+                                    <a class="contacts-section__link" href="mailto:reklama@globalmall.ru">
+                                        <svg>
+                                            <use xlink:href="#mail"></use>
+                                        </svg>
+                                        <div class="contacts-section__link-text">
+                                            <span class="contacts-section__link-name">reklama@globalmall.ru</span>
+                                            <span class="contacts-section__link-description">По вопросам рекламы и маркетинга</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="contacts-section__link-wrapper">
+                                    <a class="contacts-section__link" href="mailto:rabota@globalmall.ru">
+                                        <svg>
+                                            <use xlink:href="#mail"></use>
+                                        </svg>
+                                        <div class="contacts-section__link-text">
+                                            <span class="contacts-section__link-name">rabota@globalmall.ru</span>
+                                            <span class="contacts-section__link-description">По вопросам трудоустройства в торговый центр</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="dowload-file" href="assets/pdf-example.pdf" download>
+                                <div class="dowload-file__text">
+                                    <span class="dowload-file__name">Презентация рекламных возможностей</span>
+                                    <span class="dowload-file__info">Pdf. 1,32 Мб</span>
+                                </div>
+                                <div class="dowload-file__icon-wrapper">
+                                    <svg class="dowload-file__icon">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contacts-section__form">
+                            <form class="form js-init-validation js-handle-feedback-form" name="feedback" action="" novalidate>
+                                <h2 class="form__title">обратная связь</h2>
+                                <div class="form__inputs">
+                                    <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
+                                    <input class="form__input js-input js-phone-mask" name="phone" type="tel" placeholder="Телефон" autocomplete="off" required>
+                                    <textarea class="form__input form__textarea js-input" name="message" placeholder="Сообщение"></textarea>
+                                </div>
+                                <label class="checkbox-container form__policy">
+                                    <div class="form__policy-text">Даю свое согласие на<a href="./404.html">Обработку персональных данных</a>и соглашаюсь с<a href="./404.html">Политикой конфиденциальности</a>
+                                    </div>
+                                    <input class="js-input" type="checkbox" name="policy" checked="checked" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button class="button button--filled button--narrow form__submit js-disable-on-send" type="submit">отправить</button>
+                            </form>
+                            <div class="hystmodal modal-light" id="error-modal" aria-hidden="true">
+                                <div class="hystmodal__wrap modal-light__wrapper">
+                                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
+                                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
+                                            <svg>
+                                                <use xlink:href="#close-big"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="form-modal">
+                                            <svg>
+                                                <use xlink:href="#error"></use>
+                                            </svg>
+                                            <div class="form-modal__text">
+                                                <h3 class="form-modal__title">заявка не отправлена!</h3>
+                                                <span class="form-modal__description">Повторите попытку позже</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hystmodal modal-light" id="success-modal" aria-hidden="true">
+                                <div class="hystmodal__wrap modal-light__wrapper">
+                                    <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
+                                        <button class="modal-light__close-btn" data-hystclose title="Закрыть">
+                                            <svg>
+                                                <use xlink:href="#close-big"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="form-modal">
+                                            <svg>
+                                                <use xlink:href="#success"></use>
+                                            </svg>
+                                            <div class="form-modal__text">
+                                                <h3 class="form-modal__title">Спасибо за заявку!</h3>
+                                                <span class="form-modal__description">Мы свяжемся с вами в ближайшее время</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
