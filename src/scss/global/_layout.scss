@@ -134,12 +134,10 @@
     }
 
     ol, ul {
-        padding: 2em 0;
-
         li {
             position: relative;
         
-            margin-bottom: 1em;
+            margin-bottom: 1rem;
             margin-left: 2rem;
         
             &:last-of-type {
@@ -148,7 +146,7 @@
 
             &::before {
                 position: absolute;
-                right: calc(100% + 4px);
+                right: calc(100% + 1rem);
             }
         }
     }
@@ -174,17 +172,13 @@
             &::before {
                 content: '';
 
-                top: 9px;
+                top: 0.8rem;
 
-                width: 0.7rem;
-                height: 0.7rem;
+                width: 0.5rem;
+                height: 0.5rem;
 
                 border-radius: 50%;
-                background-color: var(--primary-color);
-
-                @include breakpoint(small-tablet) {
-                    top: 6px;
-                }
+                background-color: var(--dark);
             }
         }
     }

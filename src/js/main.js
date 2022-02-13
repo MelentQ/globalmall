@@ -18,6 +18,7 @@ import hideSortButtons from './custom/hideSortButtons';
 import initValidation from './custom/initValidation';
 import initMaps from './custom/initMaps';
 import initPhoneMask from './custom/initPhoneMask';
+import imageToTitle from './custom/imageToTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,9 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // custom
 
+    initSliders();
+    imageToTitle();
     initModals();
     editableTextContainer();
-    initSliders();
     initTabs();
     toggleHeader();
     toggleMenuSearch();

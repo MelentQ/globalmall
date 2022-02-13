@@ -8,20 +8,19 @@
   justify-content: center;
   gap: 1.2rem;
 
+  min-height: 4.2rem;
   border: 1px solid var(--dark);
   padding: 0.9rem 4.6rem;
   border-radius: 2px;
 
   @include clamp(9, 11);
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
 
   user-select: none;
 
-  transition: color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing;
-
-  
+  transition: color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing, border-color $base-transition-time $base-transition-easing;
 
   @include breakpoint(mobile) {
     padding: 0.9rem 1.6rem;
@@ -213,4 +212,11 @@
       transition: visibility $base-transition-time $base-transition-easing, opacity $base-transition-time $base-transition-easing;
     }
   }
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--grey);
 }

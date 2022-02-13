@@ -1,0 +1,15 @@
+<div class="benefits__item">
+  <div class="benefits__item-text editable-text-container">
+    {{{data.text}}}
+  </div>
+  {{#if data.list}}
+    <ul class="benefits__item-list">
+      {{#each data.list}}
+      <li class="benefits__item-list-item">
+        <span class="benefits__item-list-item-name">{{this.name}}</span>
+        <span class="benefits__item-list-item-description">{{this.description}}</span>
+      </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>

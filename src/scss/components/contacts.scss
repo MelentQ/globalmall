@@ -170,10 +170,12 @@
 
     &:hover {
       color: white;
+      border-color: var(--black) !important;
     }
 
     &:focus-visible {
       color: white;
+      border-color: var(--black) !important;
     }
   }
 

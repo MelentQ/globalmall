@@ -68,6 +68,12 @@
         content: none;
       }
     }
+
+    &--large {
+      .detail__slide-image {
+        padding-bottom: 66.66%;
+      }
+    }
   }
 
   &__slider-wrapper {

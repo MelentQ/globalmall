@@ -1,0 +1,29 @@
+.slider-section {
+  padding: 7.2rem 0;
+
+  @include breakpoint(tablet) {
+    padding: 4.2rem 0 2.4rem;
+  }
+
+  &__text-block {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title {
+    margin-bottom: 3.6rem;
+    
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__text {
+  }
+
+  &__slider-block {
+    min-width: 0;
+  }
+}

@@ -1,5 +1,5 @@
 {{> image-modal}}
-<div class="swiper detail__slider js-init-slider" data-slides="1.5" data-space="24" data-delay="3000">
+<div class="swiper detail__slider {{#if size}}detail__slider--{{size}}{{/if}} js-init-slider" {{#if large}}data-slides="1"{{else}}data-slides="1.5"{{/if}} data-space="24" data-delay="3000">
   <ul class="swiper-wrapper detail__slider-wrapper">
       {{#each imageSlider}}
       <li class="swiper-slide detail__slide">
@@ -15,4 +15,5 @@
   <div class="slider__btns slider__btns--vertical detail__slider-btns js-slider-navigation">
       {{>utils/slider-buttons}}
   </div>
+  <div class="swiper-pagination"></div>
 </div>

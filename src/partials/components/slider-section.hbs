@@ -1,0 +1,13 @@
+<section class="slider-section">
+  <div class="container container--grid">
+    <div class="slider-section__text-block">
+      <h2 class="slider-section__title">{{data.title}}</h2>
+      <div class="slider-section__text editable-text-container">
+        {{{data.text}}}
+      </div>
+    </div>
+    <div class="slider-section__slider-block">
+      {{>images-slider size="large" imageSlider=data.imageSlider}}
+    </div>
+  </div>
+</section>

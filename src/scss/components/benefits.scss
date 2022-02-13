@@ -1,0 +1,174 @@
+.benefits {
+
+  padding: 7.2rem 0;
+
+  @include breakpoint(tablet) {
+    padding: 4.2rem 0;
+  }
+
+  .ghost {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // ******
+  // Left Part
+
+  &__tabs-container {
+    grid-column: span 6;
+
+    @include breakpoint(tablet) {
+      grid-column: span 7;
+    }
+    @include breakpoint(small-tablet) {
+      grid-column: unset;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 4.8rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.6rem;
+    }
+    @include breakpoint(small-mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  &__tabs-btn {
+    border-color: var(--primary-color);
+    color: var(--black);
+    svg {
+      fill: var(--primary-color);
+    }
+
+    &.active {
+      background-color: var(--black);
+      border-color: var(--black);
+      color: white;
+    }
+
+    &:hover {
+      color: white;
+      border-color: var(--black) !important;
+    }
+
+    &:focus-visible {
+      color: white;
+      border-color: var(--black) !important;
+    }
+  }
+
+  &__bodies-slider {
+  }
+
+  &__bodies-wrapper {
+  }
+
+  &__item-wrapper {
+  }
+
+  // ******
+  // Item
+
+  &__item {
+  }
+
+  &__item-text {
+  }
+
+  &__item-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4.8rem;
+    row-gap: 2.4rem;
+
+    margin-top: 2.4rem;
+
+    @include breakpoint(tablet) {
+      column-gap: 2.4rem;
+    }
+    @include breakpoint(small-mobile) {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+  }
+
+  &__item-list-item {
+    position: relative;
+
+    padding-left: 2.4rem;
+
+    @include breakpoint(small-mobile) {
+      padding-left: 2rem;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 1rem;
+      left: 0.4rem;
+
+      width: 0.5rem;
+      height: 0.5rem;
+
+      background-color: var(--dark);
+
+      border-radius: 50%;
+
+      @include breakpoint(small-mobile) {
+        top: 0.6rem;
+      }
+    }
+  }
+
+  &__item-list-item-name {
+    display: block;
+
+    @extend %fs-h4;
+
+    @include breakpoint(tablet) {
+      @include clamp(14, 18);
+    }
+  }
+
+  &__item-list-item-description {
+    display: block;
+
+    @extend %fs-t6;
+    @extend %secondary-ff;
+    color: var(--secondary-dark);
+  }
+
+  // ******
+  // Right Part
+  &__image {
+    // imageToTitle.js
+    right: 0;
+    z-index: 2;
+
+    grid-column: span 5;
+
+    @include breakpoint(small-tablet) {
+      grid-column: unset;
+    }
+  }
+}

@@ -152,8 +152,6 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    
-
     &::after {
       content: '';
       
@@ -167,8 +165,6 @@
       background-color: var(--dark);
 
       transition: background-color $base-transition-time $base-transition-easing;
-
-      
     }
   }
 
