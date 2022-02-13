@@ -1,6 +1,6 @@
-import {Swiper, EffectFade} from "swiper";
+import {Swiper, EffectFade, HashNavigation} from "swiper";
 
-Swiper.use([EffectFade]);
+Swiper.use([EffectFade, HashNavigation]);
 
 export default function initTabs() {
   const tabsContainers = Array.from(document.querySelectorAll('.js-init-tabs'));
@@ -18,8 +18,12 @@ export default function initTabs() {
           crossFade: true
         },
         allowTouchMove: false,
-        autoHeight: true
+        autoHeight: true,
+        hashNavigation: !!container.dataset.hash
       })
+      swiper.on('hashSet', (swiper) => {
+        toggleTab(tabs, swiper.activeIndex);
+      });
       swipers.push(swiper);
     })
 
@@ -28,15 +32,19 @@ export default function initTabs() {
         swipers.forEach(swiper => {
             swiper.slideTo(i);
         })
-        tabs.forEach((t, j) => {
-          if (j == i) {
-            t.classList.add('active');
-          } else {
-            t.classList.remove('active');
-          }
-        })
+        toggleTab(tabs, i);
       })
     })
 
   })
+
+  function toggleTab(tabs, index) {
+    tabs.forEach((t, j) => {
+      if (j == index) {
+        t.classList.add('active');
+      } else {
+        t.classList.remove('active');
+      }
+    })
+  }
 }

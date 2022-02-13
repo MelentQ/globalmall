@@ -162,7 +162,7 @@
       fill: var(--primary-color);
     }
 
-    &.swiper-button-disabled {
+    &.active {
       background-color: var(--black);
       border-color: var(--black);
       color: white;

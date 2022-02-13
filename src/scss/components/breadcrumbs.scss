@@ -1,10 +1,6 @@
 .breadcrumbs {
   margin-top: 4rem;
   margin-bottom: 1.8rem;
-  
-  @extend %secondary-ff;
-  @extend %fs-t6;
-  color: var(--grey);
 
   @include breakpoint(tablet) {
     margin-top: 2.4rem;
@@ -19,6 +15,10 @@
     align-items: center;
     justify-content: flex-start;
     gap: 0.8rem;
+
+    @extend %secondary-ff;
+    @extend %fs-t6;
+    color: var(--grey);
 
     & > * {
       position: relative;
@@ -55,6 +55,10 @@
           content: none;
         }
       }
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
     }
   }
 }

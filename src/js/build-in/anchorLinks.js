@@ -33,7 +33,7 @@ export default function anchorLinks() {
                 },
             });
         } else {
-            console.error('No element to scroll');
+            // console.error('No element to scroll');
         }
     };
     document.addEventListener('click', (event) => {

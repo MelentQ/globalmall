@@ -1,0 +1,69 @@
+.dowload-file {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+
+  max-width: 35.4rem;
+  padding: 3.2rem;
+
+  background-color: var(--black);
+
+  &:hover {
+    .dowload-file__name {
+      color: var(--primary-color);
+    }
+  }
+  &:focus-visible {
+    .dowload-file__name {
+      color: var(--primary-color);
+    }
+  }
+
+  @include breakpoint(small-mobile) {
+    padding: 2.4rem;
+  }
+
+  &__name {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: white;
+    text-decoration: underline;
+
+    transition: color $base-transition-time $base-transition-easing;
+
+    @extend %fs-t6;
+  }
+
+  &__info {
+    display: block;
+
+    @extend %secondary-ff;
+    color: var(--grey);
+    @extend %fs-t8;
+  }
+
+  &__icon-wrapper {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+    margin-top: 0.2rem;
+
+    border: solid 0.2rem var(--primary-color);
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+
+    fill: var(--primary-color);
+  }
+}

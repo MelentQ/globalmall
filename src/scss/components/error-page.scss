@@ -3,7 +3,7 @@
 
   flex-grow: 1;
 
-  height: 100vh;
+  height: calc(100vh - var(--js-main-header-height));
 
   &__image {
     position: absolute;

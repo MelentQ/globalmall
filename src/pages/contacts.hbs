@@ -11,14 +11,14 @@
         {{>contacts-info}}
       </div>
     </div>
-    <div class="contacts__content">
-      <div class="swiper js-init-slider contacts__tabs" data-fade="1" data-slides="1" data-space="0" data-hash="1" data-no-touch="1">
-        <div class="contacts__tabs-btns js-slider-navigation">
-          <button class="contacts__tabs-btn button button--narrow js-prev-slide" type="button">
+    <div class="contacts__content js-init-tabs">
+      <div class="swiper contacts__tabs js-bodies" data-hash="1">
+        <div class="contacts__tabs-btns js-tabs">
+          <button class="contacts__tabs-btn button button--narrow js-tab active" type="button">
               <svg><use xlink:href="#car-1"></svg>
               <span>Как добраться</span>
           </button>
-          <button class="contacts__tabs-btn button button--narrow js-next-slide" type="button">
+          <button class="contacts__tabs-btn button button--narrow js-tab" type="button">
               <svg><use xlink:href="#block"></svg>
               <span>Схема этажей</span>
           </button>

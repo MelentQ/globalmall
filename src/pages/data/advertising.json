@@ -1,5 +1,6 @@
 {
     "title": "Реклама в ТЦ",
+    "name": "Стать центром притяжения ритейла и покупателей",
     "breadcrumbs": [
         {
             "name": "Главная",
@@ -9,5 +10,8 @@
             "name": "Реклама в ТЦ",
             "link": "#"
         }
-    ]
+    ],
+    "download": true,
+    "introImage": "img/content/bg-1.jpg",
+    "introImageMobile": "img/content/bg-1-mobile.jpg"
 }

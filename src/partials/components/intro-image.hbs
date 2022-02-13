@@ -1,0 +1,32 @@
+<section class="intro-image">
+  <div class="intro-image__header">
+    <picture>
+        <source srcset="{{introImageMobile}}" media="(max-width: 576px)">
+        <img class="lazyload intro-image__image" src="{{introImage}}" alt="Фон">
+    </picture>
+    <div class="intro-image__overlay"></div>
+    <div class="container intro-image__header-inner">
+      {{#if download}}
+      {{>dowload-file}}
+      {{else}}
+      <div class="ghost"></div>
+      {{/if}}
+      <div class="intro-image__title-block">
+        <nav class="breadcrumbs__list">
+          {{#each breadcrumbs}}
+          <a href="{{this.link}}">{{this.name}}</a>
+          {{/each}}
+        </nav>
+        <div class="intro-image__title-container">
+          <h1 class="intro-image__title">{{name}}</h1>
+          {{#if description}}
+          <div class="intro-image__description editable-text-container">
+            {{{description}}}
+          </div>
+          {{else}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

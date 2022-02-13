@@ -1,5 +1,6 @@
 {
     "title": "О ТЦ",
+    "name": "ТОРГОВЫЙ ЦЕНТР НОВОГО ПОКОЛЕНИЯ",
     "breadcrumbs": [
         {
             "name": "Главная",
@@ -9,5 +10,7 @@
             "name": "О ТЦ",
             "link": "#"
         }
-    ]
+    ],
+    "introImage": "img/content/bg-2.jpg",
+    "introImageMobile": "img/content/bg-2-mobile.jpg"
 }
