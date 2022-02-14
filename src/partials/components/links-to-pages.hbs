@@ -1,0 +1,25 @@
+<section class="links-to-pages">
+  <div class="container">
+    <div class="links-to-pages__inner">
+      <h2 class="links-to-pages__title">Интересует аренда или реклама в ТЦ “globalmall”?</h2>
+      <ul class="links-to-pages__list">
+        {{#each linksToPages}}
+        <li class="links-to-pages__link-wrapper">
+          <div class="links-to-pages__link-item">
+            <div class="links-to-pages__link-text">
+              <h3 class="links-to-pages__link-title">{{this.title}}</h3>
+              <a class="button button--narrow links-to-pages__link" href="{{this.link}}">
+                <span>Подробнее</span>
+                <svg><use xlink:href="#arrow-right"></svg>
+              </a>
+            </div>
+            <div class="links-to-pages__link-image-wrapper">
+              <img src="{{this.image}}" alt="{{this.title}}">
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

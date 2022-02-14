@@ -3,11 +3,33 @@
 
   padding: 7.2rem 0;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 0;
+  }
+
   @include breakpoint(mobile) {
     padding-top: 2rem;
   }
 
+  &--grey-line {
+    .sections__content {
+      border-color: var(--grey);
+    }
+  }
+
+  &__title {
+    margin-bottom: 5.6rem;
+
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
   &__grid {
+    position: relative;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;
@@ -29,7 +51,7 @@
     @include breakpoint(tablet) {
       grid-column: span 3;
       border-bottom: none;
-      padding-bottom: 2.4rem;
+      padding-bottom: 7.2rem;
     }
     @include breakpoint(small-tablet) {
       grid-template-columns: 1fr;
@@ -190,15 +212,15 @@
 
   &__icons-slider-container {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: calc(var(--disk-size) / 2 - var(--disk-size) / 2 / 1.41);
+    left: calc(var(--disk-size) / 2 - var(--disk-size) / 2 / 1.41);
 
     min-width: 0;
-    width: calc(var(--disk-size) / 2);
-    height: calc(var(--disk-size) / 2);
+    width: calc(var(--disk-size) / 2 / 1.41);
+    height: calc(var(--disk-size) / 2 / 1.41);
 
     @include breakpoint(tablet) {
-      top: 0;
+      top: calc(var(--disk-size) / 2 - var(--disk-size) / 2 / 1.41);
       bottom: unset;
     }
   }

@@ -12,5 +12,41 @@
         }
     ],
     "introImage": "img/content/bg-2.jpg",
-    "introImageMobile": "img/content/bg-2-mobile.jpg"
+    "introImageMobile": "img/content/bg-2-mobile.jpg",
+    "sliderSection1": {
+        "title": "Обновленный дизайн и внутреннее обустройство",
+        "icon": true,
+        "large": true,
+        "imageSlider": [
+            {
+                "image": "img/content/detail-slider-7.jpg",
+                "label": "Первый этаж. Вход"
+            },
+            {
+                "image": "img/content/detail-slider-8.jpg",
+                "label": "Второй этаж. Вход"
+            },
+            {
+                "image": "img/content/detail-slider-7.jpg",
+                "label": "Первый этаж. Вход"
+            },
+            {
+                "image": "img/content/detail-slider-8.jpg",
+                "label": "Второй этаж. Вход"
+            }
+        ],
+        "showLabel": true
+    },
+    "linksToPages": [
+        {
+            "link": "./rent.html",
+            "title": "Узнать условия для арендаторов",
+            "image": "img/content/link-bg-1.jpg"
+        },
+        {
+            "link": "./advertising.html",
+            "title": "УЗнать условия размещения рекламы",
+            "image": "img/content/link-bg-2.jpg"
+        }
+    ]
 }

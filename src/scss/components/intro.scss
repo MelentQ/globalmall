@@ -26,6 +26,9 @@
   &__info-address {
     @extend %fs-h5;
 
+    @media (min-width: 1681px) {
+      font-size: 1.4rem;
+    }
     @include breakpoint(laptop) {
       @include clamp(12, 14);
     }
@@ -37,6 +40,9 @@
   &__info-working-time {
     @extend %fs-h5;
 
+    @media (min-width: 1681px) {
+      font-size: 1.4rem;
+    }
     @include breakpoint(laptop) {
       @include clamp(12, 14);
     }

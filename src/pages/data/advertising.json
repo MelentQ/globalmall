@@ -18,20 +18,36 @@
         "title": "Внутренняя реклама",
         "text": "<ul><li>Большие видеостены на территории торгового центра;</li><li>Проведение мероприятий и промо-акций;</li><li>Размещение pop-up сторов и стендов;</li><li>Навигационная реклама в ТЦ;</li><li>Тейблстенды на фуд-корте;</li><li>Радиореклама.</li></ul>",
         "imageSlider": [
-            "img/content/detail-slider-3.jpg",
-            "img/content/detail-slider-4.jpg",
-            "img/content/detail-slider-3.jpg",
-            "img/content/detail-slider-4.jpg"
+            {
+                "image": "img/content/detail-slider-3.jpg"
+            },
+            {
+                "image": "img/content/detail-slider-4.jpg"
+            },
+            {
+                "image": "img/content/detail-slider-3.jpg"
+            },
+            {
+                "image": "img/content/detail-slider-4.jpg"
+            }
         ]
     },
     "sliderSection2": {
         "title": "Внешняя реклама",
         "text": "<p>Свободные рекламные места на фасаде.</p>",
         "imageSlider": [
-            "img/content/detail-slider-5.jpg",
-            "img/content/detail-slider-6.jpg",
-            "img/content/detail-slider-5.jpg",
-            "img/content/detail-slider-6.jpg"
+            {
+                "image": "img/content/detail-slider-5.jpg"
+            },
+            {
+                "image": "img/content/detail-slider-6.jpg"
+            },
+            {
+                "image": "img/content/detail-slider-5.jpg"
+            },
+            {
+                "image": "img/content/detail-slider-6.jpg"
+            }
         ]
     }
 }

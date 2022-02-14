@@ -152,6 +152,10 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
+    @media (min-width: 1681px) {
+      font-size: 1.4rem;
+    }
+
     &::after {
       content: '';
       
@@ -259,6 +263,10 @@
       }
       &:focus-visible {
         color: var(--primary-color);
+      }
+
+      @media (min-width: 1681px) {
+        font-size: 1.1rem;
       }
 
       @include breakpoint(laptop) {

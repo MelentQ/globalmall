@@ -21,4 +21,16 @@
 
     object-fit: contain;
   }
+
+  &__slide-label {
+    margin-top: 1.6rem;
+
+    @extend %fs-t4;
+    @extend %secondary-ff;
+    color: var(--secondary-dark);
+
+    display: block;
+
+    text-align: center;
+  }
 }

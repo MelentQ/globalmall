@@ -123,6 +123,10 @@
     font-weight: 500;
 
     transition: color $base-transition-time $base-transition-easing;
+
+    @media (min-width: 1681px) {
+      font-size: 2.2rem;
+    }
   }
 
   &__card-info {
@@ -218,6 +222,10 @@
     line-height: 1.2;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media (min-width: 1681px) {
+      font-size: 1.1rem;
+    }
   }
 
   &__more-container {

@@ -6,6 +6,10 @@
     padding: 4.2rem 0;
   }
 
+  & + .sections {
+    padding-top: 0;
+  }
+
   .ghost {
     @include breakpoint(tablet) {
       display: none;
@@ -83,12 +87,16 @@
   }
 
   &__item-wrapper {
+    .benefits__item {
+      grid-column: unset;
+    }
   }
 
   // ******
   // Item
 
   &__item {
+    grid-column: span 6;
   }
 
   &__item-text {
@@ -145,6 +153,9 @@
 
     @extend %fs-h4;
 
+    @media (min-width: 1681px) {
+      font-size: 1.8rem;
+    }
     @include breakpoint(tablet) {
       @include clamp(14, 18);
     }

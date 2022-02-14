@@ -28,6 +28,10 @@
     @include clamp(70, 140);
     font-weight: 500;
     line-height: 1;
+
+    @media (min-width: 1681px) {
+      font-size: 14rem;
+    }
   }
 
   &__subtitle {
@@ -38,6 +42,10 @@
     @include clamp(14, 16);
     font-weight: 500;
     line-height: 1.2;
+
+    @media (min-width: 1681px) {
+      font-size: 1.6rem;
+    }
 
     @include breakpoint(mobile) {
       margin-bottom: 2.4rem;

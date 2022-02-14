@@ -10,17 +10,34 @@
     z-index: 3;
   }
 
-  &__title {
-    margin-bottom: 3.6rem;
+  &__icon {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    height: 24rem;
+    width: auto;
+    max-width: unset;
+    margin-bottom: 4.2rem;
     
-    @extend %fs-h2;
+    object-fit: contain;
 
     @include breakpoint(tablet) {
-      margin-bottom: 2.4rem;
+      display: none;
     }
   }
 
+  &__title {
+    @extend %fs-h2;
+  }
+
   &__text {
+    margin-top: 3.6rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 2.4rem;
+    }
   }
 
   &__slider-block {

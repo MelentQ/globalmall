@@ -4,9 +4,9 @@ export default function toggleHeader() {
     const mainBlock = header.querySelector('.header__main-block');
     if (document.documentElement.clientWidth > 1024) {
       const secondaryBlock = header.querySelector('.header__secondary-block');
-      document.documentElement.style.setProperty('--js-secondary-header-height', secondaryBlock.clientHeight / 10 + 'rem');
+      document.documentElement.style.setProperty('--js-secondary-header-height', secondaryBlock.clientHeight + 'px');
 
-      document.documentElement.style.setProperty('--js-main-header-height', mainBlock.clientHeight / 10 + 'rem');
+      document.documentElement.style.setProperty('--js-main-header-height', mainBlock.clientHeight + 'px');
 
       const toggleY = header.dataset.toggle || 300;
       let opened = false;
@@ -22,7 +22,7 @@ export default function toggleHeader() {
       }, false)
     } else {
       document.documentElement.style.setProperty('--js-secondary-header-height', '0');
-      document.documentElement.style.setProperty('--js-main-header-height', mainBlock.clientHeight / 10 + 'rem');
+      document.documentElement.style.setProperty('--js-main-header-height', mainBlock.clientHeight + 'px');
     }
     
   }

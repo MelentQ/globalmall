@@ -4,11 +4,14 @@
       {{#each imageSlider}}
       <li class="swiper-slide detail__slide">
           <div class="detail__slide-image" data-hystmodal="#image-modal">
-            <img class="lazyload js-image" src="{{this}}" alt="{{name}}">
+            <img class="lazyload js-image" src="{{this.image}}" alt="{{name}}">
             <div class="detail__slide-image-overlay">
               <svg><use xlink:href="#arrows"></svg>
             </div>
           </div>
+          {{#if this.label}}
+          <span class="detail__slide-label">{{this.label}}</span>
+          {{/if}}
       </li>
       {{/each}}
   </ul>

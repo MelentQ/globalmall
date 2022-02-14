@@ -1,0 +1,146 @@
+.parking {
+
+  padding: 7.2rem 0;
+
+  @include breakpoint(tablet) {
+    padding: 4.2rem 0;
+  }
+
+  &__text-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    margin-bottom: 5.2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+
+      margin-bottom: 3.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      grid-column: span 2;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  &__text {
+    max-width: 40rem;
+  }
+
+  &__time {
+  }
+
+  &__time-label {
+    display: block;
+
+    margin-bottom: 3.6rem;
+
+    @extend %fs-t4;
+    @extend %secondary-ff;
+  }
+
+  &__time-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+
+  &__time-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 2.4rem;
+  }
+
+  &__time-days {
+    border-radius: 0.4rem;
+    padding: 1.4rem 1.7rem;
+
+    background-color: var(--primary-color);
+
+    @extend %fs-h5;
+
+    @media (min-width: 1681px) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint(tablet) {
+      @include clamp(12, 14);
+    }
+    @include breakpoint(small-tablet) {
+      padding: 1.4rem 2.4rem;
+    }
+  }
+
+  &__time-cost-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+
+  &__time-cost-item {
+  }
+
+  &__time-cost-value {
+    display: block;
+
+    @extend %fs-h4;
+    font-weight: 700;
+
+    @media (min-width: 1681px) {
+      font-size: 1.8rem;
+    }
+    @include breakpoint(tablet) {
+      @include clamp(14, 18);
+      font-weight: 500;
+    }
+  }
+
+  &__time-cost-description {
+    display: block;
+
+    @extend %fs-t6;
+    @extend %secondary-ff;
+    color: var(--secondary-dark);
+  }
+
+  &__image-wrapper {
+    position: relative;
+
+    height: 0;
+    padding-bottom: 56.25%;
+
+    @include breakpoint(small-mobile) {
+      margin: 0 calc(-1 * var(--content-padding));
+      padding-bottom: calc(56.25% + var(--content-padding));
+    }
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}

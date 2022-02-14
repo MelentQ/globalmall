@@ -22,6 +22,10 @@
 
   transition: color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing, border-color $base-transition-time $base-transition-easing;
 
+  @media (min-width: 1681px) {
+    font-size: 1.1rem;
+  }
+
   @include breakpoint(mobile) {
     padding: 0.9rem 1.6rem;
   }
@@ -113,7 +117,9 @@
 
     transition: color $base-transition-time $base-transition-easing;
 
-    
+    @media (min-width: 1681px) {
+      font-size: 1.1rem;
+    }
 
     &:hover,
     &:focus {

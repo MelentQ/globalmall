@@ -1,0 +1,123 @@
+.scheme-section {
+  position: relative;
+  z-index: 3;
+
+  padding-bottom: 7.2rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 4.2rem;
+  }
+
+  &__desktop-block {
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+  }
+
+  &__title-block {
+    
+  }
+
+  &__title {
+    margin-bottom: 3.6rem;
+
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__btn {
+    border-color: #E6E6E6;
+    svg {
+      fill: var(--primary-color);
+    }
+
+    &--mobile {
+      width: 100%;
+      @include breakpoint(small-mobile) {
+        margin-top: 2.4rem;
+      }
+    }
+  }
+
+  &__scheme-desktop {
+    height: 60rem;
+
+    background-color: var(--secondary-grey);
+
+    @include breakpoint(tablet) {
+      height: 45rem;
+    }
+  }
+
+  // ******
+  // Mobile
+
+  &__mobile-block {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+      display: block;
+    }
+  }
+
+  &__mobile-block-content {
+    padding-top: 2.4rem;
+
+    background-color: var(--secondary-light);
+  }
+
+  &__mobile-block-btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+
+    padding: 0.4rem;
+    margin-bottom: 2.4rem;
+    border: 0.1rem solid #EBEFF3;
+    border-radius: 0.2rem;
+
+    background-color: white;
+  }
+
+  &__mobile-block-btn {
+    justify-content: center;
+
+    padding: 0.8rem 0;
+
+    @include clamp(9, 11);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    border-radius: 0.2rem;
+
+    @media (min-width: 1681px) {
+      font-size: 1.1rem;
+    }
+
+    transition: color $base-transition-time $base-transition-easing, background-color $base-transition-time $base-transition-easing;
+
+    &.active {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &__mobile-block-slider {
+    margin: 0 calc(-1 * var(--content-padding));
+  }
+
+  &__mobile-block-slider-wrapper {
+  }
+
+  &__mobile-block-slider-slide {
+  }
+
+  &__mobile-sheme-item {
+    height: 45rem;
+
+    background-color: var(--secondary-light);
+  }
+}

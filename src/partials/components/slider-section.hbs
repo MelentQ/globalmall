@@ -2,12 +2,17 @@
   <div class="container container--grid">
     <div class="slider-section__text-block">
       <h2 class="slider-section__title">{{data.title}}</h2>
-      <div class="slider-section__text editable-text-container">
-        {{{data.text}}}
-      </div>
+      {{#if data.text}}
+        <div class="slider-section__text editable-text-container">
+          {{{data.text}}}
+        </div>
+      {{/if}}
+      {{#if data.icon}}
+        <img class="lazyload slider-section__icon" src="img/content/bg-logo-1.svg" alt="BG Logo">
+      {{/if}}
     </div>
     <div class="slider-section__slider-block">
-      {{>images-slider size="large" imageSlider=data.imageSlider}}
+      {{>images-slider showLabel=data.showLabel large=data.large imageSlider=data.imageSlider}}
     </div>
   </div>
 </section>

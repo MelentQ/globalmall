@@ -21,7 +21,7 @@ export default function initMaps() {
       
       addPlace(map, {
         coords: [mapElement.dataset.initialLongitude, mapElement.dataset.initialLatitude],
-        image: "../img/icons/location.svg"
+        image: mapElement.dataset.image
       })
     })
   }

@@ -1,5 +1,8 @@
-<section class="sections">
+<section class="sections {{#if mod}}sections--{{mod}}{{/if}}">
     <div class="container">
+        {{#if sectionTitle}}
+        <h2 class="sections__title">{{sectionTitle}}</h2>
+        {{/if}}
         <div class="sections__grid js-init-tabs">
             <div class="sections__content">
                 <ul class="sections__names js-tabs">
