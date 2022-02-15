@@ -19,6 +19,7 @@ import initValidation from './custom/initValidation';
 import initMaps from './custom/initMaps';
 import initPhoneMask from './custom/initPhoneMask';
 import imageToTitle from './custom/imageToTitle';
+import fileUpload from './build-in/fileUpload';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrollbarWidth();
     anchorLinks();
     customSelects();
+    fileUpload();
 
     // custom
 

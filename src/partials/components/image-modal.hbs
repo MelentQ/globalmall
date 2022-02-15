@@ -1,4 +1,4 @@
-<div class="hystmodal modal-light" id="image-modal" aria-hidden="true">
+<div class="hystmodal modal-light" id="image-modal-{{this.idx}}" aria-hidden="true">
     <div class="hystmodal__wrap modal-light__wrapper">
         <div class="hystmodal__window modal-light__window" role="dialog" aria-modal="true">
           <button class="modal-light__close-btn" data-hystclose title="Закрыть">
@@ -10,7 +10,7 @@
             <ul class="swiper-wrapper image-modal__slider-wrapper">
               {{#each imageSlider}}
               <li class="swiper-slide image-modal__slide">
-                <img class="lazyload image-modal__slide-image js-image" src="{{this.image}}" alt="{{name}}">
+                <img class="lazyload image-modal__slide-image" src="{{this.image}}" alt="{{name}}">
                 {{#if this.label}}
                 <span class="image-modal__slide-label">{{this.label}}</span>
                 {{/if}}

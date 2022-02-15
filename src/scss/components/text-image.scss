@@ -1,0 +1,58 @@
+.text-image {
+  padding: 7.2rem 0;
+
+  @include breakpoint(tablet) {
+    padding: 4.2rem 0;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text-block {
+    grid-column: span 4;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  &__title {
+    max-width: 35rem;
+    margin-bottom: 3.6rem;
+
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      max-width: unset;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__text {
+    @include breakpoint(tablet) {
+      max-width: 50rem;
+    }
+  }
+
+  &__image-block {
+    grid-column: span 8;
+
+    @include breakpoint(tablet) {
+      grid-column: span 1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+}

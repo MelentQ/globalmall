@@ -41,5 +41,5 @@
             ]
         }
     ],
-    "text": "<img src=\"img/content/detail-image-2.jpg\" alt=\"Картинка\">"
+    "text": "<img class=\"lazyload\" src=\"img/content/detail-image-2.jpg\" alt=\"Картинка\">"
 }

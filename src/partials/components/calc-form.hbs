@@ -1,0 +1,48 @@
+<form class="form form--v2 js-init-validation js-handle-feedback-form" name="calc" action="" novalidate>
+  <h2 class="form__title">Подобрать помещение в ТЦ "Глобал Молл"</h2>
+  <div class="form__inputs">
+    <div class="form__input-wrapper">
+      <span class="form__input-label">Как к Вам можно обращаться?</span>
+      <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
+    </div>
+    <div class="form__input-wrapper">
+      <span class="form__input-label">Как называется Ваш бизнес?</span>
+      <input class="form__input js-input" name="company" type="text" placeholder="Название бренда или торговой марки" autocomplete="off" required>
+    </div>
+    <div class="form__input-wrapper form__input-wrapper--wide">
+      <span class="form__input-label">Опишите Ваш бизнес</span>
+      <textarea class="form__input form__textarea js-input" name="about" placeholder="Например, магазин электроники или семейный итальянский ресторан"></textarea>
+    </div>
+    <div class="form__input-wrapper form__input-wrapper--wide">
+      <span class="form__input-label">Какая Вам понадобится площадь?</span>
+      <input class="form__input js-input" name="square" type="number" placeholder="от 10 до 400 м²" autocomplete="off" min="10" max="400" required>
+    </div>
+    <div class="form__input-wrapper form__input-wrapper--wide">
+      <span class="form__input-label">Укажите ссылку на Вашу презентацию или прикрепите файл</span>
+      <div class="form__row-inputs">
+      <input class="form__input js-input" name="link" type="url" placeholder="Ссылка на презентацию" autocomplete="off">
+      <label class="form__file-input-wrapper js-file-upload">
+        <input class="form__file-input" name="file" type="file">
+        <span class="js-file-upload-text form__file-input-label">Прикрепить файл</span>
+        <svg><use xlink:href="#download-alt"></svg>
+      </label>
+      </div>
+    </div>
+    <div class="form__input-wrapper form__input-wrapper--wide">
+      <span class="form__input-label">Как с Вами связаться?</span>
+      <input class="form__input js-input js-phone-mask" name="phone" type="tel" placeholder="+7" autocomplete="off" required>
+    </div>
+  
+  </div>
+  
+  <label class="checkbox-container form__policy">
+      <div class="form__policy-text">
+        Даю свое согласие на <a href="./404.html">Обработку персональных данных</a> и соглашаюсь с <a href="./404.html">Политикой конфиденциальности</a>
+      </div>
+      <input class="js-input" type="checkbox" name="policy" checked required>
+      <span class="checkmark"></span>
+  </label>
+  <button class="button button--filled button--narrow form__submit js-disable-on-send" type="submit">отправить</button>
+</form>
+{{>form-modal data=errorModalData}}
+{{>form-modal data=successModalData}}

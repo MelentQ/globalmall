@@ -19,11 +19,13 @@ export default function initTabs() {
         },
         allowTouchMove: false,
         autoHeight: true,
-        hashNavigation: !!container.dataset.hash
+        hashNavigation: !!container.dataset.hash,
+        on: {
+          init: function (swiper) {
+            toggleTab(tabs, swiper.activeIndex);
+          },
+        }
       })
-      swiper.on('hashSet', (swiper) => {
-        toggleTab(tabs, swiper.activeIndex);
-      });
       swipers.push(swiper);
     })
 

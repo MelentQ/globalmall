@@ -70,10 +70,6 @@
       display: block;
     }
 
-    @media (min-width: 1681px) {
-      font-size: 1.4rem;
-    }
-
     @include breakpoint(laptop) {
       @include clamp(12, 14);
     }

@@ -26,5 +26,17 @@
       width: 2.4rem;
       height: 2.4rem;
     }
+
+    &:hover svg {
+      fill: white;
+    }
+
+    &:focus-visible svg {
+      fill: white;
+    }
+  }
+
+  video {
+    max-width: 100%;
   }
 }

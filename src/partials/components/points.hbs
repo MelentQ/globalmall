@@ -1,0 +1,8 @@
+<ul class="points {{#if row}}points--row{{/if}}">
+  {{#each data}}
+  <li class="points__item">
+    <span class="points__item-name">{{this.name}}</span>
+    <span class="points__item-description">{{this.description}}</span>
+  </li>
+  {{/each}}
+</ul>

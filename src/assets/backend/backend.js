@@ -363,13 +363,16 @@ function feedbackFormSubmitHandler() {
   const forms = Array.from(document.querySelectorAll('.js-handle-feedback-form'));
   forms.forEach(form => {
     const url = form.action;
-    const formData = new FormData(form);
     const submitBtn = form.querySelector('.js-disable-on-send');
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       submitBtn.classList.add('disabled');
+
+      const formData = new FormData(form);
+      
+      console.log("АЛГА! МАТУР ФОРМ ДАТАСЫ:", _debugFormData(formData));
 
       fetch(url, {
         body: formData,

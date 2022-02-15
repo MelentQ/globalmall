@@ -76,9 +76,6 @@
 
     @extend %fs-h5;
 
-    @media (min-width: 1681px) {
-      font-size: 1.4rem;
-    }
     @include breakpoint(tablet) {
       @include clamp(12, 14);
     }
@@ -104,9 +101,6 @@
     @extend %fs-h4;
     font-weight: 700;
 
-    @media (min-width: 1681px) {
-      font-size: 1.8rem;
-    }
     @include breakpoint(tablet) {
       @include clamp(14, 18);
       font-weight: 500;

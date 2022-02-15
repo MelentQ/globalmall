@@ -1,0 +1,19 @@
+<section class="video">
+  <div class="container container--grid">
+    <div class="video__text-block">
+      <h2 class="video__title">Интервью с арендатором</h2>
+      <div class="video__text editable-text-container">
+        <p>Команда вьетнамской кухни SKYФО</p>
+      </div>
+      <img class="lazyload video__icon" src="img/content/bg-logo-1.svg" alt="Вадим">
+    </div>
+    <button class="video__video-block" type="button" data-hystmodal="#video-modal" title="Смотреть видео">
+      <img class="lazyload" src="img/content/video-preview.jpg" alt="Видео">
+      <span class="video__overlay"></span>
+      <span class="video__play-icon">
+        <svg><use xlink:href="#play"></svg>
+      </span>
+    </button>
+  </div>
+</section>
+{{>video-modal}}

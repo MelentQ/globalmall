@@ -1,0 +1,74 @@
+.image-text {
+  padding: 7.2rem 0;
+
+  @include breakpoint(tablet) {
+    padding: 4.2rem 0;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  &__mobile-text {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+      display: block;
+    }
+  }
+
+  &__image-block {
+    img {
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+
+  &__text-block {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 3.6rem;
+
+    @extend %fs-h2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__text {
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+
+    max-width: unset;
+    width: 80rem;
+    height: auto;
+
+    object-fit: contain;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

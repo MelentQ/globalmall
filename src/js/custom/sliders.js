@@ -8,6 +8,9 @@ export default function initSliders() {
   let controlledSwiper;
   let controlledSwiperId;
 
+  let controlledSwipers = [];
+  let controlSwipers = [];
+
   sliders.forEach((slider, i) => {
     const fadeEffect = slider.dataset.fade ? {effect: 'fade', fadeEffect: {crossFade: true}} : {};
     const autoplay = slider.dataset.delay ? {autoplay:{delay: Number(slider.dataset.delay), disableOnInteraction: true}} : {};
@@ -60,16 +63,21 @@ export default function initSliders() {
     })
 
     if (i == controlledSwiperId + 1) {
-      swiper.slides.forEach((slide, j) => {
-        slide.addEventListener('click', () => {
-          controlledSwiper.slideToLoop(j, 0);
-        })
-      })
+      controlSwipers.push(swiper);
+      controlledSwiperId = null;
     }
 
     if (slider.dataset.controlled) {
-      controlledSwiper = swiper;
+      controlledSwipers.push(swiper);
       controlledSwiperId = i;
     }
+  })
+
+  controlSwipers.forEach((controlSwiper, i) => {
+    controlSwiper.slides.forEach((slide, j) => {
+      slide.addEventListener('click', () => {
+        controlledSwipers[i].slideToLoop(j, 0);
+      })
+    })
   })
 }
