@@ -1,10 +1,10 @@
-{{> image-modal idx=this.idx}}
+{{> images-modal idx=this.idx}}
 <div class="swiper detail__slider {{#if size}}detail__slider--{{size}}{{/if}} js-init-slider" {{#if large}}data-slides="1"{{else}}data-slides="1.5"{{/if}} data-space="24" data-delay="3000">
   <ul class="swiper-wrapper detail__slider-wrapper">
       {{#each imageSlider}}
       <li class="swiper-slide detail__slide">
           <div class="detail__slide-image" data-hystmodal="#image-modal-{{../this.idx}}">
-            <img class="lazyload js-image" src="{{this.image}}" alt="{{name}}">
+            <img class="lazyload" src="{{this.image}}" alt="{{name}}">
             <div class="detail__slide-image-overlay">
               <svg><use xlink:href="#arrows"></svg>
             </div>

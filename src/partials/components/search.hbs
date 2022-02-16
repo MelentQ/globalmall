@@ -8,7 +8,7 @@
                 <form action="/" name="search" class="search-form js-search-form">
                     <input name="offset" value="8" type="hidden">
                     {{#if hasSearchTextInput}}
-                    {{>utils/search-input}}
+                    {{>utils/search-input label=this.label}}
                     {{/if}}
                     {{#if hasFloorInput}}
                     {{>utils/radio-inputs}}

@@ -1,0 +1,22 @@
+{
+    "title": "Развлечения",
+    "name": "Развлечения",
+    "hasSearchTextInput": true,
+    "hasFloorInput": true,
+    "breadcrumbs": [
+        {
+            "name": "Главная",
+            "link": "./index.html"
+        },
+        {
+            "name": "Развлечения",
+            "link": "#"
+        }
+    ],
+    "categories": [
+        "все категории",
+        "Развлечение 1",
+        "Развлечение 2",
+        "Развлечение 3"
+    ]
+}

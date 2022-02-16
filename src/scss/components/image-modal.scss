@@ -34,3 +34,14 @@
     text-align: center;
   }
 }
+
+.single-image-modal {
+  display: block;
+
+  max-width: 80vw;
+  max-height: 80vh;
+  height: auto;
+  width: auto;
+
+  object-fit: contain;
+}

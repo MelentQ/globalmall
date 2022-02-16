@@ -17,11 +17,11 @@
     },
     {
       "name": "услуги",
-      "link": "./404.html"
+      "link": "./news-list-3.html"
     },
     {
       "name": "развлечения",
-      "link": "./404.html"
+      "link": "./news-list-4.html"
     },
     {
       "name": "рестораны и кафе",
@@ -617,7 +617,7 @@
         "Игровые комнаты",
         "игровые автоматы"
       ],
-      "link": "./404.html",
+      "link": "./news-list-4.html",
       "icon": "img/section-2.svg"
     },
     {
@@ -662,7 +662,7 @@
         "Игровые комнаты",
         "игровые автоматы"
       ],
-      "link": "./404.html",
+      "link": "./news-list-4.html",
       "icon": "img/section-2.svg"
     },
     {
@@ -690,7 +690,7 @@
         "пицца",
         "кофе"
       ],
-      "link": "./404.html",
+      "link": "./news-list-3.html",
       "icon": "img/section-3.svg"
     }
   ]

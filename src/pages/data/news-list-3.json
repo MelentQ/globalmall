@@ -1,0 +1,22 @@
+{
+    "title": "Услуги",
+    "name": "Услуги",
+    "hasSearchTextInput": true,
+    "hasFloorInput": true,
+    "breadcrumbs": [
+        {
+            "name": "Главная",
+            "link": "./index.html"
+        },
+        {
+            "name": "Услуги",
+            "link": "#"
+        }
+    ],
+    "categories": [
+        "все категории",
+        "Услуга 1",
+        "Услуга 2",
+        "Услуга 3"
+    ]
+}
