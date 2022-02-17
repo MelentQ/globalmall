@@ -1,17 +1,6 @@
-import FormValidator from "../build-in/validation";
-
+// import FormValidator from "../build-in/validation";
+import Pristine from "../../../node_modules/pristinejs/dist/pristine";
 
 export default function initValidation() {
-  const forms = Array.from(document.querySelectorAll('.js-init-validation'));
-  forms.forEach(form => {
-    const validation = new FormValidator({
-      inputSelector: '.js-input',
-      submitButtonSelector: '.form__submit',
-      inactiveButtonClass: 'disabled',
-      inputErrorClass: 'js-error',
-      errorClass: 'invalid'
-    }, form);
-
-    validation.enableValidation();
-  })
+  window.Pristine = Pristine;
 }

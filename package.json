@@ -43,6 +43,7 @@
     "moment": "^2.29.1",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.12",
+    "pristinejs": "^0.1.9",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^7.4.1"
   },

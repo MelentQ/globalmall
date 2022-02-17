@@ -180,10 +180,6 @@
       outline: 1px dotted var(--primary-color);
       outline-offset: 2px;
     }
-
-    &.js-error ~ .checkmark {
-      border-color: var(--error);
-    }
   }
 
   &:hover input ~ .checkmark {
