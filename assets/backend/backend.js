@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showMore();
   
   // Отправка формы
-  feedbackFormSubmitHandler();
+  formSubmitHandler();
 });
 
 function headerSearch() {
@@ -359,14 +359,19 @@ function showMore() {
   })
 }
 
-function feedbackFormSubmitHandler() {
+function formSubmitHandler() {
   const forms = Array.from(document.querySelectorAll('.js-handle-feedback-form'));
   forms.forEach(form => {
     const url = form.action;
     const submitBtn = form.querySelector('.js-disable-on-send');
 
+    const validator = new Pristine(form, pristineConfig, true);
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const isValid = validator.validate();
+      if(!isValid) return;
 
       submitBtn.classList.add('disabled');
 
@@ -410,4 +415,17 @@ function _debugFormData(formData) {
       object[key] = value;
   });
   return json = JSON.stringify(object);
+}
+
+const pristineConfig = {
+  // class of the parent element where the error/success class is added
+  classTo: 'js-validator-wrapper',
+  errorClass: 'invalid',
+  successClass: 'valid',
+  // class of the parent element where error text element is appended
+  errorTextParent: 'js-validator-wrapper',
+  // type of element to create for the error text
+  errorTextTag: 'span',
+  // class of the error text element
+  errorTextClass: 'form__input-error' 
 }

@@ -303,11 +303,15 @@
                             <form class="form js-init-validation js-handle-feedback-form" name="feedback" action="" novalidate>
                                 <h2 class="form__title">обратная связь</h2>
                                 <div class="form__inputs">
-                                    <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
-                                    <input class="form__input js-input js-phone-mask" name="phone" type="tel" placeholder="Телефон" autocomplete="off" required>
+                                    <div class="js-validator-wrapper">
+                                        <input class="form__input js-input" name="name" type="text" placeholder="Ваше имя" autocomplete="off" required>
+                                    </div>
+                                    <div class="js-validator-wrapper">
+                                        <input class="form__input js-input js-phone-mask" name="phone" type="tel" placeholder="Телефон" autocomplete="off" required>
+                                    </div>
                                     <textarea class="form__input form__textarea js-input" name="message" placeholder="Сообщение"></textarea>
                                 </div>
-                                <label class="checkbox-container form__policy">
+                                <label class="checkbox-container form__policy js-validator-wrapper">
                                     <div class="form__policy-text">Даю свое согласие на<a href="./404.html">Обработку персональных данных</a>и соглашаюсь с<a href="./404.html">Политикой конфиденциальности</a>
                                     </div>
                                     <input class="js-input" type="checkbox" name="policy" checked="checked" required>
