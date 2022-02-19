@@ -217,12 +217,10 @@
     flex-wrap: wrap;
     max-height: 50rem;
 
-    transition: max-height 0.5s ease-in;
     overflow: hidden;
 
     &.hidden {
       max-height: 3.8rem;
-      transition: max-height 0.5s ease-out;
     }
 
     @include breakpoint(mobile) {
@@ -273,7 +271,7 @@
     align-items: center;
     justify-content: flex-start;
 
-    padding: 0.8rem 1.4rem;
+    padding: 0.8rem 1.4rem 0.8rem 0.9rem;
 
     border: 1px solid var(--primary-color);
     border-radius: 2px;
@@ -304,8 +302,6 @@
       background-size: 2rem 2rem;
 
       transition: background-position $base-transition-time $base-transition-easing;
-
-      
     }
   }
 
@@ -454,4 +450,12 @@
   flex-grow: 1;
 
   min-height: 4.2rem;
+}
+
+.body.animatable .search-form__filter-list {
+  transition: max-height 0.5s ease-in;
+
+  &.hidden {
+    transition: max-height 0.5s ease-out;
+  }
 }

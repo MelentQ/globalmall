@@ -1,11 +1,25 @@
 <section class="detail">
+  {{#if wideHeader}}
+  <div class="container">
+    <div class="detail__wide-header">
+      <h1 class="detail__title">{{name}}</h1>
+      {{>hashtags data=hashtags}}
+    </div>
+  </div>
+  {{/if}}
   <div class="container container--grid">
     <div class="detail__header">
-      <h1 class="detail__title">{{name}}</h1>
+      {{#if wideHeader}}
+      {{else}}
+        <h1 class="detail__title">{{name}}</h1>
+      {{/if}}
       {{#if showDate}}
       <time class="detail__date" datetime="2019-01-14">14.01.2019</time>
       {{/if}}
-      {{>hashtags data=hashtags}}
+      {{#if wideHeader}}
+      {{else}}
+        {{>hashtags data=hashtags}}
+      {{/if}}
       {{#if image}}
       <div class="detail__logo">
         <img class="lazyload" src="{{image}}" alt="Логотип">
@@ -29,15 +43,25 @@
 
     <div class="detail__content">
       {{#if imageSlider}}
-      {{>images-slider}}
+      <div class="detail__slider-block">
+        {{>images-slider}}
+      </div>
       {{/if}}
 
       {{#if text}}
-      <div class="detail__text-container editable-text-container">
-        {{{text}}}
+      <div class="detail__text-container">
+        <div class="editable-text-container">
+          {{{text}}}
 
-        {{#if test}}
-        {{>utils/user-text}}
+          {{#if test}}
+          {{>utils/user-text}}
+          {{/if}}
+        </div>
+        {{#if onMap}}
+        <a class="detail__btn" href="./contacts.html#scheme">
+            <svg><use xlink:href="#location"></svg>
+            <span class="detail__btn-label">Расположение на схеме</span>
+        </a>
         {{/if}}
       </div>
       {{/if}}
@@ -59,13 +83,6 @@
           <span>схема этажей</span>
         </a>
       </div>
-      {{/if}}
-
-      {{#if onMap}}
-      <a class="detail__btn" href="./contacts.html#scheme">
-          <svg><use xlink:href="#location"></svg>
-          <span class="detail__btn-label">Расположение на схеме</span>
-      </a>
       {{/if}}
     </div>
   </div>

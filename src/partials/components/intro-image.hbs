@@ -6,26 +6,24 @@
     </picture>
     <div class="intro-image__overlay"></div>
     <div class="container intro-image__header-inner">
-      {{#if download}}
-      {{>dowload-file}}
-      {{else}}
-      <div class="ghost"></div>
-      {{/if}}
-      <div class="intro-image__title-block">
+      <div class="intro-image__header-block">
         <nav class="breadcrumbs__list">
           {{#each breadcrumbs}}
           <a href="{{this.link}}">{{this.name}}</a>
           {{/each}}
         </nav>
-        <div class="intro-image__title-container js-title">
-          <h1 class="intro-image__title">{{name}}</h1>
-          {{#if description}}
-          <div class="intro-image__description editable-text-container">
-            {{{description}}}
-          </div>
-          {{else}}
-          {{/if}}
+        {{#if download}}
+          {{>dowload-file}}
+        {{/if}}
+      </div>
+      <div class="intro-image__title-container js-title">
+        <h1 class="intro-image__title">{{name}}</h1>
+        {{#if description}}
+        <div class="intro-image__description editable-text-container">
+          {{{description}}}
         </div>
+        {{else}}
+        {{/if}}
       </div>
     </div>
   </div>

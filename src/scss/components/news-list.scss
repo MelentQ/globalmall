@@ -5,6 +5,7 @@
   &--grey {
     padding-top: 7.2rem;
     padding-bottom: 7.2rem;
+    
     background-color: var(--secondary-light);
 
     @include breakpoint(small-tablet) {
