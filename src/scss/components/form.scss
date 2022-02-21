@@ -153,6 +153,8 @@
   }
 
   &__policy-text {
+    margin-top: 0.4rem;
+    
     @extend %fs-t6;
     @extend %secondary-ff;
     color: rgba(#212121, 0.5);

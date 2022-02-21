@@ -261,7 +261,7 @@
     height: 5.4rem;
     border-radius: 50%;
 
-    background-color: var(--primary-color);
+    background-color: var(--dark);
 
     box-shadow: 0px 67px 80px rgba(0, 0, 0, 0.14), 0px 8px 34.87px rgba(0, 0, 0, 0.083455), 0px 4.45557px 5.32008px rgba(0, 0, 0, 0.056545);
 
@@ -271,19 +271,19 @@
       width: 2.4rem;
       height: 2.4rem;
 
-      fill: var(--white);
+      fill: var(--primary-color);
 
       transition: fill $base-transition-time $base-transition-easing;
     }
 
     &:hover {
-      background-color: var(--dark);
+      background-color: var(--primary-color);
       svg {
-        fill: var(--primary-color);
+        fill: var(--white);
       }
 
       .newslist__open-mobile-filter-dot {
-        background-color: var(--white);
+        background-color: black;
       }
     }
 
@@ -302,7 +302,7 @@
 
     border-radius: 50%;
 
-    background-color: black;
+    background-color: var(--white);
 
     transition: background-color $base-transition-time $base-transition-easing;
   }

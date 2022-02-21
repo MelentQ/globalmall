@@ -42,7 +42,7 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%);
 
     @include breakpoint(small-mobile) {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 34%, rgba(0, 0, 0, 0.6) 100%)
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 34%, rgba(0, 0, 0, 0.6) 100%),
     }
   }
 
@@ -118,5 +118,40 @@
 
   &__description {
     grid-column: span 5;
+  }
+
+  &__next-slide {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: block;
+
+    width: 2.1rem;
+    height: 1.4rem;
+
+    &:hover {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
+    &:focus-visible {
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+
+    @include breakpoint(small-mobile) {
+      display: none;
+    }
+
+    svg {
+      width: 2.1rem;
+      height: 1.4rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
   }
 }

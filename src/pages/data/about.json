@@ -12,7 +12,7 @@
         }
     ],
     "introImage": "img/content/bg-2.jpg",
-    "introImageMobile": "img/content/bg-2-mobile.jpg",
+    "introImageMobile": "img/content/bg-1-mobile.jpg",
     "sliderSection1": {
         "title": "Обновленный дизайн и внутреннее обустройство",
         "icon": true,
