@@ -14,10 +14,7 @@
       gap: 2.4rem;
     }
     @include breakpoint(small-tablet) {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: stretch;
-      justify-content: flex-start;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -30,6 +27,9 @@
   }
 
   &__image-block {
+    @include breakpoint(small-tablet) {
+      order: 2;
+    }
     img {
       width: 100%;
       height: auto;

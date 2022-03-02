@@ -1,11 +1,11 @@
 {
-  "name": "globalmoll",
+  "name": "globalmall",
   "version": "1.0.0",
-  "description": "globalmoll",
+  "description": "globalmall",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MelentQ/globalmoll.git"
+    "url": "git+https://github.com/MelentQ/globalmall.git"
   },
   "main": "main.js",
   "scripts": {

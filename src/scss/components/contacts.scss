@@ -12,6 +12,10 @@
   &__title {
     margin-bottom: 3.6rem;
     @extend %fs-h1;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+    }
   }
 
   &__info-desktop {
@@ -142,7 +146,11 @@
   }
 
   &__tabs-btns {
-    margin-bottom: 3.7rem;
+    margin-bottom: 3.6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
 
     @include breakpoint(mobile) {
       display: grid;
@@ -256,6 +264,8 @@
       }
       .search-form__input {
         background-color: white;
+
+        margin-bottom: 2.4rem;
       }
     }
   }
