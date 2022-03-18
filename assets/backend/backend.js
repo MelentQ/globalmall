@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Поиск в хедере
   headerSearch();
 
-  // 2 функции только потому что разная разметка у карточек
+  // 3 функции только потому что разная разметка у карточек
   searchFormSubmitHandler('.js-newslist-search-form-wrapper', createNewsListElement);
   searchFormSubmitHandler('.js-cards-search-form-wrapper', createCardsListElement);
+  searchFormSubmitHandler('.js-search-form-wrapper', createSearchResultElement);
 
   // Универсальная "Показать ещё"
   showMore();
@@ -229,14 +230,16 @@ function createNewsListElement(itemData) {
   btn.href = itemData.mapLink;
 
   const hashtagsContainer = element.querySelector('.hashtags');
-  itemData.hashtags.forEach(hashtag => {
-    const hashtagElement = _getTemplateBySelector('#hashtagItemTemplate');
-    const hashtagLink = hashtagElement.querySelector('.hashtags__link');
-    hashtagLink.href = hashtag.link;
-    hashtagLink.textContent = hashtag.name;
-
-    hashtagsContainer.append(hashtagElement);
-  })
+  if(itemData.hashtags && itemData.hashtags.length) {
+    itemData.hashtags.forEach(hashtag => {
+      const hashtagElement = _getTemplateBySelector('#hashtagItemTemplate');
+      const hashtagLink = hashtagElement.querySelector('.hashtags__link');
+      hashtagLink.href = hashtag.link;
+      hashtagLink.textContent = hashtag.name;
+  
+      hashtagsContainer.append(hashtagElement);
+    })
+  }
 
   return element;
 }
@@ -281,6 +284,37 @@ function createNewsListElement(itemData) {
 
     tagsContainer.append(tagElement);
   })
+
+  return element;
+}
+
+/**
+ * Функция для страницы с поисковой выдачей
+ * "Результаты поиска" (search.html)
+ * Формат ответа сервера (data):
+ * [
+ *    {
+ *       "link": "/cards/card-1",
+ *       "name": "Adidas kids",
+ *       "text": "Какой-то текст",
+ *       "date": "3 Февраля 2022 – 31 Марта 2022"
+ *    }
+ * ]
+ */
+ function createSearchResultElement(itemData) {
+  const element = _getTemplateBySelector('#searchItemTemplate');
+
+  const link = element.querySelector('.search-result__item');
+  link.href = itemData.link;
+
+  const name = element.querySelector('.search-result__title');
+  name.textContent = itemData.name;
+
+  const text = element.querySelector('.search-result__description');
+  text.innerHTML = itemData.text;
+
+  const date = element.querySelector('.search-result__date');
+  date.innerHTML = itemData.date;
 
   return element;
 }
