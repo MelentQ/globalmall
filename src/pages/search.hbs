@@ -1,0 +1,43 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+{{>breadcrumbs}}
+
+<div class="js-search-form-wrapper">
+  {{>search label="кроссовки"}}
+
+  <section class="search-result">
+    <div class="container js-ajax-show-more-container">
+      <ul class="search-result__list js-ajax-elements-container js-search-form-elements-container">
+        {{#each result}}
+        <li class="search-result__item-wrapper js-ajax-element js-search-form-element">
+          <a class="search-result__item" href="./card-detail-2.html">
+            <h3 class="search-result__title">{{this.name}}</h3>
+            <div class="search-result__description">
+              {{{this.description}}}
+            </div>
+            <span class="search-result__date">{{this.date}}</span>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+
+      <div class="search-result__more-container js-ajax-show-more-btn-container">
+        <a class="button button--filled search-result__more js-ajax-show-more-btn" href="#">Показать еще</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<template id="searchItemTemplate">
+  <li class="search-result__item-wrapper js-ajax-element js-search-form-element">
+    <a class="search-result__item" href="">
+      <h3 class="search-result__title"></h3>
+      <div class="search-result__description"></div>
+      <span class="search-result__date"></span>
+    </a>
+  </li>
+</template>
+
+{{/content}}
+{{/extend}}
