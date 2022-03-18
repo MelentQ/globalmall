@@ -15,6 +15,7 @@
 * [Реклама в ТЦ](https://melentq.github.io/globalmall/advertising)
 * [О ТЦ](https://melentq.github.io/globalmall/about)
 * [Арендодателям](https://melentq.github.io/globalmall/rent)
+* [Поиск по сайту](https://melentq.github.io/globalmall/search)
 
 # Handlebars Boilerplate
 
