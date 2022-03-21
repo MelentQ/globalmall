@@ -1,0 +1,47 @@
+.cookie {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 16;
+
+  max-width: 41rem;
+  max-width: 100%;
+  padding: 1.4rem 2rem 2rem;
+  background-color: white;
+  box-shadow: 0px -2px 21px rgba(0, 0, 0, 0.03), 0px 100px 80px rgba(23, 33, 51, 0.04), 0px 12px 10.0172px rgba(23, 33, 51, 0.02);
+  border-radius: 0.2rem;
+
+  transition: opacity $base-transition-time $base-transition-easing, visibility $base-transition-time $base-transition-easing;
+
+  opacity: 0;
+  visibility: hidden;
+
+  @include breakpoint(mobile) {
+    max-width: calc(100% - 4.8rem);
+    bottom: 2.4rem;
+    right: 2.4rem;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__text {
+    @extend %fs-t4;
+    @extend %secondary-ff;
+    margin-bottom: 1.4rem;
+  }
+
+  &__close {
+    @extend %fs-h6;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &:focus-visible {
+      color: var(--primary-color);
+    }
+  }
+}

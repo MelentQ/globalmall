@@ -1,0 +1,17 @@
+export default function cookie() {
+  if (localStorage.getItem('cookieMessageShown')) {
+    return;
+  }
+  
+  const cookieElement = document.querySelector('.js-cookie');
+  if (cookieElement) {
+    const btn = cookieElement.querySelector('.cookie__close');
+    btn.addEventListener('click', () => {
+      cookieElement.classList.remove('visible');
+    })
+    const timer = setTimeout(() => {
+      cookieElement.classList.add('visible');
+      localStorage.setItem('cookieMessageShown', 'true');
+    }, 5000)
+  }
+}

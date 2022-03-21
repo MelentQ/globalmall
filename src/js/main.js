@@ -20,6 +20,7 @@ import initMaps from './custom/initMaps';
 import initPhoneMask from './custom/initPhoneMask';
 import imageToTitle from './custom/imageToTitle';
 import fileUpload from './build-in/fileUpload';
+import cookie from './custom/cookie';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initValidation();
     initMaps();
     initPhoneMask();
+    cookie();
 });
 
 document.addEventListener('lazyloaded', () => {
