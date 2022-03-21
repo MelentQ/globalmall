@@ -1,5 +1,5 @@
 <section class="newslist">
-    <div class="container js-ajax-show-more-container">
+    <div class="container">
         {{#if cardsTitle}}
         <div class="newslist__header-block">
             <h2 class="newslist__header-block-title">{{cardsTitle}}</h2>
@@ -16,7 +16,7 @@
         
         {{else}}
         <div class="newslist__more-container js-ajax-show-more-btn-container">
-            <a class="button button--filled newslist__more js-ajax-show-more-btn" href="#">Показать еще</a>
+            <a class="button button--filled newslist__more js-ajax-show-more-btn js-WP-show-more" href="#">Показать еще</a>
         </div>
         {{/if}}
     </div>
