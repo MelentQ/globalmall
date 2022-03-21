@@ -51,6 +51,8 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
     const errorMessageElement = container.querySelector('.js-error-message');
     const elementsContainer = container.querySelector('.js-search-form-elements-container');
     const elementTemplate = elementsContainer.querySelector('.js-search-form-element');
+
+    let isShowMoreBtnInit = false;
     
     forms.forEach((form, i) => {
       const getSettings = {
@@ -59,7 +61,8 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         errorMessageElement,
         elementsContainer,
         elementTemplate,
-        createElementFunction
+        createElementFunction,
+        container
       }
 
       form.addEventListener('submit', (e) => {
@@ -94,13 +97,24 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           }, textInputDelay);
         })
       })
+
+      const showMoreBtn = container.querySelector('.js-WP-show-more');
+      if (showMoreBtn && !isShowMoreBtnInit) {
+        isShowMoreBtnInit = true;
+
+        let page = 1; // Счётчик пагинации
+        showMoreBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          get(getSettings, page++);
+        })
+      }
     })
   })
 
   /**
    * Основная логика получения новых данных по сабмиту форму
    */
-  function get({forms, i, errorMessageElement, elementsContainer, createElementFunction}) {
+  function get({forms, i, errorMessageElement, elementsContainer, createElementFunction, container}, pageCount) {
     const form = forms[i];
     // Добавляем в скрытый инпут количество уже показанных элементов
     if (form.offset) {
@@ -112,6 +126,10 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
 
     const url = form.action;
     const formData = new FormData(form);
+
+    if (pageCount) {
+      formData.append("page", pageCount);
+    }
 
     // todo: удалить
     console.log(_debugFormData(formData));
@@ -130,10 +148,12 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           return response.json();
       })
       .then(data => {
-        // Очищаем контейнер
-        elementsContainer.innerHTML = "";
+        // Очищаем контейнер, если не была нажата кнопка "Показать еще"
+        if (!pageCount) {
+          elementsContainer.innerHTML = "";
+        }
 
-        if(!data.length){
+        if(!data.length && !pageCount){
           // Выводим сообщение "Элементы не найдены"
           errorMessageElement.classList.add('visible')
         } else {
@@ -143,6 +163,12 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
             const element = createElementFunction(itemData);
             elementsContainer.append(element);
           });
+
+          if (8 >= elementsContainer.childElementCount) {
+            const showMoreBtn = container.querySelector('.js-WP-show-more');
+            if (showMoreBtn)
+              showMoreBtn.remove();
+          }
         }
       })
       .catch((err) => {
