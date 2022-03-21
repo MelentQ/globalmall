@@ -214,6 +214,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
  * Формат ответа сервера (data):
  * [
  *    {
+ *       "total": 23,
  *       "link": "/cards/card-1",
  *       "image": "image.png",
  *       "name": "Триал-спорт",
@@ -276,6 +277,7 @@ function createNewsListElement(itemData) {
  * Формат ответа сервера (data):
  * [
  *    {
+ *       "total": 23,
  *       "link": "/cards/card-1",
  *       "image": "image.png",
  *       "name": "Триал-спорт",
