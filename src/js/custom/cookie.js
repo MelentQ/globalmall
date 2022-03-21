@@ -8,10 +8,10 @@ export default function cookie() {
     const btn = cookieElement.querySelector('.cookie__close');
     btn.addEventListener('click', () => {
       cookieElement.classList.remove('visible');
+      localStorage.setItem('cookieMessageShown', 'true');
     })
     const timer = setTimeout(() => {
       cookieElement.classList.add('visible');
-      localStorage.setItem('cookieMessageShown', 'true');
     }, 5000)
   }
 }
