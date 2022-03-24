@@ -10,12 +10,16 @@
 
   &__desktop-block {
     @include breakpoint(small-tablet) {
-      display: none;
+      padding-top: 2.4rem;
+
+      background-color: var(--secondary-light);
     }
   }
 
   &__title-block {
-    
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__title {
@@ -35,8 +39,11 @@
     }
 
     &--mobile {
+      display: none;
+
       width: 100%;
       @include breakpoint(small-mobile) {
+        display: flex;
         margin-top: 2.4rem;
       }
     }
@@ -45,10 +52,11 @@
   &__scheme-desktop {
     height: 60rem;
 
-    background-color: var(--secondary-grey);
+    background-color: var(--secondary-light);
 
     @include breakpoint(tablet) {
       height: 45rem;
+      margin: 0 calc(-1 * var(--content-padding));
     }
   }
 
@@ -70,16 +78,19 @@
   }
 
   &__mobile-block-btns {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.4rem;
 
     padding: 0.4rem;
-    margin-bottom: 2.4rem;
     border: 0.1rem solid #EBEFF3;
     border-radius: 0.2rem;
 
     background-color: white;
+
+    @include breakpoint(small-tablet) {
+      display: grid;
+    }
   }
 
   &__mobile-block-btn {
