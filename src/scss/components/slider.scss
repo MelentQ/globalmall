@@ -26,6 +26,12 @@
 
     transition: background-color $base-transition-time $base-transition-easing, opacity $base-transition-time $base-transition-easing;
 
+    &.swiper-button-lock,
+    &.swiper-button-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
     &.swiper-button-disabled {
       opacity: 0.5;
       cursor: default;

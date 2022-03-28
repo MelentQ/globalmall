@@ -50,6 +50,7 @@ export default function initSliders() {
       allowTouchMove,
       autoHeight: true,
       disableOnInteraction: true,
+      watchOverflow: true,
       ...autoplay,
       loop,
       ...fadeEffect,
