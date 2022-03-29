@@ -55,6 +55,9 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
     let isShowMoreBtnInit = false;
     
     forms.forEach((form, i) => {
+      const showMoreBtnContainer = container.querySelector('.js-ajax-show-more-btn-container');
+      const showMoreBtn = showMoreBtnContainer.querySelector('.js-WP-show-more');
+
       const getSettings = {
         forms,
         i,
@@ -67,12 +70,18 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
+        if (showMoreBtnContainer) {
+          showMoreBtnContainer.classList.remove('hidden');
+        }
         get(getSettings);
       })
 
       const resetBtn = form.querySelector('.js-reset');
       if(resetBtn) {
         resetBtn.addEventListener('click', () => {
+          if (showMoreBtnContainer) {
+            showMoreBtnContainer.classList.remove('hidden');
+          }
           form.reset();
           get(getSettings);
         })
@@ -83,6 +92,9 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
       const formInputs = [...radioButtons, ...checkboxes];
       formInputs.forEach(input => {
         input.addEventListener('change', () => {
+          if (showMoreBtnContainer) {
+            showMoreBtnContainer.classList.remove('hidden');
+          }
           get(getSettings);
         })
       })
@@ -91,6 +103,9 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
       textInputs.forEach(input => {
         let timer;
         input.addEventListener('input', e => {
+          if (showMoreBtnContainer) {
+            showMoreBtnContainer.classList.remove('hidden');
+          }
           clearTimeout(timer);
           timer = setTimeout(() => {
             get(getSettings);
@@ -98,7 +113,6 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         })
       })
 
-      const showMoreBtn = container.querySelector('.js-WP-show-more');
       if (showMoreBtn && !isShowMoreBtnInit) {
         isShowMoreBtnInit = true;
 
@@ -163,11 +177,13 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
             const element = createElementFunction(itemData);
             elementsContainer.append(element);
           });
-
-          if (8 >= elementsContainer.childElementCount) {
-            const showMoreBtn = container.querySelector('.js-WP-show-more');
-            if (showMoreBtn)
-              showMoreBtn.remove();
+          const showMoreBtnContainer = container.querySelector('.js-ajax-show-more-btn-container');
+          if (showMoreBtnContainer) {
+            if (8 >= elementsContainer.childElementCount && elementsContainer.childElementCount >= data[0].total) {
+              showMoreBtnContainer.classList.add('hidden');
+            } else {
+              showMoreBtnContainer.classList.remove('hidden');
+            }
           }
         }
       })
