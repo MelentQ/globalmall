@@ -114,7 +114,7 @@
       content: '';
       
       position: absolute;
-      bottom: 2px;
+      bottom: 1px;
       left: 0;
 
       width: 100%;
@@ -123,6 +123,10 @@
       background-color: var(--dark);
 
       transition: background-color $base-transition-time $base-transition-easing;
+
+      @include breakpoint(mobile) {
+        bottom: -1px;
+      }
     }
   }
 
