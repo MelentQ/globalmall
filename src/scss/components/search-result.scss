@@ -86,6 +86,10 @@
     @include breakpoint(tablet) {
       margin-top: 2.8rem;
     }
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__more {

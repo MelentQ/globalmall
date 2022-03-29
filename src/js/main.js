@@ -22,6 +22,7 @@ import imageToTitle from './custom/imageToTitle';
 import fileUpload from './build-in/fileUpload';
 import cookie from './custom/cookie';
 import { fixSchemeTabs } from './custom/fix';
+import initSafinTabs from './custom/tabsSafin';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initPhoneMask();
     cookie();
     fixSchemeTabs();
+    initSafinTabs();
 });
 
 document.addEventListener('lazyloaded', () => {
