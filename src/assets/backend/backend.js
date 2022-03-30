@@ -56,7 +56,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
     
     forms.forEach((form, i) => {
       const showMoreBtnContainer = container.querySelector('.js-ajax-show-more-btn-container');
-      const showMoreBtn = showMoreBtnContainer.querySelector('.js-WP-show-more');
+      const showMoreBtn = container.querySelector('.js-WP-show-more');
 
       const getSettings = {
         forms,
@@ -167,7 +167,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           elementsContainer.innerHTML = "";
         }
 
-        if(!data.length && !pageCount){
+        if(!data && !data.length && !pageCount){
           // Выводим сообщение "Элементы не найдены"
           errorMessageElement.classList.add('visible')
         } else {
@@ -179,7 +179,9 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           });
           const showMoreBtnContainer = container.querySelector('.js-ajax-show-more-btn-container');
           if (showMoreBtnContainer) {
-            if (8 >= elementsContainer.childElementCount && elementsContainer.childElementCount >= data[0].total) {
+            if (!data.length) {
+              showMoreBtnContainer.classList.add('hidden');
+            } else if (8 >= elementsContainer.childElementCount && elementsContainer.childElementCount >= data[0].total) {
               showMoreBtnContainer.classList.add('hidden');
             } else {
               showMoreBtnContainer.classList.remove('hidden');
@@ -321,13 +323,15 @@ function createNewsListElement(itemData) {
   const description = element.querySelector('.card__description');
   description.textContent = itemData.text;
 
-  const tagsContainer = element.querySelector('.card__tags');
-  itemData.tags.forEach(tag => {
-    const tagElement = document.createElement('li');
-    tagElement.textContent = tag;
+  if (itemData.tags) {
+    const tagsContainer = element.querySelector('.card__tags');
+    itemData.tags.forEach(tag => {
+      const tagElement = document.createElement('li');
+      tagElement.textContent = tag;
 
-    tagsContainer.append(tagElement);
-  })
+      tagsContainer.append(tagElement);
+    })
+  }
 
   return element;
 }
