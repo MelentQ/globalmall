@@ -1,5 +1,11 @@
 <div class="js-hide-sort-buttons">
     <ul class="search-form__filter-list js-hidden-container">
+        <li class="search-form__filter-item">
+            <label class="search-form__filter-checkbox">
+                <input class="search-form__filter-checkbox-input visually-hidden js-checkbox js-all-checkbox" name="all" value="Y" type="checkbox">
+                <span class="search-form__filter-checkbox-label">Все категории</span>
+            </label>
+        </li>
         {{#each categories}}
         <li class="search-form__filter-item">
             <label class="search-form__filter-checkbox">

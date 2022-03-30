@@ -57,6 +57,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
     forms.forEach((form, i) => {
       const showMoreBtnContainer = container.querySelector('.js-ajax-show-more-btn-container');
       const showMoreBtn = container.querySelector('.js-WP-show-more');
+      let page = 1; // Счётчик пагинации
 
       const getSettings = {
         forms,
@@ -72,6 +73,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         e.preventDefault();
         if (showMoreBtnContainer) {
           showMoreBtnContainer.classList.remove('hidden');
+          page = 1;
         }
         get(getSettings);
       })
@@ -81,6 +83,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         resetBtn.addEventListener('click', () => {
           if (showMoreBtnContainer) {
             showMoreBtnContainer.classList.remove('hidden');
+            page = 1;
           }
           form.reset();
           get(getSettings);
@@ -94,6 +97,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         input.addEventListener('change', () => {
           if (showMoreBtnContainer) {
             showMoreBtnContainer.classList.remove('hidden');
+            page = 1;
           }
           get(getSettings);
         })
@@ -105,6 +109,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
         input.addEventListener('input', e => {
           if (showMoreBtnContainer) {
             showMoreBtnContainer.classList.remove('hidden');
+            page = 1;
           }
           clearTimeout(timer);
           timer = setTimeout(() => {
@@ -115,8 +120,6 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
 
       if (showMoreBtn && !isShowMoreBtnInit) {
         isShowMoreBtnInit = true;
-
-        let page = 1; // Счётчик пагинации
         showMoreBtn.addEventListener('click', (e) => {
           e.preventDefault();
           get(getSettings, page++);
@@ -241,12 +244,10 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
  *       "mapLink": "/contacts#map",
  *       "hashtags": [
  *          {
- *             "name": "СПОРТ",
- *             "link": "/catalog?sport=1"
+ *             "name": "СПОРТ"
  *          },
  *          {
- *             "name": "СПОРТИВНЫЕ ТОВАРЫ",
- *             "link": "/catalog?sport=1"
+ *             "name": "СПОРТИВНЫЕ ТОВАРЫ"
  *          }
  *       ],
  *    }
@@ -279,7 +280,6 @@ function createNewsListElement(itemData) {
     itemData.hashtags.forEach(hashtag => {
       const hashtagElement = _getTemplateBySelector('#hashtagItemTemplate');
       const hashtagLink = hashtagElement.querySelector('.hashtags__link');
-      hashtagLink.href = hashtag.link;
       hashtagLink.textContent = hashtag.name;
   
       hashtagsContainer.append(hashtagElement);
@@ -296,11 +296,20 @@ function createNewsListElement(itemData) {
  * [
  *    {
  *       "total": 23,
+ *       "hasOverlay": "true",
+ *       "isLight": "true",
  *       "link": "/cards/card-1",
  *       "image": "image.png",
  *       "name": "Триал-спорт",
  *       "text": "Какой-то текст",
- *       "hashtags": ["СПОРТ","СПОРТИВНЫЕ ТОВАРЫ"],
+ *       "hashtags": [
+ *          {
+ *            "name": "СПОРТ"
+ *          },
+ *          {
+ *            "name": "СПОРТИВНЫЕ ТОВАРЫ"
+ *          }
+ *       ],
  *    }
  * ]
  */
@@ -323,11 +332,11 @@ function createNewsListElement(itemData) {
   const description = element.querySelector('.card__description');
   description.textContent = itemData.text;
 
-  if (itemData.tags) {
+  if (itemData.hashtags) {
     const tagsContainer = element.querySelector('.card__tags');
-    itemData.tags.forEach(tag => {
+    itemData.hashtags.forEach(tag => {
       const tagElement = document.createElement('li');
-      tagElement.textContent = tag;
+      tagElement.textContent = tag.name;
 
       tagsContainer.append(tagElement);
     })

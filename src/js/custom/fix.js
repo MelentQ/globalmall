@@ -16,3 +16,34 @@ export function fixSchemeTabs() {
     })
   })
 }
+
+export function fixSelects() {
+  const allCheckboxes = Array.from(
+    document.querySelectorAll(".js-all-checkbox")
+  );
+  const simpleCheckboxes = Array.from(
+    document.querySelectorAll(".js-checkbox:not(.js-all-checkbox)")
+  );
+
+  allCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        simpleCheckboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+      }
+    });
+  });
+
+  simpleCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        allCheckboxes.forEach(
+          (checkbox) => {
+            checkbox.checked = false;
+          }
+        );
+      }
+    });
+  });
+}
