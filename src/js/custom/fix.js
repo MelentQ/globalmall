@@ -47,3 +47,14 @@ export function fixSelects() {
     });
   });
 }
+
+export function fixTextAreas() {
+  const elements = Array.from(document.querySelectorAll('.js-textarea'));
+  elements.forEach(textarea => {
+    textarea.addEventListener('keyup', function(){
+      if(this.scrollTop > 0){
+        this.style.height = this.scrollHeight + "px";
+      }
+    });
+  })
+}

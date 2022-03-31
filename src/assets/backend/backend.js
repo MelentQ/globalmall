@@ -170,9 +170,13 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           elementsContainer.innerHTML = "";
         }
 
-        if(!data && !data.length && !pageCount){
+        if(!data && !data.length){
           // Выводим сообщение "Элементы не найдены"
-          errorMessageElement.classList.add('visible')
+          if (!pageCount) {
+            errorMessageElement.classList.add('visible')
+          } else {
+            errorMessageElement.classList.remove('visible')
+          }
         } else {
           errorMessageElement.classList.remove('visible')
           // Выводим новые элементы

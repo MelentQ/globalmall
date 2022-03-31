@@ -21,7 +21,7 @@ import initPhoneMask from './custom/initPhoneMask';
 import imageToTitle from './custom/imageToTitle';
 import fileUpload from './build-in/fileUpload';
 import cookie from './custom/cookie';
-import { fixSchemeTabs, fixSelects } from './custom/fix';
+import { fixSchemeTabs, fixSelects, fixTextAreas } from './custom/fix';
 import initSafinTabs from './custom/tabsSafin';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fixSchemeTabs();
     initSafinTabs();
     fixSelects();
+    fixTextAreas();
 });
 
 document.addEventListener('lazyloaded', () => {
