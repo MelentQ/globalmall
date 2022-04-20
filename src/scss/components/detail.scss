@@ -16,6 +16,12 @@
     }
   }
 
+  .container--grid {
+    @include breakpoint(tablet) {
+      gap: 0;
+    }
+  }
+
   @include breakpoint(tablet) {
     padding-top: 2.4rem;
     padding-bottom: 3.6rem;
@@ -281,12 +287,12 @@
   }
 
   &__scheme {
-    height: 60rem;
+    min-height: 60rem;
 
     background-color: #EEEDED;
 
     @include breakpoint(mobile) {
-      height: 33rem;
+      min-height: 33rem;
     }
     @include breakpoint(small-mobile) {
       margin: 0 calc(-1 * var(--content-padding));

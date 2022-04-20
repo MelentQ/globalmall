@@ -50,12 +50,12 @@
   }
 
   &__scheme-desktop {
-    height: 60rem;
+    min-height: 60rem;
 
     background-color: var(--secondary-light);
 
     @include breakpoint(tablet) {
-      height: 45rem;
+      min-height: 45rem;
       margin: 0 calc(-1 * var(--content-padding));
     }
   }

@@ -1,4 +1,4 @@
-import loadApi from "./loadAPI";
+import loadApi from "./loadApi";
 import initMapOverlay from "./initMapOverlay";
 
 export default function initMaps() {

@@ -352,6 +352,9 @@
   // Search Btn
 
   &__open-search {
+    transition: left $base-transition-time $base-transition-easing;
+    left: 1.6rem;
+
     &:focus-visible {
       svg {
         fill: var(--primary-color);
@@ -369,8 +372,6 @@
       height: 2rem;
 
       transition: fill $base-transition-time $base-transition-easing;
-
-      
     }
   }
 
@@ -382,6 +383,8 @@
     padding-left: 1.6rem;
 
     &.active {
+
+      
       .search-block {
         width: 100%;
 
@@ -389,6 +392,8 @@
       }
 
       .header__open-search {
+        left: 0;
+
         svg {
           fill: var(--dark);
         }

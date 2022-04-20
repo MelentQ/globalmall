@@ -329,12 +329,12 @@
   }
 
   &__tab-scheme {
-    height: 60rem;
+    min-height: 60rem;
 
     background-color: #EEEDED;
 
     @include breakpoint(mobile) {
-      height: 33rem;
+      min-height: 33rem;
     }
   }
 
