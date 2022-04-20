@@ -170,7 +170,7 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
           elementsContainer.innerHTML = "";
         }
 
-        if(!data && !data.length){
+        if(Array.isArray(data) && !data.length){
           // Выводим сообщение "Элементы не найдены"
           if (!pageCount) {
             errorMessageElement.classList.add('visible')
@@ -215,6 +215,9 @@ function searchFormSubmitHandler(containerSelector, createElementFunction) {
       if (i != j) {
         const updatedInputs = Array.from(forms[i].querySelectorAll('input'));
         const outdatedInputs = Array.from(forms[j].querySelectorAll('input'));
+
+        console.log(updatedInputs.length);
+        console.log(outdatedInputs.length);
 
         for(let k = 0; k < outdatedInputs.length; k++) {
           for(let x = 0; x < updatedInputs.length; x++) {
